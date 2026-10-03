@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Menu mobile abre",
+    "pass": true
+  },
+  {
+    "name": "Escape fecha e retorna foco",
+    "pass": true
+  },
+  {
+    "name": "Resize para desktop libera rolagem",
+    "pass": true
+  },
+  {
+    "name": "Tema claro",
+    "pass": true
+  },
+  {
+    "name": "Tema persiste",
+    "pass": true
+  },
+  {
+    "name": "Troca de idioma mantém case",
+    "pass": true
+  },
+  {
+    "name": "Índice do case aponta seção",
+    "pass": true
+  },
+  {
+    "name": "Quatro projetos",
+    "pass": true
+  },
+  {
+    "name": "Filtro reduz lista",
+    "pass": true
+  },
+  {
+    "name": "Limpar restaura projetos",
+    "pass": true
+  },
+  {
+    "name": "Atalho certificados",
+    "pass": true
+  },
+  {
+    "name": "Busca sem resultados",
+    "pass": true
+  },
+  {
+    "name": "Busca por certificado",
+    "pass": true
+  },
+  {
+    "name": "Preview e foco",
+    "pass": true
+  },
+  {
+    "name": "Fechar preview",
+    "pass": true
+  },
+  {
+    "name": "Copiar e-mail",
+    "pass": true
+  },
+  {
+    "name": "Movimento reduzido",
+    "pass": true
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Release rejects missing origin",
+    "pass": true
+  },
+  {
+    "name": ".env loaded and 20 URLs",
+    "pass": true
+  },
+  {
+    "name": "Release rejects example origin",
+    "pass": true
+  },
+  {
+    "name": "Invalid scheme removes stale sitemap",
+    "pass": true
+  }
+]

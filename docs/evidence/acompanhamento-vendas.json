@@ -1,0 +1,580 @@
+{
+  "schema": [
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "ProdutoEVendedores",
+      "ColumnName": "ProdutoEVendedores",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "ProdutoEVendedores",
+      "ColumnName": "ProdutoEVendedores Campos",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "ProdutoEVendedores",
+      "ColumnName": "ProdutoEVendedores Pedido",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "NumeMes",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "NomeMes",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "DiaSemana",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "MesAno",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "dLojas",
+      "ColumnName": "Loja",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dLojas",
+      "ColumnName": "Cloja",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dLojas",
+      "ColumnName": "Cidade",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dProdutos",
+      "ColumnName": "Codigo Produto",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dProdutos",
+      "ColumnName": "Descrição Produto",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dVendedores",
+      "ColumnName": "Nome Vendedor",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dVendedores",
+      "ColumnName": "Matricula",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Cloja",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Matricula",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Código Produto",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "PrecoU",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Qtde",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Data Venda",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "TotalVendas",
+      "PandasDataType": "decimal.Decimal"
+    }
+  ],
+  "dax_measures": [
+    {
+      "TableName": "Medidas",
+      "Name": "Faturamento",
+      "Expression": "SUM(fVendas[TotalVendas])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "TicketMedio",
+      "Expression": "AVERAGE(fVendas[TotalVendas])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Produtos_distintos",
+      "Expression": "DISTINCTCOUNT(fVendas[Código Produto])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "MaxVenda",
+      "Expression": "MAX(fVendas[TotalVendas])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "MinVenda",
+      "Expression": "MIN(fVendas[TotalVendas])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "fat_matriz",
+      "Expression": "\n    CALCULATE([Faturamento],\n        fVendas[Cloja] = \n        \"matriz\")",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "fat_filial2",
+      "Expression": "\n    CALCULATE([Faturamento],\n        fVendas[Cloja] = \n        \"Filial 2\")",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "fat_filial3",
+      "Expression": "\n    CALCULATE([Faturamento],\n        fVendas[Cloja] = \n        \"Filial 3\")",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "FatX",
+      "Expression": "\n        SUMX(fVendas, \n            fVendas[PrecoU]\n                *fVendas[Qtde])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Qntde_Pedidos",
+      "Expression": "COUNT(fVendas[TotalVendas])",
+      "DisplayFolder": null,
+      "Description": null
+    }
+  ],
+  "dax_columns": [
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "NumeMes",
+      "Expression": "MONTH(dCalendario[Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "NomeMes",
+      "Expression": "FORMAT(dCalendario[Date],\"mmm\", \"pt-br\")"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "Ano",
+      "Expression": "YEAR(dCalendario[Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "DiaSemana",
+      "Expression": "FORMAT(dCalendario[Date], \"ddd\")"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "TotalVendas",
+      "Expression": "fVendas[PrecoU]*fVendas[Qtde]"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "MesAno",
+      "Expression": "EOMONTH(dCalendario[Date], 0)"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    }
+  ],
+  "dax_tables": [
+    {
+      "TableName": "DateTableTemplate_fef8c195-ed9d-4698-a500-7e3b2ee6dcd8",
+      "Expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+    },
+    {
+      "TableName": "dCalendario",
+      "Expression": "CALENDAR(MIN(fVendas[Data Venda]),MAX(fVendas[Data Venda]))"
+    },
+    {
+      "TableName": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "Expression": "Calendar(Date(Year(MIN('dCalendario'[Date])), 1, 1), Date(Year(MAX('dCalendario'[Date])), 12, 31))"
+    },
+    {
+      "TableName": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "Expression": "Calendar(Date(Year(MIN('dCalendario'[MesAno])), 1, 1), Date(Year(MAX('dCalendario'[MesAno])), 12, 31))"
+    },
+    {
+      "TableName": "ProdutoEVendedores",
+      "Expression": "{\n    (\"Descrição Produto\", NAMEOF('dProdutos'[Descrição Produto]), 0),\n    (\"Nome Vendedor\", NAMEOF('dVendedores'[Nome Vendedor]), 1)\n}"
+    }
+  ],
+  "power_query": [
+    {
+      "TableName": "dProdutos",
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    Produtos_Sheet = Fonte{[Item=\"Produtos\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Produtos_Sheet, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Codigo Produto\", Int64.Type}, {\"Descrição Produto\", type text}}),\n    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado\",\"Tevelisão\",\"Televisão\",Replacer.ReplaceText,{\"Descrição Produto\"}),\n    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"Liqidificado\",\"Liquidificador\",Replacer.ReplaceText,{\"Descrição Produto\"})\nin\n    #\"Valor Substituído1\""
+    },
+    {
+      "TableName": "fVendas",
+      "Expression": "let\n    Fonte = Table.Combine({#\"Loja 1\", #\"Loja 2\", #\"Loja 3\"}),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Column1\", type text}, {\"Cidade\", type text}, {\"Matricula\", Int64.Type}, {\"Nome Vendedor\", type text}, {\"Código Produto\", Int64.Type}, {\"Preço Unitário - Qtde\", type text}, {\"Data Venda\", type date}, {\"Status Venda\", type text}}),\n    #\"Linhas Superiores Removidas\" = Table.Skip(#\"Tipo Alterado\",1),\n    #\"Preenchido Abaixo\" = Table.FillDown(#\"Linhas Superiores Removidas\",{\"Column1\"}),\n    #\"Dividir Coluna por Delimitador\" = Table.SplitColumn(#\"Preenchido Abaixo\", \"Column1\", Splitter.SplitTextByDelimiter(\" -> \", QuoteStyle.Csv), {\"Column1.1\", \"Column1.2\"}),\n    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Dividir Coluna por Delimitador\",{{\"Column1.1\", type text}, {\"Column1.2\", type text}}),\n    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado1\",{{\"Column1.1\", \"Loja\"}, {\"Column1.2\", \"Cloja\"}}),\n    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Colunas Renomeadas\",{{\"Matricula\", type text}, {\"Código Produto\", type text}}),\n    #\"Dividir Coluna por Delimitador1\" = Table.SplitColumn(#\"Tipo Alterado2\", \"Preço Unitário - Qtde\", Splitter.SplitTextByDelimiter(\"-\", QuoteStyle.Csv), {\"Preço Unitário - Qtde.1\", \"Preço Unitário - Qtde.2\"}),\n    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Dividir Coluna por Delimitador1\",{{\"Preço Unitário - Qtde.1\", Currency.Type}, {\"Preço Unitário - Qtde.2\", Int64.Type}}),\n    #\"Colunas Renomeadas1\" = Table.RenameColumns(#\"Tipo Alterado3\",{{\"Preço Unitário - Qtde.1\", \"PrecoU\"}, {\"Preço Unitário - Qtde.2\", \"Qtde\"}}),\n    #\"Linhas Filtradas\" = Table.SelectRows(#\"Colunas Renomeadas1\", each ([Status Venda] = \"Finalizada\")),\n    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Linhas Filtradas\",{\"Cloja\", \"Matricula\", \"Código Produto\", \"PrecoU\", \"Qtde\", \"Data Venda\"})\nin\n    #\"Outras Colunas Removidas\""
+    },
+    {
+      "TableName": "dLojas",
+      "Expression": "let\n    Fonte = Table.Combine({#\"Loja 1\", #\"Loja 2\", #\"Loja 3\"}),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Column1\", type text}, {\"Cidade\", type text}, {\"Matricula\", Int64.Type}, {\"Nome Vendedor\", type text}, {\"Código Produto\", Int64.Type}, {\"Preço Unitário - Qtde\", type text}, {\"Data Venda\", type date}, {\"Status Venda\", type text}}),\n    #\"Linhas Superiores Removidas\" = Table.Skip(#\"Tipo Alterado\",1),\n    #\"Preenchido Abaixo\" = Table.FillDown(#\"Linhas Superiores Removidas\",{\"Column1\"}),\n    #\"Dividir Coluna por Delimitador\" = Table.SplitColumn(#\"Preenchido Abaixo\", \"Column1\", Splitter.SplitTextByDelimiter(\" -> \", QuoteStyle.Csv), {\"Column1.1\", \"Column1.2\"}),\n    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Dividir Coluna por Delimitador\",{{\"Column1.1\", type text}, {\"Column1.2\", type text}}),\n    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado1\",{{\"Column1.1\", \"Loja\"}, {\"Column1.2\", \"Cloja\"}}),\n    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Colunas Renomeadas\",{{\"Matricula\", type text}, {\"Código Produto\", type text}}),\n    #\"Dividir Coluna por Delimitador1\" = Table.SplitColumn(#\"Tipo Alterado2\", \"Preço Unitário - Qtde\", Splitter.SplitTextByDelimiter(\"-\", QuoteStyle.Csv), {\"Preço Unitário - Qtde.1\", \"Preço Unitário - Qtde.2\"}),\n    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Dividir Coluna por Delimitador1\",{{\"Preço Unitário - Qtde.1\", Currency.Type}, {\"Preço Unitário - Qtde.2\", Int64.Type}}),\n    #\"Colunas Renomeadas1\" = Table.RenameColumns(#\"Tipo Alterado3\",{{\"Preço Unitário - Qtde.1\", \"PrecoU\"}, {\"Preço Unitário - Qtde.2\", \"Qtde\"}}),\n    #\"Linhas Filtradas\" = Table.SelectRows(#\"Colunas Renomeadas1\", each ([Status Venda] = \"Finalizada\")),\n    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Linhas Filtradas\",{\"Loja\", \"Cloja\", \"Cidade\"}),\n    #\"Duplicatas Removidas\" = Table.Distinct(#\"Outras Colunas Removidas\")\nin\n    #\"Duplicatas Removidas\""
+    },
+    {
+      "TableName": "dVendedores",
+      "Expression": "let\n    Fonte = Table.Combine({#\"Loja 1\", #\"Loja 2\", #\"Loja 3\"}),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Column1\", type text}, {\"Cidade\", type text}, {\"Matricula\", Int64.Type}, {\"Nome Vendedor\", type text}, {\"Código Produto\", Int64.Type}, {\"Preço Unitário - Qtde\", type text}, {\"Data Venda\", type date}, {\"Status Venda\", type text}}),\n    #\"Linhas Superiores Removidas\" = Table.Skip(#\"Tipo Alterado\",1),\n    #\"Preenchido Abaixo\" = Table.FillDown(#\"Linhas Superiores Removidas\",{\"Column1\"}),\n    #\"Dividir Coluna por Delimitador\" = Table.SplitColumn(#\"Preenchido Abaixo\", \"Column1\", Splitter.SplitTextByDelimiter(\" -> \", QuoteStyle.Csv), {\"Column1.1\", \"Column1.2\"}),\n    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Dividir Coluna por Delimitador\",{{\"Column1.1\", type text}, {\"Column1.2\", type text}}),\n    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado1\",{{\"Column1.1\", \"Loja\"}, {\"Column1.2\", \"Cloja\"}}),\n    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Colunas Renomeadas\",{{\"Matricula\", type text}, {\"Código Produto\", type text}}),\n    #\"Dividir Coluna por Delimitador1\" = Table.SplitColumn(#\"Tipo Alterado2\", \"Preço Unitário - Qtde\", Splitter.SplitTextByDelimiter(\"-\", QuoteStyle.Csv), {\"Preço Unitário - Qtde.1\", \"Preço Unitário - Qtde.2\"}),\n    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Dividir Coluna por Delimitador1\",{{\"Preço Unitário - Qtde.1\", Currency.Type}, {\"Preço Unitário - Qtde.2\", Int64.Type}}),\n    #\"Colunas Renomeadas1\" = Table.RenameColumns(#\"Tipo Alterado3\",{{\"Preço Unitário - Qtde.1\", \"PrecoU\"}, {\"Preço Unitário - Qtde.2\", \"Qtde\"}}),\n    #\"Linhas Filtradas\" = Table.SelectRows(#\"Colunas Renomeadas1\", each ([Status Venda] = \"Finalizada\")),\n    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Linhas Filtradas\",{\"Nome Vendedor\", \"Matricula\"}),\n    #\"Duplicatas Removidas\" = Table.Distinct(#\"Outras Colunas Removidas\", {\"Matricula\"})\nin\n    #\"Duplicatas Removidas\""
+    },
+    {
+      "TableName": "Medidas",
+      "Expression": "let\n    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),\n    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})\nin\n    #\"Colunas Removidas\""
+    }
+  ],
+  "relationships_full": [
+    {
+      "ID": 2568,
+      "FromTable": "fVendas",
+      "FromColumn": "Código Produto",
+      "ToTable": "dProdutos",
+      "ToColumn": "Codigo Produto",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 4042,
+      "FromTable": "fVendas",
+      "FromColumn": "Matricula",
+      "ToTable": "dVendedores",
+      "ToColumn": "Matricula",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 5606,
+      "FromTable": "dCalendario",
+      "FromColumn": "Date",
+      "ToTable": "LocalDateTable_e7089713-5410-47c4-b593-3b1d753c3836",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 8792,
+      "FromTable": "fVendas",
+      "FromColumn": "Data Venda",
+      "ToTable": "dCalendario",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 8809,
+      "FromTable": "fVendas",
+      "FromColumn": "Cloja",
+      "ToTable": "dLojas",
+      "ToColumn": "Cloja",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 9804,
+      "FromTable": "dCalendario",
+      "FromColumn": "MesAno",
+      "ToTable": "LocalDateTable_150f2be6-6c28-40c2-af7a-bea9a8e2c074",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    }
+  ],
+  "expressions_full": [
+    {
+      "ID": 1935,
+      "ModelID": 1,
+      "Name": "Loja 1",
+      "Description": null,
+      "Kind": 0,
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    #\"Loja 1_Sheet\" = Fonte{[Item=\"Loja 1\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"Loja 1_Sheet\", [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Column1\", type text}, {\"Controle de Vendas\", type text}, {\"Column3\", type any}, {\"Column4\", type text}, {\"Column5\", type any}, {\"Column6\", type text}, {\"Column7\", type any}, {\"Column8\", type text}})\nin\n    #\"Tipo Alterado\"",
+      "ModifiedTime": 134170583553316514,
+      "QueryGroupID": 1938,
+      "ParameterValuesColumnID": 0,
+      "MAttributes": null,
+      "LineageTag": "654ddbbb-88f3-4c45-a1a5-712f048b2fdd",
+      "SourceLineageTag": null,
+      "RemoteParameterName": null,
+      "ExpressionSourceID": 0
+    },
+    {
+      "ID": 1936,
+      "ModelID": 1,
+      "Name": "Loja 2",
+      "Description": null,
+      "Kind": 0,
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    #\"Loja 2_Sheet\" = Fonte{[Item=\"Loja 2\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"Loja 2_Sheet\", [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Column1\", type text}, {\"Controle de Vendas\", type text}, {\"Column3\", type any}, {\"Column4\", type text}, {\"Column5\", type any}, {\"Column6\", type text}, {\"Column7\", type any}, {\"Column8\", type text}})\nin\n    #\"Tipo Alterado\"",
+      "ModifiedTime": 134170583553316514,
+      "QueryGroupID": 1938,
+      "ParameterValuesColumnID": 0,
+      "MAttributes": null,
+      "LineageTag": "e96340e0-812d-4f0f-b127-4bc3a74fc940",
+      "SourceLineageTag": null,
+      "RemoteParameterName": null,
+      "ExpressionSourceID": 0
+    },
+    {
+      "ID": 1937,
+      "ModelID": 1,
+      "Name": "Loja 3",
+      "Description": null,
+      "Kind": 0,
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    #\"Loja 3_Sheet\" = Fonte{[Item=\"Loja 3\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"Loja 3_Sheet\", [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Column1\", type text}, {\"Controle de Vendas\", type text}, {\"Column3\", type any}, {\"Column4\", type text}, {\"Column5\", type any}, {\"Column6\", type text}, {\"Column7\", type any}, {\"Column8\", type text}})\nin\n    #\"Tipo Alterado\"",
+      "ModifiedTime": 134170583553316514,
+      "QueryGroupID": 1938,
+      "ParameterValuesColumnID": 0,
+      "MAttributes": null,
+      "LineageTag": "023f5deb-dcfc-4207-9f85-818462de3f7b",
+      "SourceLineageTag": null,
+      "RemoteParameterName": null,
+      "ExpressionSourceID": 0
+    }
+  ]
+}

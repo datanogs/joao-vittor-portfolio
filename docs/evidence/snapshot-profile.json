@@ -1,0 +1,154 @@
+{
+  "Projeto - Spotify.pbix": {
+    "Base de dados - Spotify - TOP50": {
+      "rows": 27800,
+      "columns": [
+        "album_cover_url",
+        "is_explicit",
+        "release_date",
+        "total_tracks",
+        "album_type",
+        "duration_ms",
+        "popularity",
+        "artist",
+        "song",
+        "position",
+        "date",
+        "Mes",
+        "num_mes",
+        "trimestre",
+        "Ano"
+      ],
+      "nulls": {},
+      "distinct": {
+        "album_cover_url": 566,
+        "is_explicit": 2,
+        "release_date": 341,
+        "total_tracks": 34,
+        "album_type": 3,
+        "duration_ms": 785,
+        "popularity": 83,
+        "artist": 342,
+        "song": 789,
+        "position": 50,
+        "date": 556,
+        "Mes": 12,
+        "num_mes": 12,
+        "trimestre": 4,
+        "Ano": 2
+      },
+      "album_types": {
+        "Album": 17261,
+        "Solo": 10496,
+        "Compilado": 43
+      },
+      "date_min": "2023-05-18 00:00:00",
+      "date_max": "2024-11-27 00:00:00",
+      "rows_per_date": {
+        "50": 556
+      },
+      "duplicates_date_position": 0,
+      "duplicates_date_song_artist": 0,
+      "popularity_mean": 89.6213309352518,
+      "song_artist_combos": 825
+    }
+  },
+  "Projeto - Case - XSALES.pbix": {
+    "fVendas": {
+      "rows": 700,
+      "columns": [
+        "Tipos de Clientes",
+        "País",
+        "Produto",
+        "Valor Total",
+        "Desconto",
+        "Valor Total c/ Desconto",
+        "Custo Total",
+        "Lucro",
+        "Data"
+      ],
+      "nulls": {},
+      "distinct": {
+        "Tipos de Clientes": 5,
+        "País": 5,
+        "Produto": 6,
+        "Valor Total": 550,
+        "Desconto": 515,
+        "Valor Total c/ Desconto": 559,
+        "Custo Total": 586,
+        "Lucro": 595,
+        "Data": 16
+      },
+      "dates": {
+        "min": "2018-09-01 00:00:00",
+        "max": "2019-12-01 00:00:00",
+        "day_values": [
+          1
+        ],
+        "distinct": 16
+      }
+    }
+  },
+  "Projeto - Acompanhamento de Vendas.pbix": {
+    "fVendas": {
+      "rows": 1000,
+      "columns": [
+        "Cloja",
+        "Matricula",
+        "Código Produto",
+        "PrecoU",
+        "Qtde",
+        "Data Venda",
+        "TotalVendas"
+      ],
+      "nulls": {},
+      "distinct": {
+        "Cloja": 3,
+        "Matricula": 9,
+        "Código Produto": 20,
+        "PrecoU": 18,
+        "Qtde": 3,
+        "Data Venda": 548,
+        "TotalVendas": 47
+      }
+    },
+    "dProdutos": {
+      "rows": 20,
+      "columns": [
+        "Codigo Produto",
+        "Descrição Produto"
+      ],
+      "nulls": {},
+      "distinct": {
+        "Codigo Produto": 20,
+        "Descrição Produto": 20
+      }
+    },
+    "dLojas": {
+      "rows": 3,
+      "columns": [
+        "Loja",
+        "Cloja",
+        "Cidade"
+      ],
+      "nulls": {},
+      "distinct": {
+        "Loja": 3,
+        "Cloja": 3,
+        "Cidade": 3
+      }
+    },
+    "dVendedores": {
+      "rows": 9,
+      "columns": [
+        "Nome Vendedor",
+        "Matricula"
+      ],
+      "nulls": {},
+      "distinct": {
+        "Nome Vendedor": 9,
+        "Matricula": 9
+      }
+    }
+  }
+}

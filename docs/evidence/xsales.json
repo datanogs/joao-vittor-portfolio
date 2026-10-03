@@ -1,0 +1,326 @@
+{
+  "schema": [
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "num_mes",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "mes",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "mes_ano",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Tipos de Clientes",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "País",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Produto",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Valor Total",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Desconto",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Valor Total c/ Desconto",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Custo Total",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Lucro",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "fVendas",
+      "ColumnName": "Data",
+      "PandasDataType": "datetime64[ns]"
+    }
+  ],
+  "dax_measures": [
+    {
+      "TableName": "Medidas",
+      "Name": "Faturamento_Bruto",
+      "Expression": "SUM(fVendas[Valor Total])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Faturamento_liquido",
+      "Expression": "SUM(fVendas[Valor Total c/ Desconto])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Custo",
+      "Expression": "SUM(fVendas[Custo Total])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Lucro",
+      "Expression": "SUM(fVendas[Lucro])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "FatMM",
+      "Expression": "DIVIDE([Faturamento_liquido], DISTINCTCOUNT(fVendas[Data]))",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "margem",
+      "Expression": "DIVIDE([Lucro], [Faturamento_liquido])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Descontos",
+      "Expression": "SUM(fVendas[Desconto])",
+      "DisplayFolder": null,
+      "Description": null
+    }
+  ],
+  "dax_columns": [
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "num_mes",
+      "Expression": "MONTH(dCalendario[Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "mes",
+      "Expression": "FORMAT(dCalendario[Date],\"mmm\")"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "ano",
+      "Expression": "YEAR(dCalendario[Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "mes_ano",
+      "Expression": "FORMAT(dCalendario[Date], \"mmm-yy\")"
+    }
+  ],
+  "dax_tables": [
+    {
+      "TableName": "DateTableTemplate_a97fb148-0d45-413c-889d-c656628df911",
+      "Expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+    },
+    {
+      "TableName": "dCalendario",
+      "Expression": "CALENDARAUTO()"
+    },
+    {
+      "TableName": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "Expression": "Calendar(Date(Year(MIN('dCalendario'[Date])), 1, 1), Date(Year(MAX('dCalendario'[Date])), 12, 31))"
+    }
+  ],
+  "power_query": [
+    {
+      "TableName": "fVendas",
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    BD_Sheet = Fonte{[Item=\"BD\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(BD_Sheet, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Tipos de Clientes\", type text}, {\"País\", type text}, {\"Produto\", type text}, {\"Valor Total\", Currency.Type}, {\"Desconto\", Currency.Type}, {\"Valor Total c/ Desconto\", Currency.Type}, {\"Custo Total\", Currency.Type}, {\"Lucro\", Currency.Type}, {\"Data\", type date}, {\"Mês\", type text}, {\"Ano\", Int64.Type}}),\n    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Mês\", \"Ano\"}),\n    #\"Linhas Inferiores Removidas\" = Table.RemoveLastN(#\"Colunas Removidas\",1)\nin\n    #\"Linhas Inferiores Removidas\""
+    },
+    {
+      "TableName": "Medidas",
+      "Expression": "let\n    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),\n    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})\nin\n    #\"Colunas Removidas\""
+    }
+  ],
+  "relationships_full": [
+    {
+      "ID": 1084,
+      "FromTable": "dCalendario",
+      "FromColumn": "Date",
+      "ToTable": "LocalDateTable_60fcf088-63bf-4bb1-a483-af566bc2eae8",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 1810,
+      "FromTable": "fVendas",
+      "FromColumn": "Data",
+      "ToTable": "dCalendario",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    }
+  ],
+  "expressions_full": []
+}

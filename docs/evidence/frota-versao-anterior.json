@@ -1,0 +1,62 @@
+{
+  "relationships_full": [
+    {
+      "ID": 2800,
+      "FromTable": "dCalendario",
+      "FromColumn": "Date",
+      "ToTable": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 3163,
+      "FromTable": "movimentos_detalhados (4)",
+      "FromColumn": "Data",
+      "ToTable": "dCalendario",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    }
+  ],
+  "dax_measures": [
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "Name": "TotalAbastecimento",
+      "Expression": "SUM('movimentos_detalhados (4)'[Valor Total da venda])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "Name": "ContAbastecimentos",
+      "Expression": "COUNT('movimentos_detalhados (4)'[Valor Total da venda])",
+      "DisplayFolder": null,
+      "Description": null
+    }
+  ],
+  "power_query": [
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    #\"movimentos_detalhados (4)_Sheet\" = Fonte{[Item=\"movimentos_detalhados (4)\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"movimentos_detalhados (4)_Sheet\", [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod. Movimento\", Int64.Type}, {\"Faturado\", type text}, {\"Data\", type datetime}, {\"Nfe\", Int64.Type}, {\"Condutor\", type text}, {\"Empresa\", type text}, {\"Cnpj\", type text}, {\"Coluna1\", type any}, {\"Cidade\", type text}, {\"UF\", type text}, {\"C/C. Veic.\", type any}, {\"C/C. Cond.\", type text}, {\"Tp. Abastecimento\", type text}, {\"Produto\", type text}, {\"Qtde\", type number}, {\"Valor Unitário\", type number}, {\"Valor Item\", type number}, {\"Média\", type text}, {\"Placa\", type text}, {\"Km\", Int64.Type}, {\"Rodado\", Int64.Type}, {\"Tipo Frota\", type text}, {\"Valor Total da venda\", type number}, {\"Status\", type text}, {\"Forma Pagamento\", type text}, {\"Aut. Data/Hora\", type datetime}, {\"Autorizador\", type text}, {\"Aut.Documento\", Int64.Type}, {\"Aut.Telefone\", Int64.Type}, {\"Cód.Autorizacao\", type text}, {\"Gestores\", type text}}),\n    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Tipo Alterado\",{\"Data\", \"Nfe\", \"Condutor\", \"Cnpj\", \"Cidade\", \"UF\", \"Tp. Abastecimento\", \"Produto\", \"Qtde\", \"Valor Unitário\", \"Valor Item\", \"Placa\", \"Valor Total da venda\", \"Gestores\"}),\n    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas\",{{\"Placa\", type text}, {\"Valor Total da venda\", Currency.Type}, {\"Gestores\", type text}, {\"Valor Item\", Currency.Type}, {\"Valor Unitário\", type number}}),\n    #\"Outras Colunas Removidas1\" = Table.SelectColumns(#\"Tipo Alterado1\",{\"Data\", \"Condutor\", \"Cnpj\", \"Cidade\", \"UF\", \"Tp. Abastecimento\", \"Produto\", \"Qtde\", \"Valor Unitário\", \"Valor Item\", \"Placa\", \"Valor Total da venda\", \"Gestores\"}),\n    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas1\",{{\"Data\", type date}})\nin\n    #\"Tipo Alterado2\""
+    }
+  ],
+  "dax_tables": [
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "Expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+    },
+    {
+      "TableName": "dCalendario",
+      "Expression": "CALENDAR( MIN('movimentos_detalhados (4)'[Data]), ( MAX('movimentos_detalhados (4)'[Data])))"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "Expression": "Calendar(Date(Year(MIN('dCalendario'[Date])), 1, 1), Date(Year(MAX('dCalendario'[Date])), 12, 31))"
+    }
+  ]
+}

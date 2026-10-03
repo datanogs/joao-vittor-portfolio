@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Menu mobile",
+    "pass": true
+  },
+  {
+    "name": "Escape retorna foco",
+    "pass": true
+  },
+  {
+    "name": "Resize libera rolagem",
+    "pass": true
+  },
+  {
+    "name": "Tema persiste",
+    "pass": true
+  },
+  {
+    "name": "Idioma mantém case",
+    "pass": true
+  },
+  {
+    "name": "Índice navega",
+    "pass": true
+  },
+  {
+    "name": "DAX expande",
+    "pass": true
+  },
+  {
+    "name": "DAX sem overflow",
+    "pass": true
+  },
+  {
+    "name": "Quatro projetos",
+    "pass": true
+  },
+  {
+    "name": "Filtro de categoria",
+    "pass": true
+  },
+  {
+    "name": "Limpar filtros",
+    "pass": true
+  },
+  {
+    "name": "Busca sem resultado",
+    "pass": true
+  },
+  {
+    "name": "Busca DAX",
+    "pass": true
+  },
+  {
+    "name": "Preview com foco",
+    "pass": true
+  },
+  {
+    "name": "Fechar preview",
+    "pass": true
+  },
+  {
+    "name": "Seletor de categoria",
+    "pass": true
+  },
+  {
+    "name": "Copiar e-mail",
+    "pass": true
+  },
+  {
+    "name": "Movimento reduzido",
+    "pass": true
+  }
+]

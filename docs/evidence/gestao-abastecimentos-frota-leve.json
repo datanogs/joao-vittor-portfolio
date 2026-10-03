@@ -1,0 +1,526 @@
+{
+  "schema": [
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "numMes",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "NomeMes",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Data",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Condutor",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Cnpj",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Cidade",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "UF",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Tp. Abastecimento",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Produto",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Qtde",
+      "PandasDataType": "Float64"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Valor Unitário",
+      "PandasDataType": "Float64"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Valor Item",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Placa",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Valor Total da venda",
+      "PandasDataType": "decimal.Decimal"
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "ColumnName": "Gestores",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Cod. Movimento",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Faturado",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Data",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Nfe",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Condutor",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Empresa",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Cnpj",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Coluna1",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Cidade",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "UF",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "C/C. Veic.",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "C/C. Cond.",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Tp. Abastecimento",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Produto",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Qtde",
+      "PandasDataType": "Float64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Valor Unitário",
+      "PandasDataType": "Float64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Valor Item",
+      "PandasDataType": "Float64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Média",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Placa",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Km",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Rodado",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Tipo Frota",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Valor Total da venda",
+      "PandasDataType": "Float64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Status",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Forma Pagamento",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Aut. Data/Hora",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Autorizador",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Aut.Documento",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Aut.Telefone",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Cód.Autorizacao",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "ColumnName": "Gestores",
+      "PandasDataType": "string"
+    }
+  ],
+  "dax_measures": [
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "Name": "TotalAbastecimento",
+      "Expression": "SUM('movimentos_detalhados (4)'[Valor Total da venda])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "Name": "ContAbastecimentos",
+      "Expression": "COUNT('movimentos_detalhados (4)'[Valor Total da venda])",
+      "DisplayFolder": null,
+      "Description": null
+    }
+  ],
+  "dax_columns": [
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "numMes",
+      "Expression": "MONTH(dCalendario[Date])"
+    },
+    {
+      "TableName": "dCalendario",
+      "ColumnName": "NomeMes",
+      "Expression": "FORMAT(dCalendario[Date], \"mmm\")"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    }
+  ],
+  "dax_tables": [
+    {
+      "TableName": "DateTableTemplate_cbf60801-dc33-494f-a974-388b1ee52fb5",
+      "Expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+    },
+    {
+      "TableName": "dCalendario",
+      "Expression": "CALENDAR( MIN('movimentos_detalhados (4)'[Data]), ( MAX('movimentos_detalhados (4)'[Data])))"
+    },
+    {
+      "TableName": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "Expression": "Calendar(Date(Year(MIN('dCalendario'[Date])), 1, 1), Date(Year(MAX('dCalendario'[Date])), 12, 31))"
+    },
+    {
+      "TableName": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "Expression": "Calendar(Date(Year(MIN('movimentos_detalhados (4)'[Data])), 1, 1), Date(Year(MAX('movimentos_detalhados (4)'[Data])), 12, 31))"
+    }
+  ],
+  "power_query": [
+    {
+      "TableName": "movimentos_detalhados (4)",
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    #\"movimentos_detalhados (4)_Sheet\" = Fonte{[Item=\"movimentos_detalhados (4)\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"movimentos_detalhados (4)_Sheet\", [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod. Movimento\", Int64.Type}, {\"Faturado\", type text}, {\"Data\", type datetime}, {\"Nfe\", Int64.Type}, {\"Condutor\", type text}, {\"Empresa\", type text}, {\"Cnpj\", type text}, {\"Coluna1\", type any}, {\"Cidade\", type text}, {\"UF\", type text}, {\"C/C. Veic.\", type any}, {\"C/C. Cond.\", type text}, {\"Tp. Abastecimento\", type text}, {\"Produto\", type text}, {\"Qtde\", type number}, {\"Valor Unitário\", type number}, {\"Valor Item\", type number}, {\"Média\", type text}, {\"Placa\", type text}, {\"Km\", Int64.Type}, {\"Rodado\", Int64.Type}, {\"Tipo Frota\", type text}, {\"Valor Total da venda\", type number}, {\"Status\", type text}, {\"Forma Pagamento\", type text}, {\"Aut. Data/Hora\", type datetime}, {\"Autorizador\", type text}, {\"Aut.Documento\", Int64.Type}, {\"Aut.Telefone\", Int64.Type}, {\"Cód.Autorizacao\", type text}, {\"Gestores\", type text}}),\n    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Tipo Alterado\",{\"Data\", \"Nfe\", \"Condutor\", \"Cnpj\", \"Cidade\", \"UF\", \"Tp. Abastecimento\", \"Produto\", \"Qtde\", \"Valor Unitário\", \"Valor Item\", \"Placa\", \"Valor Total da venda\", \"Gestores\"}),\n    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas\",{{\"Placa\", type text}, {\"Valor Total da venda\", Currency.Type}, {\"Gestores\", type text}, {\"Valor Item\", Currency.Type}, {\"Valor Unitário\", type number}}),\n    #\"Outras Colunas Removidas1\" = Table.SelectColumns(#\"Tipo Alterado1\",{\"Data\", \"Condutor\", \"Cnpj\", \"Cidade\", \"UF\", \"Tp. Abastecimento\", \"Produto\", \"Qtde\", \"Valor Unitário\", \"Valor Item\", \"Placa\", \"Valor Total da venda\", \"Gestores\"}),\n    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas1\",{{\"Data\", type date}})\nin\n    #\"Tipo Alterado2\""
+    },
+    {
+      "TableName": "movimentos_detalhados (5)",
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    #\"movimentos_detalhados (4)_Sheet\" = Fonte{[Item=\"movimentos_detalhados (4)\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"movimentos_detalhados (4)_Sheet\", [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod. Movimento\", Int64.Type}, {\"Faturado\", type text}, {\"Data\", Int64.Type}, {\"Nfe\", Int64.Type}, {\"Condutor\", type text}, {\"Empresa\", type text}, {\"Cnpj\", type text}, {\"Coluna1\", type any}, {\"Cidade\", type text}, {\"UF\", type text}, {\"C/C. Veic.\", type any}, {\"C/C. Cond.\", type any}, {\"Tp. Abastecimento\", type text}, {\"Produto\", type text}, {\"Qtde\", type number}, {\"Valor Unitário\", type number}, {\"Valor Item\", type number}, {\"Média\", type any}, {\"Placa\", type text}, {\"Km\", Int64.Type}, {\"Rodado\", Int64.Type}, {\"Tipo Frota\", type text}, {\"Valor Total da venda\", type number}, {\"Status\", type text}, {\"Forma Pagamento\", type text}, {\"Aut. Data/Hora\", Int64.Type}, {\"Autorizador\", type any}, {\"Aut.Documento\", type any}, {\"Aut.Telefone\", type any}, {\"Cód.Autorizacao\", type any}, {\"Gestores\", type text}})\nin\n    #\"Tipo Alterado\""
+    }
+  ],
+  "relationships_full": [
+    {
+      "ID": 2800,
+      "FromTable": "dCalendario",
+      "FromColumn": "Date",
+      "ToTable": "LocalDateTable_15c86382-fedd-49f3-a225-070c450ecc63",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 4137,
+      "FromTable": "movimentos_detalhados (5)",
+      "FromColumn": "Aut. Data/Hora",
+      "ToTable": "dCalendario",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 4157,
+      "FromTable": "movimentos_detalhados (4)",
+      "FromColumn": "Data",
+      "ToTable": "LocalDateTable_a5f8a6e0-3fc0-4d69-9f48-be90dac5ab33",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    }
+  ],
+  "expressions_full": []
+}

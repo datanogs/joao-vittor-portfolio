@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Clipboard failure pt",
+    "pass": true
+  },
+  {
+    "name": "Clipboard failure en",
+    "pass": true
+  },
+  {
+    "name": "SEO /",
+    "pass": true
+  },
+  {
+    "name": "SEO /sobre",
+    "pass": true
+  },
+  {
+    "name": "SEO /projetos",
+    "pass": true
+  },
+  {
+    "name": "SEO /formacao",
+    "pass": true
+  },
+  {
+    "name": "SEO /datanogs",
+    "pass": true
+  },
+  {
+    "name": "SEO /contato",
+    "pass": true
+  },
+  {
+    "name": "SEO /en",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/about",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/projects",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/education",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/datanogs",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/contact",
+    "pass": true
+  },
+  {
+    "name": "SEO /projetos/spotify-top-50",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/projects/spotify-top-50",
+    "pass": true
+  },
+  {
+    "name": "SEO /projetos/xsales",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/projects/xsales",
+    "pass": true
+  },
+  {
+    "name": "SEO /projetos/acompanhamento-vendas",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/projects/acompanhamento-vendas",
+    "pass": true
+  },
+  {
+    "name": "SEO /projetos/gestao-abastecimentos-frota-leve",
+    "pass": true
+  },
+  {
+    "name": "SEO /en/projects/gestao-abastecimentos-frota-leve",
+    "pass": true
+  },
+  {
+    "name": "404 case",
+    "pass": true
+  }
+]

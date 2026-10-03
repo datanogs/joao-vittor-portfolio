@@ -1,0 +1,875 @@
+{
+  "schema": [
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "album_cover_url",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "is_explicit",
+      "PandasDataType": "bool"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "release_date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "total_tracks",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "album_type",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "duration_ms",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "popularity",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "artist",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "song",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "position",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "Mes",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "num_mes",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "Filtro_Tri_Mes",
+      "ColumnName": "Filtro_Tri_Mes",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Filtro_Tri_Mes",
+      "ColumnName": "Filtro_Tri_Mes Campos",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "Filtro_Tri_Mes",
+      "ColumnName": "Filtro_Tri_Mes Pedido",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Ano",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Mês",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Trimestre",
+      "PandasDataType": "string"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Dia",
+      "PandasDataType": "Int64"
+    },
+    {
+      "TableName": "Medidas",
+      "ColumnName": "Column",
+      "PandasDataType": "Int64"
+    }
+  ],
+  "dax_measures": [
+    {
+      "TableName": "Medidas",
+      "Name": "% Albums",
+      "Expression": "\n        DIVIDE([Qtd Albums], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Capa de Álbum Disponível",
+      "Expression": "\n        DIVIDE([Capa de Álbum Disponível], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Compilations",
+      "Expression": "\n        DIVIDE([Qtd Compilations], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Entradas em #1",
+      "Expression": "\n        DIVIDE([Entradas em #1], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Entradas Top 10",
+      "Expression": "\n        DIVIDE([Entradas Top 10], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Singles",
+      "Expression": "\n        DIVIDE([Qtd Singles], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Songs Explícitas",
+      "Expression": "\n        DIVIDE([Songs Explícitas], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Songs Lançadas no Mesmo Ano do Ranking",
+      "Expression": "\n        DIVIDE([Songs Lançadas no Mesmo Ano do Ranking], [Total Songs Distintas])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "% Songs Não Explícitas",
+      "Expression": "\n        DIVIDE([Songs Não Explícitas], [Total Registros])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Amplitude de Popularidade",
+      "Expression": "\n        [Popularidade Máxima] - [Popularidade Mínima]",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Aparições por Artista",
+      "Expression": "\n        DIVIDE([Total Registros], [Total Artistas Distintos])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Aparições por Song",
+      "Expression": "\n        DIVIDE([Total Registros], [Total Songs Distintas])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Artistas com #1",
+      "Expression": "\n        COUNTROWS(\n            FILTER(\n                VALUES('Base de dados - Spotify - TOP50'[artist]),\n                CALCULATE(MIN('Base de dados - Spotify - TOP50'[position])) = 1\n            )\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Artistas com Top 10",
+      "Expression": "\n        COUNTROWS(\n            FILTER(\n                VALUES('Base de dados - Spotify - TOP50'[artist]),\n                CALCULATE(MIN('Base de dados - Spotify - TOP50'[position])) <= 10\n            )\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Artistas Distintos por Dia",
+      "Expression": "\n        DIVIDE([Total Artistas Distintos], [Dias Monitorados])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Capa de Álbum Disponível",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            NOT ISBLANK('Base de dados - Spotify - TOP50'[album_cover_url])\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Data de Lançamento Mais Antiga",
+      "Expression": "\n        MIN('Base de dados - Spotify - TOP50'[release_date])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Data de Lançamento Mais Recente",
+      "Expression": "\n        MAX('Base de dados - Spotify - TOP50'[release_date])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Data Final Ranking",
+      "Expression": "\n        MAX('Base de dados - Spotify - TOP50'[date])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Data Inicial Ranking",
+      "Expression": "\n        MIN('Base de dados - Spotify - TOP50'[date])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Dias Monitorados",
+      "Expression": "\n        DISTINCTCOUNT('Base de dados - Spotify - TOP50'[date])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Diferença Popularidade Explícitas vs Não",
+      "Expression": "\n        [Popularidade Média Explícitas] - [Popularidade Média Não Explícitas]",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Duração Máxima (min)",
+      "Expression": "\n        DIVIDE(MAX('Base de dados - Spotify - TOP50'[duration_ms]), 60000)",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Duração Média (min)",
+      "Expression": "\n        DIVIDE([Duração Média (ms)], 60000)",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Duração Média (ms)",
+      "Expression": "\n        AVERAGE('Base de dados - Spotify - TOP50'[duration_ms])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Duração Mínima (min)",
+      "Expression": "\n        DIVIDE(MIN('Base de dados - Spotify - TOP50'[duration_ms]), 60000)",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Duração Total (horas)",
+      "Expression": "\n        DIVIDE(SUM('Base de dados - Spotify - TOP50'[duration_ms]), 3600000)",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Entradas em #1",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[position] = 1\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Entradas Top 10",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[position] <= 10\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Entradas Top 50",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[position] <= 50\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Idade Média das Faixas (anos)",
+      "Expression": "\n        DIVIDE([Idade Média das Faixas (dias)], 365)",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Idade Média das Faixas (dias)",
+      "Expression": "\n        AVERAGEX(\n            'Base de dados - Spotify - TOP50',\n            DATEDIFF(\n                'Base de dados - Spotify - TOP50'[release_date],\n                'Base de dados - Spotify - TOP50'[date],\n                DAY\n            )\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Índice de Performance Artista",
+      "Expression": "\n        [Popularidade Média por Artista] * DIVIDE(51 - [Posição Média por Artista], 50)",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Índice de Performance Song",
+      "Expression": "\n        [Popularidade Média] * DIVIDE(51 - [Posição Média], 50)",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Medida",
+      "Expression": null,
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Medidas",
+      "Expression": null,
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Melhor Posição",
+      "Expression": "\n        MIN('Base de dados - Spotify - TOP50'[position])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Pior Posição",
+      "Expression": "\n        MAX('Base de dados - Spotify - TOP50'[position])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Máxima",
+      "Expression": "\n        MAX('Base de dados - Spotify - TOP50'[popularity])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média",
+      "Expression": "\n        AVERAGE('Base de dados - Spotify - TOP50'[popularity])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média Albums",
+      "Expression": "\n        CALCULATE(\n            [Popularidade Média],\n            'Base de dados - Spotify - TOP50'[album_type] = \"album\"\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média Compilations",
+      "Expression": "\n        CALCULATE(\n            [Popularidade Média],\n            'Base de dados - Spotify - TOP50'[album_type] = \"compilation\"\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média Explícitas",
+      "Expression": "\n        CALCULATE(\n            [Popularidade Média],\n            'Base de dados - Spotify - TOP50'[is_explicit] = TRUE()\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média Não Explícitas",
+      "Expression": "\n        CALCULATE(\n            [Popularidade Média],\n            'Base de dados - Spotify - TOP50'[is_explicit] = FALSE()\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média por Artista",
+      "Expression": "\n        AVERAGEX(\n            VALUES('Base de dados - Spotify - TOP50'[artist]),\n            CALCULATE(AVERAGE('Base de dados - Spotify - TOP50'[popularity]))\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média por Song",
+      "Expression": "\n        AVERAGEX(\n            VALUES('Base de dados - Spotify - TOP50'[song]),\n            CALCULATE(AVERAGE('Base de dados - Spotify - TOP50'[popularity]))\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Média Singles",
+      "Expression": "\n        CALCULATE(\n            [Popularidade Média],\n            'Base de dados - Spotify - TOP50'[album_type] = \"single\"\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Mediana",
+      "Expression": "\n        MEDIAN('Base de dados - Spotify - TOP50'[popularity])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Popularidade Mínima",
+      "Expression": "\n        MIN('Base de dados - Spotify - TOP50'[popularity])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Posição Média",
+      "Expression": "\n        AVERAGE('Base de dados - Spotify - TOP50'[position])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Posição Média por Artista",
+      "Expression": "\n        AVERAGEX(\n            VALUES('Base de dados - Spotify - TOP50'[artist]),\n            CALCULATE(AVERAGE('Base de dados - Spotify - TOP50'[position]))\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Posição Média por Song",
+      "Expression": "\n        AVERAGEX(\n            VALUES('Base de dados - Spotify - TOP50'[song]),\n            CALCULATE(AVERAGE('Base de dados - Spotify - TOP50'[position]))\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Posição Mediana",
+      "Expression": "\n        MEDIAN('Base de dados - Spotify - TOP50'[position])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Qtd Albums",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[album_type] = \"album\"\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Qtd Compilations",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[album_type] = \"compilation\"\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Qtd Singles",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[album_type] = \"single\"\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Songs com #1",
+      "Expression": "\n        COUNTROWS(\n            FILTER(\n                VALUES('Base de dados - Spotify - TOP50'[song]),\n                CALCULATE(MIN('Base de dados - Spotify - TOP50'[position])) = 1\n            )\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Songs com Top 10",
+      "Expression": "\n        COUNTROWS(\n            FILTER(\n                VALUES('Base de dados - Spotify - TOP50'[song]),\n                CALCULATE(MIN('Base de dados - Spotify - TOP50'[position])) <= 10\n            )\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Songs Distintas por Dia",
+      "Expression": "\n        DIVIDE([Total Songs Distintas], [Dias Monitorados])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Songs Explícitas",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[is_explicit] = TRUE()\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Songs Lançadas no Mesmo Ano do Ranking",
+      "Expression": "\n        CALCULATE(\n            DISTINCTCOUNT('Base de dados - Spotify - TOP50'[song]),\n            FILTER(\n                'Base de dados - Spotify - TOP50',\n                YEAR('Base de dados - Spotify - TOP50'[release_date]) =\n                YEAR('Base de dados - Spotify - TOP50'[date])\n            )\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Songs Não Explícitas",
+      "Expression": "\n        CALCULATE(\n            COUNTROWS('Base de dados - Spotify - TOP50'),\n            'Base de dados - Spotify - TOP50'[is_explicit] = FALSE()\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Artistas Distintos",
+      "Expression": "\n        DISTINCTCOUNT('Base de dados - Spotify - TOP50'[artist])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Combinações Song-Artista",
+      "Expression": "\n        COUNTROWS(\n            SUMMARIZE(\n                'Base de dados - Spotify - TOP50',\n                'Base de dados - Spotify - TOP50'[song],\n                'Base de dados - Spotify - TOP50'[artist]\n            )\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Registros",
+      "Expression": "\n        COUNTROWS('Base de dados - Spotify - TOP50')",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Songs Distintas",
+      "Expression": "\n        DISTINCTCOUNT('Base de dados - Spotify - TOP50'[song])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Tracks Máximo por Álbum",
+      "Expression": "\n        MAX('Base de dados - Spotify - TOP50'[total_tracks])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Tracks Mediano por Álbum",
+      "Expression": "\n        MEDIAN('Base de dados - Spotify - TOP50'[total_tracks])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Tracks Médio por Álbum",
+      "Expression": "\n        AVERAGE('Base de dados - Spotify - TOP50'[total_tracks])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Total Tracks Mínimo por Álbum",
+      "Expression": "\n        MIN('Base de dados - Spotify - TOP50'[total_tracks])",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Variação de Popularidade vs Média Global",
+      "Expression": "\n        [Popularidade Média] -\n        CALCULATE(\n            [Popularidade Média],\n            ALL('Base de dados - Spotify - TOP50')\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    },
+    {
+      "TableName": "Medidas",
+      "Name": "Variação de Posição vs Média Global",
+      "Expression": "\n        [Posição Média] -\n        CALCULATE(\n            [Posição Média],\n            ALL('Base de dados - Spotify - TOP50')\n        )",
+      "DisplayFolder": null,
+      "Description": null
+    }
+  ],
+  "dax_columns": [
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Ano",
+      "Expression": "YEAR([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Mês",
+      "Expression": "FORMAT([Date], \"MMMM\")"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Trimestre",
+      "Expression": "\"Qtr \" & [QuarterNo]"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ColumnName": "Dia",
+      "Expression": "DAY([Date])"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "Mes",
+      "Expression": "FORMAT('Base de dados - Spotify - TOP50'[date], \"Mmm\")"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "num_mes",
+      "Expression": "MONTH('Base de dados - Spotify - TOP50'[date])"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "trimestre",
+      "Expression": "\"T\" & QUARTER('Base de dados - Spotify - TOP50'[date])"
+    },
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "ColumnName": "Ano",
+      "Expression": "YEAR('Base de dados - Spotify - TOP50'[date])"
+    }
+  ],
+  "dax_tables": [
+    {
+      "TableName": "DateTableTemplate_6a17a98c-e113-4180-86bc-2906f409fc1e",
+      "Expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+    },
+    {
+      "TableName": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "Expression": "Calendar(Date(Year(MIN('Base de dados - Spotify - TOP50'[release_date])), 1, 1), Date(Year(MAX('Base de dados - Spotify - TOP50'[release_date])), 12, 31))"
+    },
+    {
+      "TableName": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "Expression": "Calendar(Date(Year(MIN('Base de dados - Spotify - TOP50'[date])), 1, 1), Date(Year(MAX('Base de dados - Spotify - TOP50'[date])), 12, 31))"
+    },
+    {
+      "TableName": "Medidas",
+      "Expression": "Row(\"Column\", BLANK())"
+    },
+    {
+      "TableName": "Filtro_Tri_Mes",
+      "Expression": "{\n    (\"Mês\", NAMEOF('Base de dados - Spotify - TOP50'[Mes]), 0),\n    (\"Trimestre\", NAMEOF('Base de dados - Spotify - TOP50'[trimestre]), 1)\n}"
+    }
+  ],
+  "power_query": [
+    {
+      "TableName": "Base de dados - Spotify - TOP50",
+      "Expression": "let\n    Fonte = Excel.Workbook(File.Contents(\"[caminho local omitido]\"), null, true),\n    #\"Base de dados - Spotify - TOP50_Sheet\" = Fonte{[Item=\"Base de dados - Spotify - TOP50\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(#\"Base de dados - Spotify - TOP50_Sheet\", [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"date\", type date}, {\"position\", Int64.Type}, {\"song\", type text}, {\"artist\", type text}, {\"popularity\", Int64.Type}, {\"duration_ms\", Int64.Type}, {\"album_type\", type text}, {\"total_tracks\", Int64.Type}, {\"release_date\", type date}, {\"is_explicit\", type logical}, {\"album_cover_url\", type text}, {\"Column12\", type text}, {\"Column13\", type any}, {\"Column14\", type any}, {\"Column15\", type any}, {\"Column16\", type any}, {\"Column17\", type any}, {\"Column18\", type text}}),\n    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Tipo Alterado\",{\"album_cover_url\", \"is_explicit\", \"release_date\", \"total_tracks\", \"album_type\", \"duration_ms\", \"popularity\", \"artist\", \"song\", \"position\", \"date\"}),\n    #\"Colocar Cada Palavra Em Maiúscula\" = Table.TransformColumns(#\"Outras Colunas Removidas\",{{\"album_type\", Text.Proper, type text}}),\n    #\"Valor Substituído\" = Table.ReplaceValue(#\"Colocar Cada Palavra Em Maiúscula\",\"BeyoncÃ©\",\"Beyoncé\",Replacer.ReplaceText,{\"artist\"}),\n    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"Single\",\"Solo\",Replacer.ReplaceText,{\"album_type\"}),\n    #\"Valor Substituído2\" = Table.ReplaceValue(#\"Valor Substituído1\",\"Compilation\",\"Compilado\",Replacer.ReplaceText,{\"album_type\"}),\n    #\"Linhas Filtradas\" = Table.SelectRows(#\"Valor Substituído2\", each true)\nin\n    #\"Linhas Filtradas\""
+    }
+  ],
+  "relationships_full": [
+    {
+      "ID": 24,
+      "FromTable": "Base de dados - Spotify - TOP50",
+      "FromColumn": "release_date",
+      "ToTable": "LocalDateTable_7af8172e-622d-4156-b448-35d277ef9b9a",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    },
+    {
+      "ID": 25,
+      "FromTable": "Base de dados - Spotify - TOP50",
+      "FromColumn": "date",
+      "ToTable": "LocalDateTable_2c418c2b-7005-4ede-bbae-5295da3e140f",
+      "ToColumn": "Date",
+      "IsActive": 1,
+      "FromCardinality": 2,
+      "ToCardinality": 1,
+      "CrossFilteringBehavior": 1
+    }
+  ],
+  "expressions_full": []
+}
