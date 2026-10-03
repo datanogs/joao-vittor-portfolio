@@ -5,6 +5,9 @@ Portfólio profissional PT/EN em React, TypeScript, Vite, TanStack Start/Router 
 Repositório: https://github.com/datanogs/joao-vittor-portfolio
 Branch de produção: `main`.
 
+Site: https://joao-vittor-portfolio.vercel.app
+Projeto Vercel: `joao-vittor-portfolio`, conta `eujoaovittornogueira-9878` (Hobby).
+
 ## Desenvolvimento e validação
 
 Use Node.js 24.x e npm. O lockfile de referência é `package-lock.json`.
@@ -33,7 +36,7 @@ A URL é incorporada durante o build aos canonicals, alternates PT/EN, Open Grap
 
 Para um build de release local, configure `VITE_SITE_URL` em `.env` usando `.env.example` como referência e execute `npm run build:release`. Um build comum sem a variável permite validação local, mas não gera canonical nem sitemap.
 
-Após conectar a integração GitHub → Vercel, pushes em `main` devem gerar deploys de produção automaticamente. Confira o commit associado e o estado Ready no painel; valide a URL em uma sessão sem login. A conexão e a primeira publicação ainda precisam ser confirmadas na conta da Vercel.
+A integração GitHub → Vercel está conectada. Pushes em `main` geram deploys de produção automaticamente. Confira o commit associado e o estado Ready no painel; valide a URL em uma sessão sem login.
 
 ## Checklist após deploy
 
@@ -48,3 +51,4 @@ A fotografia oficial é `public/images/profile/portrait.webp`, referenciada por 
 Não versionar credenciais, `.env` com valores, `.vercel`, dependências, builds, PBIX ou bases privadas. Certificados e imagens em `public/` são os materiais públicos do portfólio.
 
 Os relatórios em `docs/` registram revisões anteriores; instruções Cloudflare e resultados antigos são históricos e não comprovam o estado do deploy atual. Este README descreve a configuração Vercel vigente.
+
