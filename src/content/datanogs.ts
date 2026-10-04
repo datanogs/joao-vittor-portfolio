@@ -6,26 +6,33 @@ export const datanogs = {
     en: "Personal project",
   },
   tagline: {
-    pt: "DataNogs: estudos, projetos e explicações.",
-    en: "DataNogs: studies, projects and explanations.",
+    pt: "DataNogs: o que aprendo enquanto construo.",
+    en: "DataNogs: what I learn as I build.",
   },
   description: {
-    pt: "DataNogs é meu projeto autoral para documentar o desenvolvimento em Dados e Tecnologia. A proposta reúne registros de estudo, projetos práticos e explicações sobre os temas que estou explorando.",
-    en: "DataNogs is my personal project for documenting my development in Data and Technology. Its purpose brings together study notes, practical projects and explanations of the topics I am exploring.",
+    pt: "DataNogs é meu projeto para compartilhar estudos e explicar como construo minhas análises. Quero mostrar as perguntas, os testes e as escolhas que ficam por trás de um relatório.",
+    en: "DataNogs is my project for sharing what I study and explaining how I build analyses. I want to show the questions, tests and choices behind a report.",
   },
   relationship: {
-    pt: "Este portfólio apresenta os cases e minha trajetória profissional. O DataNogs é o espaço proposto para compartilhar o processo de estudo e construção que acompanha essa trajetória.",
-    en: "This portfolio presents the case studies and my professional background. DataNogs is the space intended for sharing the study and building process alongside that journey.",
+    pt: "Aqui no portfólio, você encontra os cases completos. No DataNogs, a proposta é abrir espaço para o aprendizado que acontece durante a construção.",
+    en: "This portfolio contains the full case studies. DataNogs is intended as a space for the learning that happens while building them.",
   },
   purposeTitle: {
-    pt: "Análise, programação e organização de dados.",
-    en: "Analysis, programming and data organization.",
+    pt: "Estudar, testar e explicar.",
+    en: "Study, test and explain.",
   },
   purpose: {
-    pt: "Os temas de estudo incluem análise de dados, programação, bancos de dados, inteligência artificial e automação. O foco do projeto é registrar a prática e organizar explicações que tornem o raciocínio por trás dos trabalhos mais acessível.",
-    en: "Study topics include data analysis, programming, databases, artificial intelligence and automation. The project’s focus is to document practice and organize explanations that make the reasoning behind the work easier to follow.",
+    pt: "Análise de dados e BI são o ponto de partida. Programação, bancos de dados, IA e automação aparecem como estudos que podem ampliar esse trabalho.",
+    en: "Data analysis and BI are the starting point. Programming, databases, AI and automation are areas of study that can extend that work.",
   },
   topics: [
+    {
+      id: "bi",
+      label: {
+        pt: "Dados e BI",
+        en: "Data and BI",
+      },
+    },
     {
       id: "analytics",
       label: {
@@ -70,8 +77,8 @@ export const datanogs = {
       handle: "youtube.com/@datanogs",
       priority: 1,
       context: {
-        pt: "Canal indicado para acompanhar as explicações em vídeo do projeto.",
-        en: "The channel intended for following the project’s video explanations.",
+        pt: "Canal do DataNogs para explicações em vídeo.",
+        en: "The DataNogs channel for video explanations.",
       },
     },
     {
@@ -81,8 +88,8 @@ export const datanogs = {
       handle: "github.com/datanogs",
       priority: 2,
       context: {
-        pt: "Perfil destinado a reunir código e materiais de estudo.",
-        en: "The profile intended for sharing code and study materials.",
+        pt: "Meu perfil de código e projetos, incluindo este portfólio.",
+        en: "My code and projects profile, including this portfolio.",
       },
     },
     {
@@ -92,8 +99,8 @@ export const datanogs = {
       handle: "linkedin.com/in/joaovittornogueira",
       priority: 3,
       context: {
-        pt: "Perfil profissional para contato e acompanhamento da minha trajetória.",
-        en: "My professional profile for getting in touch and following my career.",
+        pt: "Meu perfil profissional e um canal para conversarmos.",
+        en: "My professional profile and a place to get in touch.",
       },
     },
     {

@@ -16,8 +16,8 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     role: {
-      pt: "Atuação na área administrativa",
-      en: "Work in administration",
+      pt: "Área administrativa",
+      en: "Administration",
     },
     company: {
       pt: "Empresa de transporte",
@@ -28,27 +28,27 @@ export const experience: ExperienceItem[] = [
       en: "Current",
     },
     description: {
-      pt: "Trabalho na área administrativa de uma empresa de transporte, em uma rotina que envolve compras, acompanhamento de indicadores e informações operacionais. O uso de SAP ERP, SAT, Excel e Power BI conecta esse contexto de negócio ao meu desenvolvimento em Dados/BI.",
-      en: "I work in administration at a transportation company, in a routine involving purchasing, indicator monitoring and operational information. Using SAP ERP, SAT, Excel and Power BI connects this business context with my development in Data/BI.",
+      pt: "Na empresa de transporte onde trabalho, acompanho informações que fazem parte da operação: compras, indicadores e registros administrativos. Essa rotina dá uma referência prática ao que estudo em BI.",
+      en: "At the transportation company where I work, I deal with information used in daily operations: purchasing, indicators and administrative records. That routine gives my BI studies a practical reference.",
     },
     activities: [
       {
-        pt: "Compras e atividades administrativas de apoio à operação de transporte.",
-        en: "Purchasing and administrative activities supporting transportation operations.",
+        pt: "Atuo nas compras e nas atividades administrativas de apoio à operação.",
+        en: "Handle purchasing and administrative tasks that support operations.",
       },
       {
-        pt: "Uso de SAP ERP e SAT no contexto das rotinas administrativas.",
-        en: "Use of SAP ERP and SAT in administrative routines.",
+        pt: "Utilizo SAP ERP e SAT nas rotinas administrativas.",
+        en: "Use SAP ERP and SAT in administrative work.",
       },
     ],
     dataWork: [
       {
-        pt: "Acompanhamento de indicadores e informações operacionais.",
-        en: "Monitoring indicators and operational information.",
+        pt: "Acompanho indicadores e informações operacionais.",
+        en: "Monitor indicators and operational information.",
       },
       {
-        pt: "Uso de Excel e Power BI nas atividades relacionadas a dados.",
-        en: "Use of Excel and Power BI in data-related activities.",
+        pt: "Utilizo Excel e Power BI no trabalho com dados da rotina.",
+        en: "Use Excel and Power BI for day-to-day data work.",
       },
     ],
   },

@@ -7,80 +7,81 @@ export const heroStack = ["Power BI", "Power Query", "DAX", "Excel"];
 export const skillGroups: SkillGroup[] = [
   {
     category: {
-      pt: "BI aplicado nos cases",
-      en: "BI in the case studies",
+      pt: "BI e visualização",
+      en: "BI and visualization",
     },
     tools: [
       {
         name: "Power BI",
         context: {
-          pt: "Relatórios navegáveis de Spotify, XSales, vendas e abastecimentos; páginas, filtros e visuais organizados por pergunta analítica.",
-          en: "Navigable reports for Spotify, XSales, sales and refueling; pages, filters and visuals organized around analytical questions.",
-        },
-      },
-      {
-        name: "Power Query",
-        context: {
-          pt: "Importação de planilhas, definição de tipos, padronização de categorias e combinação das bases de lojas no case Acompanhamento de Vendas.",
-          en: "Spreadsheet import, type conversion, category standardization and store-data combination in the sales tracking case study.",
-        },
-      },
-      {
-        name: "DAX",
-        context: {
-          pt: "Medidas de faturamento, margem, contagem, popularidade e posição. As fórmulas e suas interpretações estão nos cases.",
-          en: "Measures for revenue, margin, counts, popularity and position. Formulas and their interpretations appear in the case studies.",
+          pt: "Construo relatórios com páginas, filtros e visuais para explorar músicas, vendas e abastecimentos. Os quatro cases mostram esse trabalho.",
+          en: "I build reports with pages, filters and visuals to explore music, sales and fuel data. The four case studies show this work.",
         },
       },
     ],
   },
   {
     category: {
-      pt: "Rotina profissional",
-      en: "Professional routine",
+      pt: "Preparação dos dados",
+      en: "Data preparation",
     },
     tools: [
       {
         name: "Excel",
         context: {
-          pt: "Ferramenta presente nas atividades administrativas e no trabalho com dados; também é fonte dos dashboards deste portfólio.",
-          en: "Used in administrative work and data-related activities; it also supplies data to this portfolio’s dashboards.",
+          pt: "Utilizo na rotina administrativa e no trabalho com dados. Planilhas também são a fonte dos dashboards do portfólio.",
+          en: "I use it in administrative and data work. Spreadsheets also supply the data for the portfolio dashboards.",
         },
       },
       {
-        name: "SAP ERP · SAT",
+        name: "Power Query",
         context: {
-          pt: "Sistemas presentes na rotina administrativa da empresa de transporte, em um contexto de compras e informações operacionais.",
-          en: "Systems used in the transportation company’s administrative routine, in the context of purchasing and operational information.",
+          pt: "Importo planilhas, ajusto tipos e categorias e combino bases. No case de vendas, reúno os dados das lojas antes da análise.",
+          en: "I import spreadsheets, adjust types and categories, and combine datasets. In the sales tracking case, I bring store data together before analysis.",
         },
       },
     ],
   },
   {
     category: {
-      pt: "Desenvolvimento técnico",
-      en: "Technical development",
+      pt: "Modelagem e cálculos",
+      en: "Modeling and calculations",
     },
     tools: [
       {
-        name: "SQL",
+        name: "DAX",
         context: {
-          pt: "Estudo de fundamentos de consulta a dados, com curso de Fundamentos de SQL concluído.",
-          en: "Study of data-query fundamentals, supported by a completed SQL Fundamentals course.",
+          pt: "Construo medidas de faturamento, margem, contagem e posição. Nos cases, apresento as fórmulas e explico o que calculam.",
+          en: "I build revenue, margin, count and ranking measures. The case studies include the formulas and explain what they calculate.",
         },
       },
       {
+        name: "SQL",
+        context: {
+          pt: "Estudo consultas a dados, com o curso de Fundamentos de SQL concluído. Os projetos publicados aqui usam Power Query e DAX.",
+          en: "I am studying data queries and have completed SQL Fundamentals. The projects published here use Power Query and DAX.",
+        },
+      },
+    ],
+  },
+  {
+    category: {
+      pt: "Estudos complementares",
+      en: "Further studies",
+    },
+    tools: [
+      {
         name: "Python",
         context: {
-          pt: "Área de estudo voltada à análise de dados e automação.",
-          en: "An area of study focused on data analysis and automation.",
+          pt: "Estudo programação aplicada à análise de dados e automação.",
+          en: "I am studying programming for data analysis and automation.",
         },
       },
       {
         name: "APIs · Git · GitHub",
         context: {
-          pt: "Temas de desenvolvimento contínuo em integração de dados, versionamento e documentação de projetos.",
-          en: "Areas of continuing study in data integration, version control and project documentation.",
+          pt: "Exploro integração de dados, versionamento e documentação para apoiar a construção dos projetos.",
+          en: "I am exploring data integration, version control and documentation to support my project work.",
         },
       },
     ],

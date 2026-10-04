@@ -83,8 +83,8 @@ export const projects: Project[] = [
       en: "Category normalization in Power Query, DAX counts and ranking measures, and four pages for exploring artists and songs.",
     },
     shortDescription: {
-      pt: "Dashboard em Power BI com quatro páginas para explorar músicas, artistas, tipos de álbum, popularidade, duração e recortes temporais de uma base Spotify Top 50.",
-      en: "A four-page Power BI dashboard for exploring songs, artists, album types, popularity, duration and time-based views from a Spotify Top 50 dataset.",
+      pt: "Quais músicas e artistas aparecem no Top 50, e como essa presença muda ao longo do tempo? Quatro páginas em Power BI exploram o ranking, a popularidade e as características das músicas.",
+      en: "Which songs and artists appear in the Top 50, and how does their presence change over time? Four Power BI pages explore ranking positions, popularity and song characteristics.",
     },
     categoryKey: "music",
     category: {
@@ -143,8 +143,8 @@ export const projects: Project[] = [
     context: {
       status: "complete",
       content: {
-        pt: "Case principal dedicado à exploração de um recorte histórico do Spotify Top 50. As quatro páginas conectam uma leitura consolidada do catálogo observado à investigação de artistas e músicas.",
-        en: "The main case explores a historical Spotify Top 50 snapshot. Four pages connect an overview of the observed catalogue with artist and song investigation.",
+        pt: "Neste projeto, organizei um histórico do Spotify Top 50 para explorar a presença de artistas e músicas no ranking. A navegação parte da visão geral e chega ao detalhe de cada artista ou faixa.",
+        en: "In this project, I organized a historical Spotify Top 50 dataset to explore how artists and songs appear in the ranking. Navigation moves from an overview to individual artists and songs.",
       },
       items: [],
     },
@@ -192,8 +192,8 @@ export const projects: Project[] = [
     treatment: {
       status: "complete",
       content: {
-        pt: "O Power Query promove cabeçalhos, define tipos, seleciona 11 campos e padroniza categorias e um nome de artista. A sequência completa foi recuperada do PBIX.",
-        en: "Power Query promotes headers, sets types, selects 11 fields and standardizes categories and one artist name. The complete sequence was recovered from the PBIX.",
+        pt: "No Power Query, promovi cabeçalhos, defini os tipos e selecionei 11 campos. Também padronizei categorias de álbum e corrigi a codificação de um nome de artista.",
+        en: "In Power Query, I promoted headers, set data types and selected 11 fields. I also standardized album categories and corrected the encoding of an artist name.",
       },
       items: [
         {
@@ -396,8 +396,8 @@ export const projects: Project[] = [
     insights: {
       status: "complete",
       content: {
-        pt: "Capacidades analíticas: comparar alcance do repertório, recorrência e posição; distinguir popularidade média de permanência no ranking; explorar diferenças por tipo de álbum, conteúdo explícito e período.",
-        en: "Analytical capabilities: compare repertoire breadth, recurrence and position; distinguish average popularity from persistence in the ranking; explore differences by album type, explicit content and period.",
+        pt: "O relatório permite comparar a variedade de músicas de cada artista, a frequência das aparições e a posição no ranking. Os filtros ajudam a separar popularidade de permanência e a explorar o recorte por período e tipo de álbum.",
+        en: "The report lets you compare the range of songs for each artist, how often they appear and their ranking positions. Filters help distinguish popularity from persistence and explore the dataset by period and album type.",
       },
       items: [
         {
@@ -413,16 +413,16 @@ export const projects: Project[] = [
     results: {
       status: "complete",
       content: {
-        pt: "Dashboard de quatro páginas com navegação, indicadores e exploração por artista e música. A leitura do PBIX documenta as fórmulas e explicita diferenças entre títulos, combinações música–artista e entradas no ranking.",
-        en: "A four-page dashboard with navigation, indicators and artist/song exploration. PBIX inspection documents formulas and clarifies the differences between titles, song–artist combinations and ranking entries.",
+        pt: "Construí um relatório de quatro páginas para explorar o ranking por artista, música e período. Os cálculos permitem distinguir títulos, combinações música–artista e aparições, uma diferença essencial para ler os indicadores.",
+        en: "I built a four-page report to explore the ranking by artist, song and period. The calculations distinguish titles, song–artist combinations and appearances, an essential difference when reading the indicators.",
       },
       items: [],
     },
     learnings: {
       status: "complete",
       content: {
-        pt: "O case demonstra prática em Power Query, medidas DAX, parâmetros de campos, navegação entre páginas e composição de uma experiência analítica com diferentes níveis de detalhe.",
-        en: "The case demonstrates practice in Power Query, DAX measures, field parameters, page navigation and analytical experiences with multiple levels of detail.",
+        pt: "Apliquei Power Query, medidas DAX e parâmetros de campos. Organizei a navegação para passar da visão geral ao detalhe sem perder a pergunta da análise.",
+        en: "I used Power Query, DAX measures and field parameters. I organized navigation to move from overview to detail while keeping the analytical question in view.",
       },
       items: [],
     },
@@ -492,8 +492,8 @@ export const projects: Project[] = [
       en: "Revenue, cost, profit and margin measures, a related calendar, and commercial breakdowns on desktop and portrait pages.",
     },
     shortDescription: {
-      pt: "Dashboard de vendas em Power BI com uma página principal para desktop e uma página retrato dedicada, cobrindo faturamento, custo, lucro, margem, descontos, países, clientes e produtos.",
-      en: "A Power BI sales dashboard with one main desktop page and a dedicated portrait page covering revenue, cost, profit, margin, discounts, countries, customers and products.",
+      pt: "Uma leitura das vendas por país, produto e tipo de cliente, com faturamento, descontos, custo, lucro e margem. O relatório tem uma página desktop e uma composição em formato retrato.",
+      en: "A view of sales by country, product and customer type, covering revenue, discounts, costs, profit and margin. The report includes a desktop page and a portrait composition.",
     },
     categoryKey: "sales",
     category: {
@@ -519,8 +519,8 @@ export const projects: Project[] = [
     context: {
       status: "complete",
       content: {
-        pt: "Análise comercial e financeira por período, país, tipo de cliente e produto, com uma página desktop e uma página em formato retrato.",
-        en: "Commercial and financial analysis by period, country, customer type and product, with a desktop page and a portrait page.",
+        pt: "Neste relatório, reuni vendas e indicadores financeiros para comparar países, produtos e tipos de cliente. Preparei duas composições: uma para desktop e outra em formato retrato.",
+        en: "In this report, I brought sales and financial indicators together to compare countries, products and customer types. I created two compositions: one for desktop and one in portrait format.",
       },
       items: [],
     },
@@ -696,29 +696,29 @@ export const projects: Project[] = [
     insights: {
       status: "complete",
       content: {
-        pt: "Capacidades analíticas: acompanhar receita e custos em conjunto, comparar lucro absoluto com margem relativa e identificar segmentos com alto volume e menor rentabilidade.",
-        en: "Analytical capabilities: examine revenue alongside costs, compare absolute profit with relative margin and identify high-volume segments with lower profitability.",
+        pt: "Faturamento e lucro contam partes diferentes da história. O relatório permite comparar receita, custo e margem no mesmo recorte e investigar segmentos que vendem mais, mas apresentam menor rentabilidade.",
+        en: "Revenue and profit tell different parts of the story. The report lets you compare revenue, cost and margin within the same selection and investigate segments with higher sales but lower profitability.",
       },
       items: [
         {
-          pt: "Receita → custo → lucro → margem é uma sequência de leitura financeira. Lucro é somado de uma coluna da base; margem divide esse lucro pelo faturamento líquido. Isso não demonstra causalidade empresarial.",
-          en: "Revenue → cost → profit → margin is a financial reading sequence. Profit is summed from a source column; margin divides that profit by net revenue. This does not demonstrate business causality.",
+          pt: "O lucro é somado de uma coluna da base; a margem divide esse lucro pelo faturamento líquido. Ler os dois em conjunto ajuda a comparar valor absoluto e proporção, sem atribuir uma causa à diferença.",
+          en: "Profit is summed from a source column; margin divides that profit by net revenue. Reading them together helps compare absolute values and proportions without attributing a cause to the difference.",
         },
       ],
     },
     results: {
       status: "complete",
       content: {
-        pt: "Relatório navegável com indicadores financeiros, recortes por país, produto e tipo de cliente, e composições desktop e retrato.",
-        en: "A navigable report with financial indicators, views by country, product and customer type, and desktop and portrait compositions.",
+        pt: "Construí um relatório com indicadores financeiros, filtros por país, produto e cliente e duas composições de página. A comparação entre receita e margem orienta a leitura.",
+        en: "I built a report with financial indicators, country, product and customer filters, and two page compositions. Comparing revenue with margin guides the analysis.",
       },
       items: [],
     },
     learnings: {
       status: "complete",
       content: {
-        pt: "O case demonstra prática em integração de métricas financeiras, calendário relacionado, comparação entre receita e rentabilidade e adaptação de composição para uma página retrato.",
-        en: "The case demonstrates practice in integrating financial measures, a related calendar, revenue/profitability comparisons and adapting a composition to a portrait page.",
+        pt: "Apliquei medidas financeiras e um calendário relacionado à base de vendas. Também adaptei a disposição dos gráficos e filtros para a página retrato.",
+        en: "I used financial measures and a calendar related to the sales dataset. I also adapted the charts and filters for the portrait page.",
       },
       items: [],
     },
@@ -780,8 +780,8 @@ export const projects: Project[] = [
       en: "Three-store consolidation, a model with commercial dimensions, and navigation from a sales overview to detailed analysis.",
     },
     shortDescription: {
-      pt: "Dashboard de vendas em Power BI com Visão Geral e Detalhamento de Loja, analisando faturamento, valor médio por registro, frequência de vendas, produtos, vendedores, lojas e cidades.",
-      en: "A Power BI sales dashboard with Overview and Store Detail pages analyzing revenue, average record value, sales-record frequency, products, salespeople, stores and cities.",
+      pt: "Como as vendas se distribuem entre lojas, produtos e vendedores? Duas páginas permitem comparar faturamento e registros de venda e aprofundar a análise de cada loja.",
+      en: "How are sales distributed across stores, products and sellers? Two pages compare revenue and sales records and provide a closer look at each store.",
     },
     categoryKey: "sales",
     category: {
@@ -818,8 +818,8 @@ export const projects: Project[] = [
     context: {
       status: "complete",
       content: {
-        pt: "Análise de vendas de três lojas, com dimensões de produto, vendedor e calendário. A experiência conecta visão executiva e investigação detalhada.",
-        en: "Sales analysis across three stores, with product, salesperson and calendar dimensions. The experience connects an executive overview to detailed investigation.",
+        pt: "Reuni os dados de três lojas para comparar vendas por produto, vendedor e período. A primeira página apresenta o conjunto; a segunda aprofunda a leitura de cada loja.",
+        en: "I brought together data from three stores to compare sales by product, salesperson and period. The first page provides an overview; the second takes a closer look at each store.",
       },
       items: [],
     },
@@ -1006,8 +1006,8 @@ export const projects: Project[] = [
     insights: {
       status: "complete",
       content: {
-        pt: "Capacidades analíticas: partir da comparação entre lojas, localizar a distribuição geográfica e temporal e aprofundar a composição por produto ou vendedor.",
-        en: "Analytical capabilities: start with store comparisons, locate geographic and temporal distribution, and investigate composition by product or salesperson.",
+        pt: "A análise começa pela comparação entre lojas e avança para os produtos, vendedores e períodos que compõem cada resultado. Os recortes ajudam a localizar diferenças e escolher o que investigar em detalhe.",
+        en: "The analysis starts with store comparisons, then moves into the products, sellers and periods behind each result. These views help locate differences and decide what to investigate further.",
       },
       items: [
         {
@@ -1019,16 +1019,16 @@ export const projects: Project[] = [
     results: {
       status: "complete",
       content: {
-        pt: "Dashboard com duas páginas principais e tooltip, base consolidada de três lojas, quatro dimensões relacionadas e navegação da visão geral para o detalhe.",
-        en: "A dashboard with two main pages and a tooltip, a consolidated three-store dataset, four related dimensions and navigation from overview to detail.",
+        pt: "Construí duas páginas e um tooltip a partir da base consolidada de três lojas. Quatro dimensões relacionadas permitem navegar da visão geral para o detalhe por loja, produto, vendedor e período.",
+        en: "I built two pages and a tooltip from the combined dataset of three stores. Four related dimensions support navigation from an overview to detail by store, product, salesperson and period.",
       },
       items: [],
     },
     learnings: {
       status: "complete",
       content: {
-        pt: "O case demonstra prática em consolidação de consultas, limpeza textual, modelagem dimensional, cálculo de receita, parâmetros de campos e detalhamento progressivo.",
-        en: "The case demonstrates practice in query consolidation, text cleanup, dimensional modeling, revenue calculation, field parameters and progressive detail.",
+        pt: "Combinei consultas, tratei textos e organizei o modelo dimensional. Usei medidas de receita e parâmetros de campos para oferecer diferentes recortes da mesma base.",
+        en: "I combined queries, cleaned text and organized the dimensional model. I used revenue measures and field parameters to provide different views of the same dataset.",
       },
       items: [],
     },
@@ -1090,8 +1090,8 @@ export const projects: Project[] = [
       en: "Spending by location and vehicle in a public version with fictional data. Monthly comparison requires the validation described in the case study.",
     },
     shortDescription: {
-      pt: "Dashboard de abastecimentos criado a partir de uma necessidade real, com gastos e registros por localização e veículo. A versão do portfólio utiliza dados e placas fictícios.",
-      en: "A refueling dashboard developed from a real need, showing expenditure and records by location and vehicle. The portfolio version uses fictional data and license plates.",
+      pt: "Um dashboard para acompanhar gastos e registros de abastecimento por veículo e localização, criado a partir de uma necessidade real. A versão pública usa dados e placas fictícios.",
+      en: "A dashboard for tracking fuel spending and records by vehicle and location, built for a real need. The public version uses fictional data and license plates.",
     },
     categoryKey: "fleet",
     category: {
@@ -1128,8 +1128,8 @@ export const projects: Project[] = [
     context: {
       status: "complete",
       content: {
-        pt: "Projeto criado para uma necessidade real de acompanhamento de abastecimentos. Segundo o autor, a versão apresentada no portfólio substitui dados, placas e elementos identificadores por informações fictícias. Os números públicos não representam resultados da operação original.",
-        en: "A project created for a real fuel-monitoring need. According to the author, the portfolio version replaces data, license plates and identifying elements with fictional information. Public figures do not represent the original operation’s results.",
+        pt: "Criei este projeto para acompanhar abastecimentos em uma situação real de trabalho. Para apresentá-lo no portfólio, substituí dados, placas e identificadores por informações fictícias. Os valores públicos servem para demonstrar o relatório.",
+        en: "I created this project to track fuel records in a real work situation. For the portfolio, I replaced data, license plates and identifiers with fictional information. The public figures demonstrate how the report works.",
       },
       items: [],
     },
@@ -1152,8 +1152,8 @@ export const projects: Project[] = [
     data: {
       status: "complete",
       source: {
-        pt: "Dois PBIX fornecidos foram comparados. O Power Query carrega uma planilha Excel de movimentos de abastecimento. Somente a versão ilustrativa do dashboard é apresentada publicamente.",
-        en: "Two supplied PBIX files were compared. Power Query loads an Excel worksheet of refueling movements. Only the illustrative dashboard version is presented publicly.",
+        pt: "Planilha Excel de movimentos de abastecimento, carregada pelo Power Query. O portfólio apresenta somente a versão ilustrativa do dashboard.",
+        en: "An Excel spreadsheet of fuel records, loaded through Power Query. The portfolio shows only the illustrative version of the dashboard.",
       },
       entities: ["movimentos_detalhados (4)", "dCalendario"],
       fields: [
@@ -1169,8 +1169,8 @@ export const projects: Project[] = [
         "Valor Total da venda",
       ],
       note: {
-        pt: "As medidas operam sobre registros com valor de venda. A estrutura selecionada não comprova um identificador único de evento. Valores e placas exibidos no portfólio são fictícios, conforme informado pelo autor.",
-        en: "Measures operate on records containing a sale value. The selected structure does not establish a unique event identifier. Values and plates displayed in the portfolio are fictional, as stated by the author.",
+        pt: "As medidas usam registros com valor de venda, sem um identificador único de evento confirmado na estrutura. Valores e placas desta versão são fictícios.",
+        en: "Measures use records containing a sale value, with no confirmed unique event identifier in the structure. Values and license plates in this version are fictional.",
       },
     },
     treatment: {
@@ -1252,24 +1252,24 @@ export const projects: Project[] = [
     insights: {
       status: "complete",
       content: {
-        pt: "Capacidades analíticas: comparar concentração do gasto por UF, cidade e veículo no recorte exibido. A investigação temporal depende de revisar e validar o relacionamento da versão “(1)”.",
-        en: "Analytical capabilities: compare expenditure concentration by state, city and vehicle in the displayed slice. Temporal investigation depends on reviewing and validating the relationship in version “(1)”.",
+        pt: "O relatório permite comparar a concentração de gastos por estado, cidade e veículo. Para analisar a evolução mensal, é necessário corrigir e validar o relacionamento temporal identificado na versão publicada.",
+        en: "The report supports comparisons of spending by state, city and vehicle. Monthly analysis requires correcting and validating the time relationship identified in the published version.",
       },
       items: [],
     },
     results: {
       status: "complete",
       content: {
-        pt: "Entregável de monitoramento com navegação e distribuição de gastos por localização e veículo, apresentado com dados fictícios. A revisão identificou uma divergência de relacionamento entre versões que precisa ser resolvida antes de validar análises mensais.",
-        en: "A monitoring deliverable with navigation and expenditure distribution by location and vehicle, presented with fictional data. Review identified a relationship difference between versions that must be resolved before monthly analysis can be validated.",
+        pt: "Construí uma visão de gastos e registros de abastecimento por localização e veículo. A versão pública usa dados fictícios. A análise mensal permanece com uma pendência de relacionamento temporal, explicada neste case.",
+        en: "I built a view of fuel spending and records by location and vehicle. The public version uses fictional data. Monthly analysis still has a time-relationship issue, explained in this case study.",
       },
       items: [],
     },
     learnings: {
       status: "complete",
       content: {
-        pt: "O case demonstra prática em preparação de registros operacionais, agregação financeira, filtros e apresentação de uma necessidade real com dados ilustrativos. Também evidencia a importância de validar o caminho de filtros entre calendário e medidas.",
-        en: "The case demonstrates practice in preparing operational records, financial aggregation, filters and presenting a real need with illustrative data. It also highlights the importance of validating the filter path between calendar and measures.",
+        pt: "Preparei registros operacionais e construí medidas e filtros para acompanhar os gastos. A revisão do modelo também mostrou onde o caminho entre calendário e medidas precisa ser validado.",
+        en: "I prepared operational records and built measures and filters to track spending. Reviewing the model also showed where the path between the calendar and measures needs validation.",
       },
       items: [],
     },

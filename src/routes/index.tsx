@@ -121,7 +121,7 @@ export function HomePage() {
         title={h.stackTitle}
         description={h.stackDescription}
       >
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {skillGroups.map((group) => (
             <article key={group.category.pt} className="border-t border-border pt-5">
               <h3 className="text-card-title">{l(group.category)}</h3>

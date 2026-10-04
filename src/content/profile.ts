@@ -1,4 +1,4 @@
-/** Perfil editorial PT/EN. Fontes e limites em docs/EDITORIAL_REVIEW_STAGE17.md. */
+/** Perfil editorial PT/EN. Revisão e limites em docs/EDITORIAL_REVIEW_2026_10.md. */
 export const profile = {
   name: "João Vittor",
   fullName: "João Vittor Nogueira",
@@ -8,16 +8,16 @@ export const profile = {
     en: "Data Analyst | Business Intelligence",
   },
   heroStatement: {
-    pt: "Análise de dados com contexto de operações e negócio.",
-    en: "Data analysis grounded in operations and business context.",
+    pt: "Antes do dashboard, vem a pergunta.",
+    en: "Before the dashboard comes the question.",
   },
   heroDescription: {
-    pt: "Desenvolvo dashboards em Power BI e construo minha trajetória em Dados/BI a partir da experiência administrativa no setor de transporte.",
-    en: "I build Power BI dashboards and develop my Data/BI career from a background in transportation administration.",
+    pt: "Desenvolvo projetos de BI: preparo os dados, organizo os modelos e construo medidas e dashboards em Power BI para investigar o que os números mostram.",
+    en: "I build BI projects: preparing data, structuring models and creating measures and Power BI dashboards to explore what the numbers show.",
   },
   metaDescription: {
-    pt: "João Vittor Nogueira: trajetória em Logística e administração, projetos em Power BI e desenvolvimento profissional em Análise de Dados e Business Intelligence.",
-    en: "João Vittor Nogueira: a background in Logistics and administration, Power BI projects and professional development in Data Analysis and Business Intelligence.",
+    pt: "João Vittor Nogueira — Analista de Dados | Business Intelligence. Projetos em Power BI, preparação de dados, modelagem e DAX, com explicações sobre cada análise.",
+    en: "João Vittor Nogueira — Data Analyst | Business Intelligence. Power BI projects, data preparation, modeling and DAX, with the reasoning behind each analysis.",
   },
   images: {
     portrait: "/images/profile/portrait.webp",
@@ -40,48 +40,48 @@ export const profile = {
       en: "Professional focus",
     },
     title: {
-      pt: "Do contexto operacional à análise.",
-      en: "From operational context to analysis.",
+      pt: "O raciocínio por trás do relatório.",
+      en: "The thinking behind the report.",
     },
     text: {
-      pt: "Nos cases, explico o que cada medida calcula, quais perguntas ela permite investigar e quais são seus limites. A análise conecta o indicador ao contexto dos dados.",
-      en: "In the case studies, I explain what each measure calculates, which questions it can help investigate and where its limits lie. The analysis connects each indicator to the context of its data.",
+      pt: "Uma música pode aparecer várias vezes no ranking. Um registro de venda nem sempre é um pedido. Nos meus projetos, explico essas diferenças antes de comparar os números.",
+      en: "A song can appear in a ranking more than once. A sales record is not always an order. In my projects, I explain those differences before comparing the numbers.",
     },
   },
   about: {
     summary: {
-      pt: "A formação em Logística e o MBA em Supply Chain Management são a base de negócio da minha trajetória. Hoje, a atuação administrativa e o curso de Ciência da Computação se encontram nos estudos e projetos de análise de dados.",
-      en: "My Logistics degree and MBA in Supply Chain Management provide the business foundation for my career. Today, administrative work and Computer Science studies come together in my data analysis learning and projects.",
+      pt: "Gosto de investigar uma pergunta e acompanhar a análise até conseguir explicá-la. Nos projetos de BI, isso passa por entender a base, preparar os dados e decidir o que o relatório precisa mostrar.",
+      en: "I enjoy investigating a question and working through the analysis until I can explain it. In my BI projects, that means understanding the dataset, preparing the data and deciding what the report needs to show.",
     },
     blocks: [
       {
         title: {
-          pt: "Base de negócio",
-          en: "Business foundation",
+          pt: "Pergunta antes da ferramenta",
+          en: "The question comes first",
         },
         text: {
-          pt: "CST em Logística concluído e MBA em Supply Chain Management concluído, combinando visão operacional e entendimento de processos.",
-          en: "Completed Technology Degree in Logistics and MBA in Supply Chain Management, combining operational perspective and process understanding.",
+          pt: "Começo pelo que preciso entender e pelas informações disponíveis. A escolha da ferramenta vem depois.",
+          en: "I start with what I need to understand and the information available. The choice of tool follows.",
         },
       },
       {
         title: {
-          pt: "Dados no trabalho",
-          en: "Data at work",
+          pt: "Aprendizado em projetos",
+          en: "Learning through projects",
         },
         text: {
-          pt: "A rotina administrativa inclui contato com compras, indicadores e dados, utilizando ferramentas como SAP ERP, SAT, Excel e Power BI.",
-          en: "My administrative routine includes purchasing, indicators and data, using tools such as SAP ERP, SAT, Excel and Power BI.",
+          pt: "Estudo, testo e refaço. Os projetos são onde aplico Power Query, modelagem e DAX e confiro o que cada cálculo representa.",
+          en: "I study, test and revise. Projects are where I apply Power Query, modeling and DAX and check what each calculation represents.",
         },
       },
       {
         title: {
-          pt: "Desenvolvimento técnico",
-          en: "Technical development",
+          pt: "Dados na rotina",
+          en: "Data in daily work",
         },
         text: {
-          pt: "Ciência da Computação em andamento e evolução contínua em Power BI, Power Query, DAX, SQL, Python, APIs, Git e GitHub.",
-          en: "Computer Science in progress and continuous development in Power BI, Power Query, DAX, SQL, Python, APIs, Git and GitHub.",
+          pt: "O trabalho administrativo com compras e indicadores me dá contato com as informações que uma operação precisa acompanhar.",
+          en: "Administrative work with purchasing and indicators gives me contact with the information an operation needs to track.",
         },
       },
     ],
@@ -93,47 +93,47 @@ export const profile = {
         en: "Who I am",
       },
       text: {
-        pt: "Sou João Vittor Nogueira. Minha trajetória reúne formação em Logística, MBA em Supply Chain Management e atuação administrativa em uma empresa de transporte. Estou direcionando meu desenvolvimento profissional para Análise de Dados e Business Intelligence.",
-        en: "I am João Vittor Nogueira. My background combines a degree in Logistics, an MBA in Supply Chain Management and administrative work at a transportation company. I am directing my professional development toward Data Analysis and Business Intelligence.",
+        pt: "Sou João Vittor Nogueira, Analista de Dados com foco em Business Intelligence. Gosto de entender um problema, investigar os dados disponíveis e construir uma análise que eu consiga explicar com clareza. É assim que desenvolvo meus projetos em Power BI e construo minha carreira em Dados/BI.",
+        en: "I’m João Vittor Nogueira, a Data Analyst focused on Business Intelligence. I like understanding a problem, examining the available data and building an analysis I can explain clearly. That is how I approach my Power BI projects and build my career in Data/BI.",
       },
     },
     {
       title: {
-        pt: "O ponto de partida: a operação",
-        en: "Starting with operations",
+        pt: "O que me trouxe aos dados",
+        en: "What drew me to data",
       },
       text: {
-        pt: "Na rotina administrativa, tenho contato com compras, indicadores e dados, utilizando SAP ERP, SAT, Excel e Power BI. Esse contexto dá uma referência concreta aos meus estudos: entender de onde vem uma informação, o que ela representa e como pode apoiar a leitura da operação.",
-        en: "In my administrative routine, I work with purchasing, indicators and data, using SAP ERP, SAT, Excel and Power BI. This context gives my studies a practical reference: understanding where information comes from, what it represents and how it can help explain operations.",
+        pt: "Meu interesse vem da vontade de resolver problemas do dia a dia. Trabalho na área administrativa de uma empresa de transporte, com compras e acompanhamento de indicadores. O projeto de abastecimentos nasceu de uma necessidade real dessa rotina: organizar a leitura dos gastos e dos registros por veículo e localização.",
+        en: "My interest comes from wanting to solve everyday problems. I work in administration at a transportation company, handling purchasing and monitoring indicators. The fuel project grew out of a real need in that routine: making spending and records easier to examine by vehicle and location.",
       },
     },
     {
       title: {
-        pt: "Da base de negócio ao desenvolvimento técnico",
-        en: "From business foundations to technical development",
+        pt: "Como aprendo e construo",
+        en: "How I learn and build",
       },
       text: {
-        pt: "Curso Ciência da Computação e complemento essa formação com estudos de Power BI, Power Query, DAX, Excel e SQL. Nos projetos deste portfólio, preparo dados, organizo modelos e construo medidas e relatórios navegáveis. Os cases detalham as fórmulas e os recortes de análise de cada trabalho.",
-        en: "I study Computer Science and complement it with Power BI, Power Query, DAX, Excel and SQL coursework. In the projects in this portfolio, I prepare data, organize models and build measures and navigable reports. The case studies explain each project’s formulas and analytical views.",
+        pt: "Boa parte do meu aprendizado acontece ao testar, conferir resultados e refazer os projetos. Trabalho com Power BI, Power Query, DAX e Excel, estudo SQL e curso Ciência da Computação para ampliar minha base técnica. Antes de escolher uma ferramenta, procuro entender a pergunta e o que os dados permitem responder.",
+        en: "Much of my learning comes from testing, checking results and revising projects. I work with Power BI, Power Query, DAX and Excel, study SQL and am pursuing Computer Science to broaden my technical foundation. Before choosing a tool, I work out the question and what the data can answer.",
       },
     },
     {
       title: {
-        pt: "Direção profissional",
-        en: "Professional direction",
+        pt: "O trabalho que quero fazer",
+        en: "The work I want to do",
       },
       text: {
-        pt: "Meu objetivo é consolidar uma carreira em Dados/BI, aprofundando a capacidade de consultar, tratar e analisar dados. Quero manter a conexão com processos e contexto de negócio ao explicar o que os indicadores mostram e quais são seus limites.",
-        en: "My goal is to build a career in Data/BI, developing my ability to query, prepare and analyze data. I want to stay connected to processes and business context when explaining what indicators show and where their limits lie.",
+        pt: "Quero trabalhar com Dados e BI: preparar bases, desenvolver análises e criar relatórios que ajudem outras pessoas a acompanhar o que importa. A formação em Logística e o MBA em Supply Chain Management me ajudam a entender as necessidades de uma operação. Programação e automação entram como caminhos para ampliar esse trabalho.",
+        en: "I want to work in Data and BI: preparing datasets, developing analyses and creating reports that help people track what matters. My Logistics degree and MBA in Supply Chain Management help me understand operational needs. Programming and automation are ways to expand that work.",
       },
     },
   ],
   contactIntro: {
-    pt: "Para conversar sobre oportunidades em Dados/BI ou sobre os projetos deste portfólio, entre em contato pelo LinkedIn ou pelo e-mail.",
-    en: "For Data/BI opportunities or a conversation about the projects in this portfolio, reach me through LinkedIn or email.",
+    pt: "Quer conversar sobre uma oportunidade em Dados/BI ou sobre um dos projetos? Fale comigo pelo LinkedIn ou por e-mail.",
+    en: "Have a Data/BI opportunity or a question about a project? Get in touch on LinkedIn or by email.",
   },
   projectsIntro: {
-    pt: "Quatro projetos em Power BI exploram música, desempenho comercial e abastecimentos. Cada case apresenta os dados, as medidas e as perguntas que o dashboard permite investigar.",
-    en: "Four Power BI projects explore music, commercial performance and refueling. Each case presents the data, measures and questions the dashboard can help investigate.",
+    pt: "Como comparar a presença de músicas em um ranking? O que muda nas vendas entre lojas? Estes quatro projetos mostram como preparo os dados, construo os cálculos e organizo a leitura em Power BI.",
+    en: "How do you compare songs’ appearances in a ranking? How do sales differ between stores? These four projects show how I prepare data, build calculations and organize the analysis in Power BI.",
   },
 };

@@ -29,7 +29,7 @@ export function DataNogsPage() {
         </div>
       </section>
 
-      <Section eyebrow={labels.scope} title={labels.scopeTitle}>
+      <Section eyebrow={labels.scope} title={labels.scopeTitle} description={l(datanogs.purpose)}>
         <TagList items={topics} />
       </Section>
 
