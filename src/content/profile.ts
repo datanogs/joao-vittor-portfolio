@@ -36,16 +36,16 @@ export const profile = {
   },
   positioning: {
     eyebrow: {
-      pt: "Perfil profissional",
-      en: "Professional focus",
+      pt: "Como trabalho",
+      en: "My approach",
     },
     title: {
-      pt: "O raciocínio por trás do relatório.",
-      en: "The thinking behind the report.",
+      pt: "Entender o problema. Explicar a análise.",
+      en: "Understand the problem. Explain the analysis.",
     },
     text: {
-      pt: "Uma música pode aparecer várias vezes no ranking. Um registro de venda nem sempre é um pedido. Nos meus projetos, explico essas diferenças antes de comparar os números.",
-      en: "A song can appear in a ranking more than once. A sales record is not always an order. In my projects, I explain those differences before comparing the numbers.",
+      pt: "Procuro entender o que precisa ser acompanhado, organizar os dados e conferir o que cada cálculo representa. O relatório é a forma de tornar essa análise clara para quem vai usá-la.",
+      en: "I work out what needs to be tracked, organize the data and check what each calculation represents. The report makes that analysis clear to the people who will use it.",
     },
   },
   about: {
