@@ -92,7 +92,7 @@ export const projects: Project[] = [
       en: "BI · Music",
     },
     featured: true,
-    technologies: ["Power BI", "Power Query", "DAX"],
+    technologies: ["Excel", "Power Query", "Power BI", "DAX"],
     coverImage: "/images/projects/spotify/overview.webp",
     gallery: [
       {
@@ -501,7 +501,7 @@ export const projects: Project[] = [
       en: "BI · Sales",
     },
     featured: false,
-    technologies: ["Power BI", "Power Query", "DAX"],
+    technologies: ["Excel", "Power Query", "Power BI", "DAX"],
     coverImage: "/images/projects/xsales/dashboard.webp",
     gallery: [
       {
@@ -789,7 +789,7 @@ export const projects: Project[] = [
       en: "BI · Sales",
     },
     featured: false,
-    technologies: ["Power BI", "Power Query", "DAX"],
+    technologies: ["Excel", "Power Query", "Power BI", "DAX"],
     coverImage: "/images/projects/acompanhamento-vendas/overview.webp",
     gallery: [
       {
@@ -1099,7 +1099,7 @@ export const projects: Project[] = [
       en: "BI · Fleet",
     },
     featured: false,
-    technologies: ["Power BI", "Power Query", "DAX"],
+    technologies: ["Excel", "Power Query", "Power BI", "DAX"],
     coverImage: "/images/projects/frota-leve/dashboard.webp",
     gallery: [
       {

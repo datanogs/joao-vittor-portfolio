@@ -6,6 +6,7 @@ import { LinkButton, Section, TagList } from "@/components/site/primitives";
 import type { CaseBlock, Project } from "@/content/projects";
 import { imageDimensions } from "@/content/image-dimensions";
 import { getProject, projects } from "@/content/projects";
+import { projectProcesses } from "@/content/project-process";
 import { useI18n } from "@/lib/i18n";
 import { buildProjectSeoHead } from "@/lib/seo";
 
@@ -50,9 +51,15 @@ function Narrative({ block }: { block: CaseBlock }) {
 export function ProjectCasePage({ project }: { project: Project }) {
   const { t, l } = useI18n();
   const p = t.project;
+  const process = projectProcesses[project.slug];
+  const selectedMetrics = process?.metrics.flatMap((reading) => {
+    const definition = project.metrics.definitions.find((metric) => metric.name === reading.name);
+    return definition ? [{ ...definition, reading }] : [];
+  });
   const others = projects.filter((item) => item.slug !== project.slug);
   const chapters = [
     ["01", p.overview],
+    ...(process ? [["process", p.process]] : []),
     ["04", p.dataModel],
     ["08", p.metrics],
     ["09", p.explore],
@@ -127,9 +134,69 @@ export function ProjectCasePage({ project }: { project: Project }) {
                 <Narrative block={project.objective} />
               </div>
             </Chapter>
+            {process && (
+              <Chapter id="process" title={p.process}>
+                <p className="text-body text-muted-foreground mb-6">{p.processIntro}</p>
+                <ol className="analysis-flow">
+                  {process.stages.map((stage, index) => (
+                    <li key={stage.title.pt}>
+                      <a href={`#case-${stage.target}`}>
+                        <span className="flow-index" aria-hidden="true">
+                          {String(index + 1).padStart(2, "0")} <span>→</span>
+                        </span>
+                        <strong>{l(stage.title)}</strong>
+                        <span>{l(stage.detail)}</span>
+                        {stage.pending && (
+                          <small className="flow-pending">{p.validationPending}</small>
+                        )}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </Chapter>
+            )}
             <Chapter id="04" title={p.dataModel}>
               <p className="text-body text-muted-foreground">{l(project.data.source)}</p>
               <p className="mt-4 text-body text-muted-foreground">{l(project.data.note)}</p>
+              {process && (
+                <div className="case-prose">
+                  <h3 className="text-card-title">{p.excelRole}</h3>
+                  <p className="text-body">{l(process.excel)}</p>
+                  <p className="text-sm">{p.excelBoundary}</p>
+                  <h3 id="case-etl" className="text-card-title case-anchor">
+                    {p.etl}
+                  </h3>
+                  <dl className="etl-sequence">
+                    <div>
+                      <dt>
+                        <span aria-hidden="true">E</span>
+                        {p.extraction}
+                      </dt>
+                      <dd>{l(process.extraction)}</dd>
+                    </div>
+                    <div>
+                      <dt>
+                        <span aria-hidden="true">T</span>
+                        {p.transformation}
+                      </dt>
+                      <dd>
+                        <ul>
+                          {process.transformation.map((item) => (
+                            <li key={item.pt}>{l(item)}</li>
+                          ))}
+                        </ul>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>
+                        <span aria-hidden="true">L</span>
+                        {p.load}
+                      </dt>
+                      <dd>{l(process.load)}</dd>
+                    </div>
+                  </dl>
+                </div>
+              )}
               <dl className="case-technical">
                 <div>
                   <dt>{p.dataEntities}</dt>
@@ -155,22 +222,50 @@ export function ProjectCasePage({ project }: { project: Project }) {
                 </div>
               </dl>
               <div className="case-prose">
-                <h3 className="text-card-title">{p.model}</h3>
+                <h3 id="case-model" className="text-card-title case-anchor">
+                  {p.model}
+                </h3>
                 <p className="text-body">{l(project.modeling.content)}</p>
-                <h3 className="text-card-title">{p.treatment}</h3>
-                <Narrative block={project.treatment} />
-                <h3 className="text-card-title">{p.transformation}</h3>
-                <Narrative block={project.transformation} />
+                {!process && (
+                  <>
+                    <h3 className="text-card-title">{p.treatment}</h3>
+                    <Narrative block={project.treatment} />
+                  </>
+                )}
               </div>
             </Chapter>
             <Chapter id="08" title={p.metrics}>
+              <Narrative block={project.transformation} />
               <p className="text-body text-muted-foreground mb-6">{l(project.metrics.note)}</p>
+              {selectedMetrics && <p className="metric-intro text-body">{p.selectedMetrics}</p>}
               <dl className="metric-list">
-                {project.metrics.definitions.map((metric) => (
+                {(
+                  selectedMetrics ??
+                  project.metrics.definitions.map((definition) => ({
+                    ...definition,
+                    reading: undefined,
+                  }))
+                ).map((metric) => (
                   <div key={metric.name}>
                     <dt>{metric.name}</dt>
                     <dd>
                       <p className="text-body text-muted-foreground">{l(metric.interpretation)}</p>
+                      {metric.reading && (
+                        <div className="metric-reading">
+                          <p>
+                            <strong>{p.metricPurpose}</strong>
+                            {l(metric.reading.purpose)}
+                          </p>
+                          <p>
+                            <strong>{p.metricUsage}</strong>
+                            {l(metric.reading.usage)}
+                          </p>
+                          <p>
+                            <strong>{p.metricLogic}</strong>
+                            {l(metric.reading.logic)}
+                          </p>
+                        </div>
+                      )}
                       <details>
                         <summary>{p.viewFormula}</summary>
                         <pre>
