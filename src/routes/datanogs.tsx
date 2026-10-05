@@ -29,7 +29,9 @@ export function DataNogsPage() {
             height="120"
             className="datanogs-logo mb-7"
           />
-          <p className="text-eyebrow">{profile.fullName} · {l(datanogs.eyebrow)}</p>
+          <p className="text-eyebrow">
+            {profile.fullName} · {l(datanogs.eyebrow)}
+          </p>
           <h1 className="text-page-title mt-4">{l(datanogs.tagline)}</h1>
           <p className="mt-4 text-lead text-muted-foreground">{l(datanogs.description)}</p>
           <p className="mt-6 text-body text-muted-foreground">{l(datanogs.relationship)}</p>
