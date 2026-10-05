@@ -99,7 +99,7 @@ export function buildSeoHead(lang: Lang, config: SeoConfig) {
   const canonical = absoluteUrl(currentPath);
   const ptAlternate = absoluteUrl(paths.pt);
   const enAlternate = absoluteUrl(paths.en);
-  const image = absoluteUrl(config.image ?? profile.images.portrait);
+  const image = absoluteUrl(config.image ?? profile.brandAssets.openGraph);
   const imageAlt = config.imageAlt?.[lang] ?? profile.fullName;
   const locale = lang === "pt" ? "pt_BR" : "en_US";
   const alternateLocale = lang === "pt" ? "en_US" : "pt_BR";
