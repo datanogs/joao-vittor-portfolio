@@ -1,0 +1,53 @@
+name: Generate Synthesis raster assets
+
+on:
+  push:
+    branches: [feat/synthesis-brand-system]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  brand-assets:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      VITE_SITE_URL: https://joao-vittor-portfolio.vercel.app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Install rasterizers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends librsvg2-bin webp
+      - name: Generate raster brand assets
+        run: |
+          mkdir -p public/brand/favicons public/brand/social
+          rsvg-convert -w 16 -h 16 public/brand/joao-vittor/symbol-micro.svg > public/brand/favicons/favicon-16x16.png
+          rsvg-convert -w 32 -h 32 public/brand/joao-vittor/symbol-micro.svg > public/brand/favicons/favicon-32x32.png
+          rsvg-convert -w 180 -h 180 public/brand/joao-vittor/symbol-master.svg > public/brand/favicons/apple-touch-icon.png
+          rsvg-convert -w 1024 -h 1024 public/brand/social/avatar-brand.svg > public/brand/social/avatar-brand.png
+          rsvg-convert -w 1200 -h 630 public/brand/social/og-joao-vittor.svg > /tmp/og-joao-vittor.png
+          cwebp -quiet -q 88 -m 6 /tmp/og-joao-vittor.png -o public/brand/social/og-joao-vittor.webp
+      - name: Commit generated rasters
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/brand/favicons/*.png public/brand/social/avatar-brand.png public/brand/social/og-joao-vittor.webp
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: generate synthesis raster assets [brand-assets]"
+          git push
+      - run: npm ci
+      - name: Validate content
+        run: npm run validate
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Release build
+        run: npm run build:release

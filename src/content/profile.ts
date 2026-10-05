@@ -22,6 +22,17 @@ export const profile = {
   images: {
     portrait: "/images/profile/portrait.webp",
   },
+  brandAssets: {
+    symbolMaster: "/brand/joao-vittor/symbol-master.svg",
+    symbolCompact: "/brand/joao-vittor/symbol-compact.svg",
+    symbolMicro: "/brand/joao-vittor/symbol-micro.svg",
+    symbolDark: "/brand/joao-vittor/symbol-dark.svg",
+    symbolLight: "/brand/joao-vittor/symbol-light.svg",
+    logoHorizontal: "/brand/joao-vittor/logo-horizontal.svg",
+    logoFull: "/brand/joao-vittor/logo-full.svg",
+    openGraph: "/brand/social/og-joao-vittor.webp",
+    avatar: "/brand/social/avatar-brand.png",
+  },
   location: {
     pt: "",
     en: "",
