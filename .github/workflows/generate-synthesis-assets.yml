@@ -36,9 +36,6 @@ jobs:
           rsvg-convert -w 1024 -h 1024 public/brand/social/avatar-brand.svg > public/brand/social/avatar-brand.png
           rsvg-convert -w 1200 -h 630 public/brand/social/og-joao-vittor.svg > /tmp/og-joao-vittor.png
           cwebp -quiet -q 88 -m 6 /tmp/og-joao-vittor.png -o public/brand/social/og-joao-vittor.webp
-      - run: npm ci
-      - run: npm run check
-      - run: npm run build:release
       - name: Commit generated rasters
         run: |
           git config user.name "github-actions[bot]"
@@ -47,3 +44,12 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "chore: generate synthesis raster assets [brand-assets]"
           git push
+      - run: npm ci
+      - name: Validate content
+        run: npm run validate
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Release build
+        run: npm run build:release
