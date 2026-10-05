@@ -25,7 +25,7 @@ export function HomePage() {
   const others = projects.filter((project) => project.slug !== featuredProject.slug);
   return (
     <SiteLayout>
-      <section className="border-b border-border">
+      <section className="brand-hero border-b border-border">
         <div className="site-container home-hero">
           <div className="hero-identity animate-rise min-w-0">
             <h1 className="text-display hero-name">{profile.fullName}</h1>
