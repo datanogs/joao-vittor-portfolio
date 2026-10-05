@@ -53,27 +53,27 @@
 :root,
 .light {
   --radius: 0.375rem;
-  --background: #f6f4ef;
-  --foreground: #252724;
-  --surface: #fffefa;
-  --surface-2: #eeebe4;
-  --surface-3: #e4e0d7;
+  --background: #F2F1ED;
+  --foreground: #0B0C0E;
+  --surface: #FFFFFF;
+  --surface-2: #E6E4DE;
+  --surface-3: #D8D5CE;
   --card: var(--surface);
   --card-foreground: var(--foreground);
   --popover: oklch(0.995 0.002 285);
   --popover-foreground: var(--foreground);
 
   /* Primary é usado como sinal/texto; primary-solid é reservado a preenchimentos. */
-  --primary: oklch(0.43 0.175 25.5);
-  --primary-strong: oklch(0.37 0.18 25.5);
-  --primary-solid: oklch(0.43 0.175 25.5);
-  --primary-soft: oklch(0.43 0.175 25.5 / 9%);
+  --primary: #B32632;
+  --primary-strong: #8F1D28;
+  --primary-solid: #B32632;
+  --primary-soft: rgb(179 38 50 / 9%);
   --primary-foreground: oklch(0.99 0.001 285);
 
   --secondary: oklch(0.94 0.005 285);
   --secondary-foreground: oklch(0.22 0.008 285);
   --muted: oklch(0.94 0.004 285);
-  --muted-foreground: #5b5d58;
+  --muted-foreground: #5E6166;
   --accent: var(--primary);
   --accent-foreground: var(--primary-foreground);
   --destructive: oklch(0.48 0.2 25);
@@ -82,7 +82,7 @@
   --border: oklch(0.18 0.01 285 / 11%);
   --border-strong: oklch(0.18 0.01 285 / 24%);
   --input: oklch(0.18 0.01 285 / 20%);
-  --ring: oklch(0.45 0.175 25.5 / 72%);
+  --ring: rgb(179 38 50 / 72%);
 
   --shadow-panel: 0 1px 0 oklch(1 0 0 / 75%) inset, 0 20px 60px -44px oklch(0.18 0.01 285 / 28%);
   --grid-line: oklch(0.18 0.01 285 / 4.5%);
@@ -93,27 +93,27 @@
 
 /* Dark — identidade principal. */
 .dark {
-  --background: #151719;
-  --foreground: #f0f0ec;
-  --surface: #1c1f22;
-  --surface-2: #24282c;
-  --surface-3: #2d3237;
+  --background: #0B0C0E;
+  --foreground: #F2F1ED;
+  --surface: #15171B;
+  --surface-2: #1F2125;
+  --surface-3: #292C31;
   --card: var(--surface);
   --card-foreground: var(--foreground);
   --popover: oklch(0.175 0.005 285);
   --popover-foreground: var(--foreground);
 
   /* Accent claro para texto/linhas; preenchimento separado para manter AA com branco. */
-  --primary: oklch(0.68 0.18 25.5);
-  --primary-strong: oklch(0.73 0.18 25.5);
-  --primary-solid: oklch(0.46 0.18 25.5);
-  --primary-soft: oklch(0.68 0.18 25.5 / 11%);
+  --primary: #D13A46;
+  --primary-strong: #E04A56;
+  --primary-solid: #B32632;
+  --primary-soft: rgb(209 58 70 / 11%);
   --primary-foreground: oklch(0.99 0.001 285);
 
   --secondary: oklch(0.205 0.006 285);
   --secondary-foreground: oklch(0.92 0.003 285);
   --muted: oklch(0.205 0.006 285);
-  --muted-foreground: #b6bbc0;
+  --muted-foreground: #8E929A;
   --accent: var(--primary);
   --accent-foreground: var(--primary-foreground);
   --destructive: oklch(0.62 0.19 25);
@@ -122,7 +122,7 @@
   --border: oklch(1 0 0 / 9%);
   --border-strong: oklch(1 0 0 / 19%);
   --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.7 0.18 25.5 / 78%);
+  --ring: rgb(209 58 70 / 78%);
 
   --shadow-panel: 0 1px 0 oklch(1 0 0 / 4%) inset, 0 28px 80px -56px oklch(0 0 0 / 92%);
   --grid-line: oklch(1 0 0 / 4%);
@@ -1038,4 +1038,104 @@
 
 .page-intro {
   padding-bottom: 1.5rem;
+}
+
+
+/* Synthesis — integração básica da identidade oficial. */
+.brand-logo-symbol {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+}
+.brand-logo-symbol img {
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+a:hover .brand-logo-symbol img {
+  transform: translateY(-1px) rotate(-1deg);
+}
+.brand-logo-symbol::after {
+  content: "";
+  position: absolute;
+  right: -0.18rem;
+  top: 50%;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transform: rotate(-28deg);
+  transform-origin: left;
+  transition: width 180ms ease;
+}
+a:hover .brand-logo-symbol::after {
+  width: 0.8rem;
+}
+
+.brand-hero,
+.brand-subpage {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.brand-hero::before,
+.brand-subpage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("/brand/system/brand-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: 70% 42%;
+  background-size: min(82rem, 118vw) auto;
+  opacity: 0.08;
+}
+.dark .brand-hero::before,
+.dark .brand-subpage::before {
+  opacity: 0.16;
+}
+.brand-subpage::before {
+  background-position: 80% 20%;
+  opacity: 0.05;
+}
+.dark .brand-subpage::before {
+  opacity: 0.1;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 9rem;
+  height: 0.5rem;
+  margin-top: 1.15rem;
+  background: url("/brand/system/brand-divider.svg") left center / contain no-repeat;
+  opacity: 0.85;
+}
+.project-card-media {
+  position: relative;
+}
+.project-card-media::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  bottom: 0.85rem;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transform: rotate(-24deg);
+  transform-origin: right;
+  transition: width 160ms ease;
+}
+.project-card:hover .project-card-media::after {
+  width: 2.5rem;
+}
+.datanogs-logo {
+  display: block;
+  width: min(100%, 24rem);
+  height: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo-symbol img,
+  .brand-logo-symbol::after,
+  .project-card-media::after {
+    transition: none !important;
+  }
 }
