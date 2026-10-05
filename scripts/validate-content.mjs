@@ -57,8 +57,15 @@ assertPublicFiles(
   "Imagem de perfil",
 );
 
-for (const favicon of ["public/favicon.svg", "public/favicon.png"]) {
-  if (!fs.existsSync(path.join(root, favicon))) fail(`Favicon ausente: ${favicon}`);
+for (const favicon of [
+  "public/brand/favicons/favicon.svg",
+  "public/brand/favicons/favicon-16x16.png",
+  "public/brand/favicons/favicon-32x32.png",
+  "public/brand/favicons/apple-touch-icon.png",
+  "public/brand/social/og-joao-vittor.webp",
+  "public/brand/social/avatar-brand.png",
+]) {
+  if (!fs.existsSync(path.join(root, favicon))) fail(`Asset de marca ausente: ${favicon}`);
 }
 
 const routePairs = [
