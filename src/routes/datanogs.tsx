@@ -20,9 +20,16 @@ export function DataNogsPage() {
 
   return (
     <SiteLayout>
-      <section className="site-container section-space">
+      <section className="brand-subpage site-container section-space">
         <div className="max-w-3xl">
-          <p className="text-eyebrow">{profile.fullName} · DataNogs</p>
+          <img
+            src="/brand/datanogs/datanogs-logo.svg"
+            alt="DataNogs — projeto autoral de João Vittor Nogueira"
+            width="460"
+            height="120"
+            className="datanogs-logo mb-7"
+          />
+          <p className="text-eyebrow">{profile.fullName} · {l(datanogs.eyebrow)}</p>
           <h1 className="text-page-title mt-4">{l(datanogs.tagline)}</h1>
           <p className="mt-4 text-lead text-muted-foreground">{l(datanogs.description)}</p>
           <p className="mt-6 text-body text-muted-foreground">{l(datanogs.relationship)}</p>
