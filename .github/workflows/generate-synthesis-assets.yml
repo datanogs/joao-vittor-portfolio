@@ -3,9 +3,7 @@ name: Generate Synthesis raster assets
 on:
   push:
     branches: [feat/synthesis-brand-system]
-    paths:
-      - "public/brand/**/*.svg"
-      - ".github/workflows/generate-synthesis-assets.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
