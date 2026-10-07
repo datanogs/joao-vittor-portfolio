@@ -70,7 +70,8 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-[background-color,border-color] duration-200 ${
+      data-scrolled={scrolled || open}
+      className={`site-header sticky top-0 z-50 w-full transition-[background-color,border-color] duration-200 ${
         scrolled || open
           ? "border-b border-border bg-background/95 backdrop-blur-xl"
           : "border-b border-transparent bg-background/78 backdrop-blur-md"

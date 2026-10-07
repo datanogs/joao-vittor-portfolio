@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { DataFlow, DataSignal } from "@/components/site/DataFlow";
 import { ProfilePhoto } from "@/components/site/ProfilePhoto";
 import { ProjectCard } from "@/components/site/ProjectCard";
 import { CertificationsList } from "@/components/site/CertificationsList";
@@ -25,7 +26,7 @@ export function HomePage() {
   const others = projects.filter((project) => project.slug !== featuredProject.slug);
   return (
     <SiteLayout>
-      <section className="border-b border-border">
+      <section className="hero-stage border-b border-border">
         <div className="site-container home-hero">
           <div className="hero-identity animate-rise min-w-0">
             <h1 className="text-display hero-name">{profile.fullName}</h1>
@@ -69,6 +70,7 @@ export function HomePage() {
             </div>
           </div>
           <div className="hero-photo animate-rise reveal-delay-1">
+            <DataSignal />
             <ProfilePhoto variant="hero" />
           </div>
         </div>
@@ -81,21 +83,11 @@ export function HomePage() {
           <p className="text-eyebrow">{l(profile.positioning.eyebrow)}</p>
           <h2 className="mt-3 text-card-title">{l(profile.positioning.title)}</h2>
         </div>
-        <p className="text-body text-muted-foreground">{l(profile.positioning.text)}</p>
-      </section>
-      <Section
-        id="projetos"
-        eyebrow={h.projectsEyebrow}
-        title={h.projectsTitle}
-        description={l(profile.projectsIntro)}
-      >
-        <FeaturedProject />
-        <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
-          {others.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
+        <div>
+          <p className="text-body text-muted-foreground">{l(profile.positioning.text)}</p>
+          <DataFlow />
         </div>
-      </Section>
+      </section>
       <section id="sobre" className="bg-surface">
         <div className="site-container section-space grid gap-8 lg:grid-cols-[.65fr_1.35fr] lg:gap-20">
           <div>
@@ -137,6 +129,21 @@ export function HomePage() {
           ))}
         </div>
       </Section>
+      <div className="projects-band">
+        <Section
+          id="projetos"
+          eyebrow={h.projectsEyebrow}
+          title={h.projectsTitle}
+          description={l(profile.projectsIntro)}
+        >
+          <FeaturedProject />
+          <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
+            {others.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </Section>
+      </div>
       {experience[0] && (
         <Section id="experiencia" eyebrow={h.experienceEyebrow} title={h.experienceTitle}>
           <p className="text-body text-muted-foreground">{l(experience[0].description)}</p>

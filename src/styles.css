@@ -53,10 +53,10 @@
 :root,
 .light {
   --radius: 0.375rem;
-  --background: #f6f4ef;
-  --foreground: #252724;
-  --surface: #fffefa;
-  --surface-2: #eeebe4;
+  --background: #f4f3ef;
+  --foreground: #15171b;
+  --surface: #eceae5;
+  --surface-2: #faf9f6;
   --surface-3: #e4e0d7;
   --card: var(--surface);
   --card-foreground: var(--foreground);
@@ -88,16 +88,25 @@
   --grid-line: oklch(0.18 0.01 285 / 4.5%);
   --selection: oklch(0.43 0.175 25.5 / 18%);
   --photo-overlay: linear-gradient(180deg, transparent 68%, oklch(0.18 0.008 285 / 7%));
+  --technical-surface: #1f2125;
+  --technical-text: #f2f1ed;
+  --photo-plane: #1f2125;
+  --photo-rule: #b32632;
+  --diagram-line: #999a96;
+  --diagram-grid: #d7d5cf;
+  --diagram-point: #646761;
+  --diagram-insight: #b32632;
+  --footer-background: #eceae5;
   color-scheme: light;
 }
 
 /* Dark — identidade principal. */
 .dark {
-  --background: #151719;
-  --foreground: #f0f0ec;
-  --surface: #1c1f22;
-  --surface-2: #24282c;
-  --surface-3: #2d3237;
+  --background: #0b0c0e;
+  --foreground: #f2f1ed;
+  --surface: #15171b;
+  --surface-2: #1f2125;
+  --surface-3: #292c31;
   --card: var(--surface);
   --card-foreground: var(--foreground);
   --popover: oklch(0.175 0.005 285);
@@ -128,6 +137,15 @@
   --grid-line: oklch(1 0 0 / 4%);
   --selection: oklch(0.68 0.18 25.5 / 30%);
   --photo-overlay: linear-gradient(180deg, transparent 62%, oklch(0.08 0.004 285 / 26%));
+  --technical-surface: #1f2125;
+  --technical-text: #f2f1ed;
+  --photo-plane: #15171b;
+  --photo-rule: #b32632;
+  --diagram-line: #636970;
+  --diagram-grid: #292c31;
+  --diagram-point: #a8adb4;
+  --diagram-insight: #d13a46;
+  --footer-background: #15171b;
   color-scheme: dark;
 }
 
@@ -570,7 +588,7 @@
 }
 @media (min-width: 1280px) {
   :root {
-    --type-display: 3.75rem;
+    --type-display: 3.5rem;
     --type-h1: 3rem;
     --section-padding: 5rem;
   }
@@ -1038,4 +1056,331 @@
 
 .page-intro {
   padding-bottom: 1.5rem;
+}
+
+/* October redesign: one editorial system, two deliberate material treatments. */
+.hero-stage {
+  position: relative;
+  isolation: isolate;
+}
+.home-hero {
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+}
+.hero-role {
+  max-width: 38ch;
+}
+.hero-name {
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+.hero-copy > p {
+  max-width: 59ch;
+}
+.hero-photo {
+  position: relative;
+  isolation: isolate;
+  padding: 0 0 1.5rem 1.5rem;
+}
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 12% 12% 0 0;
+  background: var(--photo-plane);
+  z-index: -1;
+}
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: var(--photo-rule);
+}
+.hero-photo .profile-photo-frame {
+  border-radius: 1px;
+}
+.hero-photo .profile-portrait {
+  border-radius: 1px;
+}
+.data-signal {
+  color: var(--diagram-line);
+  width: 14rem;
+  height: auto;
+  pointer-events: none;
+  overflow: visible;
+}
+.hero-photo .data-signal {
+  position: absolute;
+  right: 66%;
+  bottom: -1.5rem;
+  width: 12rem;
+  z-index: -2;
+  opacity: 0.6;
+}
+.signal-grid {
+  stroke: var(--diagram-grid);
+  stroke-width: 0.6;
+}
+.signal-paths {
+  stroke: var(--diagram-line);
+  stroke-width: 1;
+}
+.signal-paths path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: connect-lines 1500ms ease-out both;
+}
+.signal-point {
+  fill: var(--diagram-point);
+  animation: point-arrive 500ms ease-out both;
+  animation-delay: calc(var(--step) * 65ms);
+}
+.signal-insight {
+  fill: var(--diagram-insight);
+  animation: point-arrive 500ms 1100ms ease-out both;
+}
+.data-flow {
+  margin-top: 2rem;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.data-flow ol {
+  display: grid;
+  grid-template-columns: repeat(var(--flow-count), minmax(0, 1fr));
+  padding: 0;
+  list-style: none;
+  gap: 0;
+  margin: 1.5rem 0 0;
+}
+.data-flow li {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-right: 0.75rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.data-flow li::before {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  right: 0;
+  background: var(--diagram-line);
+  transform-origin: left;
+}
+.data-flow li:last-child::before {
+  display: none;
+}
+.flow-node {
+  display: block;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--background);
+  border: 1px solid var(--diagram-point);
+}
+.data-flow li:last-child .flow-node {
+  background: var(--diagram-insight);
+  border-color: var(--diagram-insight);
+}
+.data-flow.is-revealed li::before {
+  animation: flow-line 520ms ease-out both;
+  animation-delay: calc(var(--step) * 80ms);
+}
+.section-heading {
+  max-width: 56rem;
+}
+.section-heading > p:last-child {
+  max-width: 65ch;
+}
+#sobre {
+  border-block: 1px solid var(--border);
+}
+#stack .section-content > div > article {
+  padding: 1.5rem 0 0;
+}
+#stack dl > div {
+  display: grid;
+  grid-template-columns: minmax(6rem, 0.35fr) minmax(0, 1fr);
+  gap: 1rem;
+}
+#stack dl dd {
+  margin-top: 0;
+}
+#stack dl dt {
+  line-height: 1.7;
+}
+.projects-band {
+  background: var(--surface);
+  border-block: 1px solid var(--border);
+}
+.featured-image,
+.project-card-media {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+.project-card img,
+.featured-image img {
+  transition: transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.project-card:hover img,
+.project-card:focus-visible img,
+.featured-image:hover img {
+  transform: scale(1.02);
+}
+.project-card:hover .project-card-media {
+  border-color: var(--border-strong);
+}
+.metric-list pre {
+  background: var(--technical-surface);
+  color: var(--technical-text);
+  border: 1px solid var(--border-strong);
+  padding: 1.25rem;
+}
+.site-footer {
+  background: var(--footer-background);
+}
+.site-header {
+  backdrop-filter: blur(8px);
+}
+.site-header[data-scrolled="true"] {
+  box-shadow: 0 1px 0 var(--border);
+}
+.site-header[data-scrolled="true"] .button-base {
+  padding-block: 0.5rem;
+}
+.datanogs-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.datanogs-intro > .data-signal {
+  position: absolute;
+  right: var(--page-gutter);
+  top: 1.5rem;
+  opacity: 0.28;
+  z-index: -1;
+}
+.page-enter {
+  animation: page-arrive 220ms ease-out;
+}
+.is-revealed {
+  animation: editorial-reveal 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes editorial-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes page-arrive {
+  from {
+    opacity: 0.8;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes connect-lines {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes point-arrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes flow-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (min-width: 768px) {
+  .hero-photo {
+    max-width: 26rem;
+    padding: 0 0 2rem 2rem;
+  }
+  .hero-photo .data-signal {
+    width: 15rem;
+    right: 65%;
+    bottom: -2rem;
+  }
+  #posicionamento {
+    padding-block: 3rem;
+  }
+}
+@media (max-width: 479px) {
+  .data-flow ol {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .data-flow li {
+    padding: 0 0 1.25rem 1.5rem;
+  }
+  .flow-node {
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    margin: 0;
+  }
+  .data-flow li::before {
+    width: 1px;
+    height: auto;
+    left: 4px;
+    top: 0.5rem;
+    bottom: 0;
+    right: auto;
+    transform-origin: top;
+  }
+  .data-flow li:last-child {
+    padding-bottom: 0;
+  }
+  #stack dl > div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .hero-photo {
+    margin-left: auto;
+    max-width: 20rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter,
+  .is-revealed,
+  .signal-point,
+  .signal-insight,
+  .signal-paths path,
+  .data-flow li::before {
+    animation: none !important;
+    opacity: 1;
+    transform: none !important;
+    stroke-dashoffset: 0;
+  }
+  .project-card:hover img,
+  .project-card:focus-visible img,
+  .featured-image:hover img {
+    transform: none;
+  }
 }

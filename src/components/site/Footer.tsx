@@ -11,7 +11,7 @@ export function Footer() {
     "link-underline w-fit text-sm text-muted-foreground transition-colors hover:text-foreground";
 
   return (
-    <footer className="border-t border-border bg-surface/30">
+    <footer className="site-footer border-t border-border">
       <div className="site-container py-12 sm:py-16">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div>

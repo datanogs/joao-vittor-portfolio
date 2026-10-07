@@ -1,10 +1,15 @@
-import type { ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
+import { useRouterState } from "@tanstack/react-router";
+import { useEditorialMotion } from "./useEditorialMotion";
 import { useI18n } from "@/lib/i18n";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { t } = useI18n();
+  const main = useRef<HTMLElement>(null);
+  const route = useRouterState({ select: (state) => state.location.pathname });
+  useEditorialMotion(main, route);
   return (
     <div className="flex min-h-dvh flex-col bg-background">
       <a
@@ -14,7 +19,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         {t.nav.skip}
       </a>
       <Header />
-      <main id="conteudo" tabIndex={-1} className="flex-1 outline-none">
+      <main
+        ref={main}
+        key={route}
+        id="conteudo"
+        tabIndex={-1}
+        className="page-enter flex-1 outline-none"
+      >
         {children}
       </main>
       <Footer />

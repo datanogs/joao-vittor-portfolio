@@ -1,3 +1,4 @@
+import { DataSignal } from "@/components/site/DataFlow";
 import { createFileRoute } from "@tanstack/react-router";
 import { LocalizedLink } from "@/components/site/LocalizedLink";
 import { SiteLayout } from "@/components/site/SiteLayout";
@@ -20,7 +21,8 @@ export function DataNogsPage() {
 
   return (
     <SiteLayout>
-      <section className="site-container section-space">
+      <section className="site-container section-space datanogs-intro">
+        <DataSignal />
         <div className="max-w-3xl">
           <p className="text-eyebrow">{profile.fullName} · DataNogs</p>
           <h1 className="text-page-title mt-4">{l(datanogs.tagline)}</h1>

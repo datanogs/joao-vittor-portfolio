@@ -1,3 +1,4 @@
+import { DataFlow } from "@/components/site/DataFlow";
 import type { ReactNode } from "react";
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { LocalizedLink } from "@/components/site/LocalizedLink";
@@ -126,6 +127,7 @@ export function ProjectCasePage({ project }: { project: Project }) {
           </nav>
           <div className="case-body">
             <Chapter id="01" title={p.overview}>
+              <DataFlow project={project.slug} />
               <Narrative block={project.context} />
               <div className="case-prose">
                 <h3 className="text-card-title">{p.problem}</h3>
