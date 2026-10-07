@@ -41,12 +41,12 @@ export const profile = {
       en: "My approach",
     },
     title: {
-      pt: "Organizo a base antes de comparar.",
-      en: "Prepare the data before comparing results.",
+      pt: "Da pergunta à leitura dos dados.",
+      en: "From the question to understanding the data.",
     },
     text: {
-      pt: "No Spotify, separo músicas distintas de aparições no ranking. No projeto de vendas, reúno três lojas e relaciono os registros a produtos, vendedores e datas. Os cases explicam essas escolhas e como elas orientam a leitura dos indicadores.",
-      en: "In Spotify, I distinguish unique song titles from ranking appearances. In the sales project, I bring three stores together and link records to products, salespeople and dates. The case studies explain these choices and how they shape the interpretation of each measure.",
+      pt: "Antes de construir uma visualização, procuro entender o contexto, quem usará a informação e quais perguntas precisam de resposta. Isso orienta o nível de detalhe, as relações e as métricas da análise. Ao apresentar, destaco o que merece atenção e deixo os detalhes acessíveis para investigação.",
+      en: "Before building a visualization, I consider the context, who will use the information and which questions need answers. This guides the level of detail, relationships and measures used in the analysis. When presenting the findings, I highlight what needs attention and make the details available for further investigation.",
     },
   },
   about: {

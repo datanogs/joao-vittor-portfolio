@@ -2,13 +2,35 @@ import type { L } from "@/lib/i18n";
 
 /** Diagramas conceituais: etapas e recortes, nunca séries ou resultados quantitativos. */
 export const visualLanguage = {
-  method: { pt: "Dos dados à decisão", en: "From data to decision" },
+  method: { pt: "Meu processo de análise", en: "My analytical process" },
   methodSteps: [
-    { pt: "Dados", en: "Data" },
-    { pt: "Tratamento", en: "Transform" },
-    { pt: "Modelo", en: "Model" },
-    { pt: "Análise", en: "Analyze" },
-    { pt: "Decisão", en: "Decide" },
+    { pt: "Entender", en: "Understand" },
+    { pt: "Organizar", en: "Organize" },
+    { pt: "Estruturar", en: "Structure" },
+    { pt: "Analisar", en: "Analyze" },
+    { pt: "Comunicar", en: "Communicate" },
+  ] satisfies L[],
+  methodDescriptions: [
+    {
+      pt: "Definir o contexto e as perguntas que orientam a análise.",
+      en: "Define the context and questions that guide the analysis.",
+    },
+    {
+      pt: "Preparar uma base consistente antes de criar comparações.",
+      en: "Prepare consistent data before making comparisons.",
+    },
+    {
+      pt: "Relacionar informações e definir métricas coerentes com o problema.",
+      en: "Connect information and define measures that address the problem.",
+    },
+    {
+      pt: "Comparar, segmentar e investigar a partir das perguntas definidas.",
+      en: "Compare, segment and investigate based on the questions defined.",
+    },
+    {
+      pt: "Organizar indicadores e visualizações para tornar a leitura clara e permitir aprofundamento.",
+      en: "Organize indicators and visuals for clear interpretation and further exploration.",
+    },
   ] satisfies L[],
   projectLabel: { pt: "Percurso de leitura", en: "Reading path" },
   projectNote: {

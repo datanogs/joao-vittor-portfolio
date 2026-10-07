@@ -1789,9 +1789,15 @@
 }
 
 /* Light-only material treatment. Geometry, type and motion remain shared. */
-.portrait-light { display: none; }
-.light .portrait-dark { display: none; }
-.light .portrait-light { display: block; }
+.portrait-light {
+  display: none;
+}
+.light .portrait-dark {
+  display: none;
+}
+.light .portrait-light {
+  display: block;
+}
 .light .profile-photo-frame {
   background: var(--background);
   border-radius: 2px;
@@ -1828,10 +1834,52 @@
   filter: none;
   box-shadow: none;
 }
-.light .scene-grid { opacity: 0.55; }
-.light :is(.scene-decision, .signal-insight) { fill: #b32632; }
+.light .scene-grid {
+  opacity: 0.55;
+}
+.light :is(.scene-decision, .signal-insight) {
+  fill: #b32632;
+}
 .light .input-field:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 3px;
   box-shadow: none;
+}
+
+/* Method narrative: labels and descriptions share the existing five-step motion. */
+.method-step-title {
+  display: block;
+  font-weight: 600;
+  color: var(--foreground);
+}
+.method-step-description {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--muted-foreground);
+}
+@media (max-width: 1023px) {
+  .scroll-pipeline ol {
+    grid-template-columns: 1fr;
+  }
+  .scroll-pipeline li {
+    padding: 0 0 1.5rem 1.5rem;
+  }
+  .scroll-pipeline .flow-node {
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    margin: 0;
+  }
+  .scroll-pipeline li::before {
+    width: 1px;
+    height: auto;
+    left: 4px;
+    right: auto;
+    top: 0.5rem;
+    bottom: 0;
+    transform-origin: top;
+  }
+  .scroll-pipeline li:last-child {
+    padding-bottom: 0;
+  }
 }

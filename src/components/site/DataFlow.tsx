@@ -38,7 +38,19 @@ export function DataFlow({ project }: { project?: string }) {
         {steps.map((step, i) => (
           <li key={step.en} style={{ "--step": i } as CSSProperties}>
             <span className="flow-node" aria-hidden="true" />
-            <span>{l(step)}</span>
+            {project ? (
+              <span>{l(step)}</span>
+            ) : (
+              <>
+                <span className="method-step-title">
+                  <span aria-hidden="true">{String(i + 1).padStart(2, "0")} — </span>
+                  {l(step)}
+                </span>
+                <span className="method-step-description">
+                  {visualLanguage.methodDescriptions[i] && l(visualLanguage.methodDescriptions[i])}
+                </span>
+              </>
+            )}
           </li>
         ))}
       </ol>
