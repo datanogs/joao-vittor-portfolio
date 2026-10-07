@@ -2,13 +2,13 @@ import type { L } from "@/lib/i18n";
 
 /** Diagramas conceituais: etapas e recortes, nunca séries ou resultados quantitativos. */
 export const visualLanguage = {
-  method: { pt: "Da fonte à comunicação", en: "From source to communication" },
+  method: { pt: "Dos dados à decisão", en: "From data to decision" },
   methodSteps: [
-    { pt: "Fonte", en: "Source" },
-    { pt: "Preparação", en: "Transform" },
+    { pt: "Dados", en: "Data" },
+    { pt: "Tratamento", en: "Transform" },
     { pt: "Modelo", en: "Model" },
     { pt: "Análise", en: "Analyze" },
-    { pt: "Comunicação", en: "Communicate" },
+    { pt: "Decisão", en: "Decide" },
   ] satisfies L[],
   projectLabel: { pt: "Percurso de leitura", en: "Reading path" },
   projectNote: {

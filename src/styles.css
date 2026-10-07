@@ -1357,3 +1357,433 @@
     transform: none;
   }
 }
+
+/* Data motion — conceptual diagrams, never quantitative charts. */
+:root {
+  --motion-fast: 220ms;
+  --motion-base: 340ms;
+  --motion-slow: 800ms;
+  --motion-sequence: 1800ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-emphasized: cubic-bezier(0.65, 0, 0.25, 1);
+}
+.hero-motion {
+  grid-area: motion;
+  min-width: 0;
+  max-width: 30rem;
+}
+.home-hero {
+  grid-template-areas: "identity" "photo" "copy" "motion";
+}
+.data-scene {
+  width: 100%;
+  max-width: 36rem;
+  color: var(--diagram-point);
+}
+.data-scene svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.hero-motion .data-scene {
+  max-width: 23rem;
+}
+.scene-grid path {
+  stroke: var(--diagram-grid);
+  stroke-width: 0.7;
+}
+.scene-route {
+  stroke: var(--diagram-line);
+  stroke-width: 1.3;
+}
+.scene-mark {
+  fill: var(--diagram-point);
+  transform-box: view-box;
+}
+.document-stroke {
+  stroke: var(--diagram-point);
+  stroke-width: 2;
+}
+.scene-decision {
+  fill: var(--diagram-insight);
+}
+.scene-scan {
+  stroke: var(--diagram-insight);
+  stroke-width: 1;
+  opacity: 0;
+}
+.data-scene.is-revealed,
+.data-flow.is-revealed {
+  animation: none;
+}
+.data-scene.is-revealed .scene-mark {
+  animation: data-organize var(--motion-sequence) var(--ease-emphasized) both;
+  animation-delay: calc(var(--i) * 55ms);
+}
+.data-scene.is-revealed .scene-route {
+  stroke-dasharray: 1;
+  animation: data-connect var(--motion-sequence) 450ms var(--ease-out) both;
+}
+.data-scene.is-revealed .scene-grid path {
+  stroke-dasharray: 1;
+  animation: data-connect var(--motion-slow) var(--ease-out) both;
+  animation-delay: calc(var(--i) * 70ms);
+}
+.data-scene.is-revealed .scene-decision {
+  transform-origin: 320px 75px;
+  animation: insight-arrive var(--motion-slow) 1600ms var(--ease-out) both;
+}
+.data-scene.is-revealed .scene-scan {
+  animation: data-scan var(--motion-sequence) var(--ease-standard) both;
+}
+.scene-ranking.is-revealed .scene-mark {
+  animation-name: ranking-organize;
+}
+.scene-document.is-revealed .scene-mark {
+  animation-name: document-organize;
+}
+.scene-drill.is-revealed .scene-mark,
+.scene-refine.is-revealed .scene-mark {
+  animation-name: drill-organize;
+}
+.data-flow ol {
+  position: relative;
+}
+.data-flow.is-revealed li .flow-node {
+  animation: node-arrive var(--motion-base) var(--ease-out) both;
+  animation-delay: calc(var(--step) * 300ms);
+}
+.data-flow.is-revealed li::before {
+  animation: flow-line var(--motion-base) var(--ease-out) both;
+  animation-delay: calc(var(--step) * 300ms + 150ms);
+}
+.data-flow.is-revealed li > span:last-child {
+  display: block;
+  animation: node-arrive var(--motion-base) var(--ease-out) both;
+  animation-delay: calc(var(--step) * 300ms + 80ms);
+}
+.data-flow .data-scene {
+  margin: 0.75rem 0;
+  max-width: 30rem;
+}
+.scroll-pipeline {
+  --progress: 0;
+}
+.scroll-pipeline::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 1.5rem;
+  background: var(--diagram-insight);
+  transform: scaleX(var(--progress));
+  transform-origin: left;
+}
+.scroll-pipeline[data-stage="0"] li:nth-child(1),
+.scroll-pipeline[data-stage="1"] li:nth-child(2),
+.scroll-pipeline[data-stage="2"] li:nth-child(3),
+.scroll-pipeline[data-stage="3"] li:nth-child(4),
+.scroll-pipeline[data-stage="4"] li:nth-child(5) {
+  color: var(--primary);
+}
+.scroll-pipeline[data-stage="0"] .scene-route {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0.95;
+}
+.scroll-pipeline[data-stage="1"] .scene-route {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0.75;
+}
+.scroll-pipeline[data-stage="2"] .scene-route {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0.5;
+}
+.scroll-pipeline[data-stage="3"] .scene-route {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0.25;
+}
+.scroll-pipeline[data-stage="4"] .scene-route {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.scroll-pipeline .data-scene .scene-route {
+  animation: none;
+  transition: stroke-dashoffset var(--motion-base) var(--ease-standard);
+}
+.scroll-pipeline[data-stage="0"] .scene-mark,
+.scroll-pipeline[data-stage="1"] .scene-mark {
+  transform: translate(var(--dx), var(--dy));
+}
+.scroll-pipeline .data-scene .scene-mark {
+  animation: none;
+  transition: transform var(--motion-slow) var(--ease-emphasized);
+}
+.scroll-pipeline[data-stage="0"] .scene-decision,
+.scroll-pipeline[data-stage="1"] .scene-decision,
+.scroll-pipeline[data-stage="2"] .scene-decision,
+.scroll-pipeline[data-stage="3"] .scene-decision {
+  fill: var(--diagram-point);
+}
+.section-heading {
+  position: relative;
+}
+.section-heading::after,
+.metric-list > div::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 1px;
+  background: var(--diagram-line);
+  transform-origin: left;
+}
+.section-heading::after {
+  margin-top: 1.5rem;
+}
+.section-heading.is-revealed::after,
+.metric-list > div.is-revealed::before {
+  animation: flow-line var(--motion-slow) var(--ease-out) both;
+}
+.metric-list > div {
+  position: relative;
+}
+.metric-list > div::before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.metric-list > div.is-revealed {
+  animation: none;
+}
+.metric-list > div.is-revealed dt {
+  animation: editorial-reveal var(--motion-base) 180ms var(--ease-out) both;
+}
+.metric-list > div.is-revealed dd {
+  animation: editorial-reveal var(--motion-base) 320ms var(--ease-out) both;
+}
+.featured-image.is-revealed img,
+.case-gallery figure.is-revealed img {
+  animation: dashboard-uncover var(--motion-slow) var(--ease-emphasized) both;
+}
+.featured-image.is-revealed,
+.case-gallery figure.is-revealed {
+  animation: none;
+}
+.project-card img,
+.featured-image img {
+  transition: transform var(--motion-base) var(--ease-out);
+}
+.project-card:focus-visible h3 {
+  color: var(--primary);
+}
+.featured-image:focus-visible img {
+  transform: scale(1.02);
+}
+.case-nav a {
+  position: relative;
+  border-left: 1px solid var(--border);
+  padding-left: 0.9rem;
+  transition: color var(--motion-fast);
+}
+.case-nav a::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--diagram-point);
+  transform: translateY(-50%);
+}
+.case-nav a[aria-current="location"] {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.case-nav a[aria-current="location"]::before {
+  background: var(--diagram-insight);
+}
+.datanogs-intro > .data-scene {
+  margin-top: 2rem;
+  max-width: 32rem;
+}
+.motion-ready:not(.is-in-view) *,
+.motion-paused * {
+  animation-play-state: paused !important;
+}
+@keyframes data-organize {
+  0%,
+  15% {
+    transform: translate(var(--dx), var(--dy));
+    opacity: 0.4;
+  }
+  65%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes ranking-organize {
+  0% {
+    transform: translate(var(--dx), var(--dy));
+  }
+  45% {
+    transform: translate(0, var(--dy));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes document-organize {
+  0% {
+    transform: translate(var(--dx), var(--dy)) rotate(-12deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes drill-organize {
+  0% {
+    transform: translate(calc(var(--dx) * -1), -18px) scale(0.7);
+    opacity: 0.2;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes data-connect {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes insight-arrive {
+  from {
+    opacity: 0.25;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes node-arrive {
+  from {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes data-scan {
+  0% {
+    transform: translateX(12px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  90% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(348px);
+    opacity: 0;
+  }
+}
+@keyframes dashboard-uncover {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@media (min-width: 768px) {
+  .home-hero {
+    grid-template-areas: "identity photo" "copy photo" "motion photo";
+  }
+}
+@media (max-width: 767px) {
+  .hero-motion {
+    max-width: 16rem;
+    justify-self: center;
+    width: 100%;
+  }
+  .data-scene .scene-grid,
+  .data-scene .scene-scan,
+  .data-scene .mark-6,
+  .data-scene .mark-7,
+  .data-scene .mark-8 {
+    display: none;
+  }
+  .data-flow .data-scene {
+    max-width: 20rem;
+  }
+  .scroll-pipeline::after {
+    display: none;
+  }
+  .scroll-pipeline .data-scene .scene-route {
+    stroke-dashoffset: 0;
+  }
+  .scroll-pipeline .data-scene .scene-mark {
+    transform: none;
+  }
+  .scroll-pipeline li {
+    color: var(--foreground) !important;
+  }
+  .scroll-pipeline .data-scene.is-revealed .scene-mark {
+    animation: data-organize var(--motion-slow) var(--ease-out) both;
+  }
+}
+@media (max-width: 479px) {
+  .data-flow.is-revealed li::before {
+    animation-name: flow-vertical;
+  }
+}
+@keyframes flow-vertical {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .data-scene *,
+  .data-flow *,
+  .section-heading::after,
+  .metric-list > div::before,
+  .metric-list dt,
+  .metric-list dd,
+  .featured-image img,
+  .case-gallery img {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    clip-path: none !important;
+    opacity: 1 !important;
+  }
+  .data-scene .scene-route {
+    stroke-dashoffset: 0 !important;
+  }
+  .data-scene .scene-scan {
+    display: none;
+  }
+  .scroll-pipeline::after {
+    display: none;
+  }
+  .scroll-pipeline .scene-decision {
+    fill: var(--diagram-insight);
+  }
+  .scroll-pipeline li {
+    color: var(--foreground) !important;
+  }
+}

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { DataScene } from "@/components/site/DataScene";
 import { DataFlow } from "@/components/site/DataFlow";
 import { ProfilePhoto } from "@/components/site/ProfilePhoto";
 import { ProjectCard } from "@/components/site/ProjectCard";
@@ -68,6 +69,9 @@ export function HomePage() {
                 </LocalizedLink>
               </nav>
             </div>
+          </div>
+          <div className="hero-motion">
+            <DataScene grid />
           </div>
           <div className="hero-photo animate-rise reveal-delay-1">
             <ProfilePhoto variant="hero" />
