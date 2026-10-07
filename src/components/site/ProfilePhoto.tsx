@@ -19,7 +19,16 @@ export function ProfilePhoto({
         height={1402}
         loading={variant === "hero" ? "eager" : "lazy"}
         fetchPriority={variant === "hero" ? "high" : "auto"}
-        className="profile-portrait block w-full"
+        className="profile-portrait portrait-dark block w-full"
+      />
+      <img
+        src={profile.images.portraitLight}
+        alt={t.common.profilePhotoAlt}
+        width={1122}
+        height={1402}
+        loading={variant === "hero" ? "eager" : "lazy"}
+        fetchPriority={variant === "hero" ? "high" : "auto"}
+        className="profile-portrait portrait-light w-full"
       />
     </figure>
   );

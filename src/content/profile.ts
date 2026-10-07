@@ -21,6 +21,7 @@ export const profile = {
   },
   images: {
     portrait: "/images/profile/portrait.webp",
+    portraitLight: "/images/profile/portrait-light.webp",
   },
   location: {
     pt: "",

@@ -53,7 +53,7 @@ assertPublicFiles(
 );
 assertPublicFiles(
   profile,
-  /(?:portrait):\s*["'](\/images\/profile\/[^"']+)["']/g,
+  /(?:portrait|portraitLight):\s*["'](\/images\/profile\/[^"']+)["']/g,
   "Imagem de perfil",
 );
 
