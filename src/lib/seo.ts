@@ -73,8 +73,8 @@ export const seoPages = {
       en: `DataNogs — personal project by ${profile.name}`,
     },
     description: {
-      pt: "DataNogs é o projeto autoral de João Vittor Nogueira para compartilhar sua trajetória em Dados e Tecnologia, com estudos, projetos e explicações.",
-      en: "DataNogs is João Vittor Nogueira's personal project for sharing his journey in Data and Technology through studies, projects and explanations.",
+      pt: "DataNogs é o projeto autoral de João Vittor Nogueira para registrar e compartilhar estudos, projetos e explicações sobre Dados e Tecnologia.",
+      en: "DataNogs is João Vittor Nogueira's personal project for documenting and sharing studies, projects and explanations about Data and Technology.",
     },
     ptPath: "/datanogs",
   },

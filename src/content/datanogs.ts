@@ -6,24 +6,24 @@ export const datanogs = {
     en: "Personal project",
   },
   tagline: {
-    pt: "DataNogs: o que aprendo enquanto construo.",
-    en: "DataNogs: what I learn as I build.",
+    pt: "DataNogs: estudos e projetos em Dados e Tecnologia.",
+    en: "DataNogs: studies and projects in Data and Technology.",
   },
   description: {
-    pt: "DataNogs é meu projeto para compartilhar estudos e explicar como construo minhas análises. Quero mostrar as perguntas, os testes e as escolhas que ficam por trás de um relatório.",
-    en: "DataNogs is my project for sharing what I study and explaining how I build analyses. I want to show the questions, tests and choices behind a report.",
+    pt: "DataNogs é meu projeto autoral para registrar e compartilhar estudos, projetos e explicações sobre Dados e Tecnologia.",
+    en: "DataNogs is my personal project for documenting and sharing studies, projects and explanations about Data and Technology.",
   },
   relationship: {
-    pt: "Aqui no portfólio, você encontra os cases completos. No DataNogs, a proposta é abrir espaço para o aprendizado que acontece durante a construção.",
-    en: "This portfolio contains the full case studies. DataNogs is intended as a space for the learning that happens while building them.",
+    pt: "O portfólio reúne os cases. No DataNogs, a proposta é detalhar etapas de preparação, cálculos e testes realizados nos estudos.",
+    en: "The portfolio presents the case studies. DataNogs is intended to document data preparation, calculations and tests from my studies.",
   },
   purposeTitle: {
     pt: "Estudar, testar e explicar.",
     en: "Study, test and explain.",
   },
   purpose: {
-    pt: "Análise de dados e BI são o ponto de partida. Programação, bancos de dados, IA e automação aparecem como estudos que podem ampliar esse trabalho.",
-    en: "Data analysis and BI are the starting point. Programming, databases, AI and automation are areas of study that can extend that work.",
+    pt: "O projeto reúne estudos de análise de dados, BI, programação, bancos de dados, IA e automação.",
+    en: "The project covers studies in data analysis, BI, programming, databases, AI and automation.",
   },
   topics: [
     {

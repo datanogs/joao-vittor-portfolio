@@ -14,8 +14,8 @@ export const skillGroups: SkillGroup[] = [
       {
         name: "Power BI",
         context: {
-          pt: "Construo relatórios com páginas, filtros e visuais para explorar músicas, vendas e abastecimentos. Os quatro cases mostram esse trabalho.",
-          en: "I build reports with pages, filters and visuals to explore music, sales and fuel data. The four case studies show this work.",
+          pt: "Construo relatórios de ranking musical, vendas e abastecimentos, com páginas de visão geral, filtros e detalhamento.",
+          en: "I build reports on music rankings, sales and fuel records, with overview pages, filters and detailed views.",
         },
       },
     ],
@@ -51,8 +51,8 @@ export const skillGroups: SkillGroup[] = [
       {
         name: "DAX",
         context: {
-          pt: "Construo medidas de faturamento, margem, contagem e posição. Nos cases, apresento as fórmulas e explico o que calculam.",
-          en: "I build revenue, margin, count and ranking measures. The case studies include the formulas and explain what they calculate.",
+          pt: "Uso somas, contagens, médias e razões para calcular faturamento, margem e indicadores de presença no ranking.",
+          en: "I use sums, counts, averages and ratios to calculate revenue, margin and ranking-presence measures.",
         },
       },
       {
@@ -80,8 +80,8 @@ export const skillGroups: SkillGroup[] = [
       {
         name: "APIs · Git · GitHub",
         context: {
-          pt: "Exploro integração de dados, versionamento e documentação para apoiar a construção dos projetos.",
-          en: "I am exploring data integration, version control and documentation to support my project work.",
+          pt: "Estudo integração por APIs. Utilizo Git e GitHub no versionamento deste portfólio.",
+          en: "I study API integration and use Git and GitHub to version this portfolio.",
         },
       },
     ],

@@ -8,12 +8,12 @@ export const profile = {
     en: "Data Analyst | Business Intelligence",
   },
   heroStatement: {
-    pt: "Antes do dashboard, vem a pergunta.",
-    en: "Before the dashboard comes the question.",
+    pt: "Estrutura, análise e contexto para entender melhor o negócio.",
+    en: "Data structure, analysis and context to understand the business.",
   },
   heroDescription: {
-    pt: "Desenvolvo projetos de BI: preparo os dados, organizo os modelos e construo medidas e dashboards em Power BI para investigar o que os números mostram.",
-    en: "I build BI projects: preparing data, structuring models and creating measures and Power BI dashboards to explore what the numbers show.",
+    pt: "Preparo bases no Power Query, organizo modelos e escrevo medidas DAX. Meus dashboards em Power BI analisam músicas, vendas e abastecimentos.",
+    en: "I prepare datasets in Power Query, structure models and write DAX measures. My Power BI dashboards cover music rankings, sales and fuel records.",
   },
   metaDescription: {
     pt: "João Vittor Nogueira — Analista de Dados | Business Intelligence. Projetos em Power BI, preparação de dados, modelagem e DAX, com explicações sobre cada análise.",
@@ -40,28 +40,28 @@ export const profile = {
       en: "My approach",
     },
     title: {
-      pt: "Entender o problema. Explicar a análise.",
-      en: "Understand the problem. Explain the analysis.",
+      pt: "Conferir a base e os cálculos.",
+      en: "Check the data and calculations.",
     },
     text: {
-      pt: "Procuro entender o que precisa ser acompanhado, organizar os dados e conferir o que cada cálculo representa. O relatório é a forma de tornar essa análise clara para quem vai usá-la.",
-      en: "I work out what needs to be tracked, organize the data and check what each calculation represents. The report makes that analysis clear to the people who will use it.",
+      pt: "Nos cases, explico a origem das bases, as etapas do Power Query e as fórmulas DAX. Distingo o que cada medida conta ou soma e registro os limites de interpretação.",
+      en: "The case studies explain the data sources, Power Query steps and DAX formulas. I describe what each measure counts or sums and document its interpretation limits.",
     },
   },
   about: {
     summary: {
-      pt: "Gosto de investigar uma pergunta e acompanhar a análise até conseguir explicá-la. Nos projetos de BI, isso passa por entender a base, preparar os dados e decidir o que o relatório precisa mostrar.",
-      en: "I enjoy investigating a question and working through the analysis until I can explain it. In my BI projects, that means understanding the dataset, preparing the data and deciding what the report needs to show.",
+      pt: "Sou formado em Logística, tenho MBA em Supply Chain Management e trabalho na área administrativa de uma empresa de transporte. Curso Ciência da Computação e desenvolvo projetos de BI.",
+      en: "I have a degree in Logistics and an MBA in Supply Chain Management, and work in administration at a transportation company. I am studying Computer Science and developing BI projects.",
     },
     blocks: [
       {
         title: {
-          pt: "Pergunta antes da ferramenta",
-          en: "The question comes first",
+          pt: "Bases e medidas",
+          en: "Data and measures",
         },
         text: {
-          pt: "Começo pelo que preciso entender e pelas informações disponíveis. A escolha da ferramenta vem depois.",
-          en: "I start with what I need to understand and the information available. The choice of tool follows.",
+          pt: "Documento as fontes, os campos e as fórmulas usados nos dashboards.",
+          en: "I document the sources, fields and formulas used in the dashboards.",
         },
       },
       {
@@ -70,8 +70,8 @@ export const profile = {
           en: "Learning through projects",
         },
         text: {
-          pt: "Estudo, testo e refaço. Os projetos são onde aplico Power Query, modelagem e DAX e confiro o que cada cálculo representa.",
-          en: "I study, test and revise. Projects are where I apply Power Query, modeling and DAX and check what each calculation represents.",
+          pt: "Aplico Power Query, modelagem e DAX nos projetos de música, vendas e abastecimentos.",
+          en: "I apply Power Query, data modeling and DAX in music, sales and fuel projects.",
         },
       },
       {
@@ -80,8 +80,8 @@ export const profile = {
           en: "Data in daily work",
         },
         text: {
-          pt: "O trabalho administrativo com compras e indicadores me dá contato com as informações que uma operação precisa acompanhar.",
-          en: "Administrative work with purchasing and indicators gives me contact with the information an operation needs to track.",
+          pt: "Trabalho com compras, registros administrativos e acompanhamento de indicadores em uma empresa de transporte.",
+          en: "I work with purchasing, administrative records and indicators at a transportation company.",
         },
       },
     ],
@@ -93,8 +93,8 @@ export const profile = {
         en: "Who I am",
       },
       text: {
-        pt: "Sou João Vittor Nogueira, Analista de Dados com foco em Business Intelligence. Gosto de entender um problema, investigar os dados disponíveis e construir uma análise que eu consiga explicar com clareza. É assim que desenvolvo meus projetos em Power BI e construo minha carreira em Dados/BI.",
-        en: "I’m João Vittor Nogueira, a Data Analyst focused on Business Intelligence. I like understanding a problem, examining the available data and building an analysis I can explain clearly. That is how I approach my Power BI projects and build my career in Data/BI.",
+        pt: "Sou João Vittor Nogueira. Tenho formação em Logística e MBA em Supply Chain Management. Trabalho na área administrativa de uma empresa de transporte e estou direcionando meu desenvolvimento profissional para Dados e Business Intelligence.",
+        en: "I’m João Vittor Nogueira. I have a degree in Logistics and an MBA in Supply Chain Management. I work in administration at a transportation company and am developing my career in Data and Business Intelligence.",
       },
     },
     {
@@ -103,8 +103,8 @@ export const profile = {
         en: "What drew me to data",
       },
       text: {
-        pt: "Meu interesse vem da vontade de resolver problemas do dia a dia. Trabalho na área administrativa de uma empresa de transporte, com compras e acompanhamento de indicadores. O projeto de abastecimentos nasceu de uma necessidade real dessa rotina: organizar a leitura dos gastos e dos registros por veículo e localização.",
-        en: "My interest comes from wanting to solve everyday problems. I work in administration at a transportation company, handling purchasing and monitoring indicators. The fuel project grew out of a real need in that routine: making spending and records easier to examine by vehicle and location.",
+        pt: "Na rotina administrativa, atuo com compras, registros e indicadores, utilizando SAP ERP, SAT, Excel e Power BI. O projeto de abastecimentos surgiu de uma necessidade real de acompanhamento de gastos por veículo e localização. A versão do portfólio usa dados e placas fictícios para preservar a confidencialidade.",
+        en: "My administrative work involves purchasing, records and indicators, using SAP ERP, SAT, Excel and Power BI. The fuel project came from a real need to track spending by vehicle and location. The portfolio version uses fictional data and license plates to protect confidentiality.",
       },
     },
     {
@@ -113,8 +113,8 @@ export const profile = {
         en: "How I learn and build",
       },
       text: {
-        pt: "Boa parte do meu aprendizado acontece ao testar, conferir resultados e refazer os projetos. Trabalho com Power BI, Power Query, DAX e Excel, estudo SQL e curso Ciência da Computação para ampliar minha base técnica. Antes de escolher uma ferramenta, procuro entender a pergunta e o que os dados permitem responder.",
-        en: "Much of my learning comes from testing, checking results and revising projects. I work with Power BI, Power Query, DAX and Excel, study SQL and am pursuing Computer Science to broaden my technical foundation. Before choosing a tool, I work out the question and what the data can answer.",
+        pt: "Curso Ciência da Computação e estudo SQL e Python. Nos projetos publicados, utilizo Excel como fonte, Power Query para preparar as bases e DAX para calcular indicadores no Power BI. Os cases apresentam as fórmulas, os relacionamentos e as limitações encontradas.",
+        en: "I am studying Computer Science, SQL and Python. My published projects use Excel as a source, Power Query for data preparation and DAX for calculations in Power BI. The case studies include formulas, relationships and identified limitations.",
       },
     },
     {
@@ -123,8 +123,8 @@ export const profile = {
         en: "The work I want to do",
       },
       text: {
-        pt: "Quero trabalhar com Dados e BI: preparar bases, desenvolver análises e criar relatórios que ajudem outras pessoas a acompanhar o que importa. A formação em Logística e o MBA em Supply Chain Management me ajudam a entender as necessidades de uma operação. Programação e automação entram como caminhos para ampliar esse trabalho.",
-        en: "I want to work in Data and BI: preparing datasets, developing analyses and creating reports that help people track what matters. My Logistics degree and MBA in Supply Chain Management help me understand operational needs. Programming and automation are ways to expand that work.",
+        pt: "Meu objetivo é atuar em Dados/BI, com preparação de bases, modelagem, indicadores e relatórios. Quero aplicar a experiência com compras e informações operacionais a esse trabalho.",
+        en: "My goal is to work in Data/BI, preparing datasets, building models, defining indicators and producing reports. I want to apply my experience with purchasing and operational information to that work.",
       },
     },
   ],
@@ -133,7 +133,7 @@ export const profile = {
     en: "Have a Data/BI opportunity or a question about a project? Get in touch on LinkedIn or by email.",
   },
   projectsIntro: {
-    pt: "Como comparar a presença de músicas em um ranking? O que muda nas vendas entre lojas? Estes quatro projetos mostram como preparo os dados, construo os cálculos e organizo a leitura em Power BI.",
-    en: "How do you compare songs’ appearances in a ranking? How do sales differ between stores? These four projects show how I prepare data, build calculations and organize the analysis in Power BI.",
+    pt: "Quatro projetos em Power BI: ranking musical, análise financeira de vendas, comparação entre lojas e acompanhamento de abastecimentos. Cada case apresenta a base, os cálculos e o que o dashboard permite analisar.",
+    en: "Four Power BI projects cover music rankings, sales financials, store comparisons and fuel records. Each case study explains the dataset, calculations and analyses supported by the dashboard.",
   },
 };

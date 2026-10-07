@@ -28,8 +28,8 @@ export const experience: ExperienceItem[] = [
       en: "Current",
     },
     description: {
-      pt: "Na empresa de transporte onde trabalho, acompanho informações que fazem parte da operação: compras, indicadores e registros administrativos. Essa rotina dá uma referência prática ao que estudo em BI.",
-      en: "At the transportation company where I work, I deal with information used in daily operations: purchasing, indicators and administrative records. That routine gives my BI studies a practical reference.",
+      pt: "Atuo na área administrativa de uma empresa de transporte, com compras, registros e acompanhamento de indicadores. Utilizo SAP ERP e SAT nas rotinas administrativas, além de Excel e Power BI no trabalho com dados.",
+      en: "I work in administration at a transportation company, handling purchasing, records and indicators. I use SAP ERP and SAT for administrative tasks, and Excel and Power BI for data work.",
     },
     activities: [
       {

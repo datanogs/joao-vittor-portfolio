@@ -31,12 +31,11 @@ const pt = {
     quickNav: "Conheça meu trabalho",
     toolsLink: "Ferramentas",
     aboutEyebrow: "Sobre mim",
-    aboutTitle: "Como penso e trabalho com dados",
+    aboutTitle: "Da Logística aos projetos de BI",
     aboutLink: "Mais sobre mim",
     stackEyebrow: "Ferramentas",
     stackTitle: "Da preparação à análise",
-    stackDescription:
-      "Power Query prepara a base; o modelo e as medidas DAX sustentam a análise; o Power BI organiza a leitura. Veja o que aplico nos projetos e o que estou estudando.",
+    stackDescription: "Ferramentas usadas nos quatro projetos e tecnologias em estudo.",
     projectsEyebrow: "Portfólio",
     projectsTitle: "Projetos selecionados",
     featured: "Projeto em destaque",
@@ -45,11 +44,11 @@ const pt = {
     experienceTitle: "Experiência",
     experienceDescription: "Compras, sistemas de gestão e indicadores no setor de transporte.",
     educationEyebrow: "Formação",
-    educationTitle: "Base de negócio, formação técnica",
+    educationTitle: "Logística, Supply Chain e Computação",
     educationDescription:
       "Curso Ciência da Computação e tenho formação concluída em Logística e MBA em Supply Chain Management.",
     certificationsEyebrow: "Certificações",
-    certificationsTitle: "Estudo que levo para os projetos",
+    certificationsTitle: "Cursos concluídos",
     certificationsDescription:
       "Os cursos complementam a prática em Excel, Power BI, Power Query e DAX e os estudos de SQL e inteligência artificial.",
     certificationsEmpty: "Nenhum certificado publicado nesta versão.",
@@ -81,14 +80,14 @@ const pt = {
     educationEyebrow: "Formação",
     educationTitle: "Formação acadêmica",
     educationDescription:
-      "Ciência da Computação amplia minha base técnica. Logística e Supply Chain complementam a compreensão das operações.",
+      "Ciência da Computação em andamento; Logística e MBA em Supply Chain Management concluídos.",
     seeProjects: "Ver projetos",
   },
   certifications: {
     pageEyebrow: "Formação",
     pageTitle: "Formação e Certificações",
     pageDescription:
-      "Curso Ciência da Computação e complemento a formação com estudos aplicados aos projetos de dados. Logística e o MBA em Supply Chain Management fazem parte da minha base de negócio.",
+      "Formação em Logística, MBA em Supply Chain Management e Ciência da Computação em andamento. Os cursos complementares estão listados abaixo, com os certificados em PDF.",
     academicLabel: "Formações acadêmicas",
     certificatesLabel: "Certificados",
     sourceLabel: "Documentos",
@@ -155,8 +154,7 @@ const pt = {
     model: "Modelagem",
     metrics: "Métricas e raciocínio DAX",
     process: "Da fonte à análise",
-    processIntro:
-      "O percurso dos dados neste projeto. Selecione uma etapa para explorar as decisões e os detalhes.",
+    processIntro: "Selecione uma etapa para ver a fonte, o tratamento, o modelo ou os cálculos.",
     validationPending: "Validação pendente",
     excelRole: "O papel do Excel",
     excelBoundary:
@@ -176,7 +174,7 @@ const pt = {
     openImage: "Abrir imagem",
     openDashboard: "Abrir no Power BI",
     insights: "O que a análise permite investigar",
-    results: "O que foi construído",
+    results: "Resultado técnico",
     learnings: "Técnicas aplicadas",
     overview: "Visão do projeto",
     dataModel: "Dados, ETL e modelagem",
@@ -195,7 +193,7 @@ const pt = {
     project: "Projeto autoral",
     distinction: "Os projetos e o processo de aprender",
     scope: "Temas",
-    scopeTitle: "Dados e BI, com espaço para explorar",
+    scopeTitle: "Temas de estudo",
     presence: "Presença digital",
     presenceTitle: "Onde acompanhar",
     presenceDescription:
@@ -277,12 +275,11 @@ const en: UiDict = {
     quickNav: "Explore my work",
     toolsLink: "Tools",
     aboutEyebrow: "About me",
-    aboutTitle: "How I approach data",
+    aboutTitle: "From Logistics to BI projects",
     aboutLink: "More about me",
     stackEyebrow: "Tools",
     stackTitle: "From preparation to analysis",
-    stackDescription:
-      "Power Query prepares the data; the model and DAX measures support the analysis; Power BI presents it. Here is what I use in projects and what I am studying.",
+    stackDescription: "Tools used in the four projects, alongside technologies I am studying.",
     projectsEyebrow: "Portfolio",
     projectsTitle: "Selected work",
     featured: "Featured project",
@@ -291,11 +288,11 @@ const en: UiDict = {
     experienceTitle: "Experience",
     experienceDescription: "Purchasing, management systems and indicators in transportation.",
     educationEyebrow: "Education",
-    educationTitle: "Business grounding, technical study",
+    educationTitle: "Logistics, Supply Chain and Computing",
     educationDescription:
       "I study Computer Science and hold a Technology Degree in Logistics and an MBA in Supply Chain Management.",
     certificationsEyebrow: "Certifications",
-    certificationsTitle: "Learning I bring to projects",
+    certificationsTitle: "Completed courses",
     certificationsDescription:
       "Courses complement my work with Excel, Power BI, Power Query and DAX, and my studies in SQL and artificial intelligence.",
     certificationsEmpty: "No certificate has been published in this version.",
@@ -325,14 +322,14 @@ const en: UiDict = {
     educationEyebrow: "Education",
     educationTitle: "Academic background",
     educationDescription:
-      "Computer Science broadens my technical foundation. Logistics and Supply Chain support my understanding of operations.",
+      "Computer Science studies in progress; Logistics degree and MBA in Supply Chain Management completed.",
     seeProjects: "View projects",
   },
   certifications: {
     pageEyebrow: "Education",
     pageTitle: "Education & Certifications",
     pageDescription:
-      "I study Computer Science and complement it with learning applied to data projects. My Logistics degree and MBA in Supply Chain Management provide business grounding.",
+      "Logistics degree, MBA in Supply Chain Management and Computer Science studies in progress. Additional courses are listed below with PDF certificates.",
     academicLabel: "Academic programs",
     certificatesLabel: "Certificates",
     sourceLabel: "Documents",
@@ -399,8 +396,7 @@ const en: UiDict = {
     model: "Modeling",
     metrics: "Metrics and DAX reasoning",
     process: "From source to analysis",
-    processIntro:
-      "The data journey in this project. Select a stage to explore its decisions and details.",
+    processIntro: "Select a stage to see the source, preparation steps, model or calculations.",
     validationPending: "Validation pending",
     excelRole: "Excel’s role",
     excelBoundary:
@@ -420,7 +416,7 @@ const en: UiDict = {
     openImage: "Open image",
     openDashboard: "Open in Power BI",
     insights: "What the analysis helps explore",
-    results: "What I built",
+    results: "Technical deliverable",
     learnings: "Techniques used",
     overview: "Project overview",
     dataModel: "Data, ETL and modeling",
@@ -439,7 +435,7 @@ const en: UiDict = {
     project: "Personal project",
     distinction: "The projects and the learning process",
     scope: "Topics",
-    scopeTitle: "Data and BI, with room to explore",
+    scopeTitle: "Study topics",
     presence: "Digital presence",
     presenceTitle: "Where to follow",
     presenceDescription:

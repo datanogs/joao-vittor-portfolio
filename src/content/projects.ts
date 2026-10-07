@@ -83,8 +83,8 @@ export const projects: Project[] = [
       en: "Category normalization in Power Query, DAX counts and ranking measures, and four pages for exploring artists and songs.",
     },
     shortDescription: {
-      pt: "Quais músicas e artistas aparecem no Top 50, e como essa presença muda ao longo do tempo? Quatro páginas em Power BI exploram o ranking, a popularidade e as características das músicas.",
-      en: "Which songs and artists appear in the Top 50, and how does their presence change over time? Four Power BI pages explore ranking positions, popularity and song characteristics.",
+      pt: "Histórico do Spotify Top 50 organizado em quatro páginas: início, visão geral, artistas e músicas. Compara aparições no ranking, popularidade, duração e características das faixas por período.",
+      en: "Spotify Top 50 history across four pages: Home, Overview, Artists and Songs. Compares ranking appearances, popularity, duration and track characteristics over time.",
     },
     categoryKey: "music",
     category: {
@@ -254,8 +254,8 @@ export const projects: Project[] = [
         "Índice de Performance Song",
       ],
       note: {
-        pt: "Veja o que cada medida calcula e como pode ser usada na análise. As fórmulas DAX abaixo foram extraídas do modelo.",
-        en: "See what each measure calculates and how it can be used in analysis. The DAX formulas below were extracted from the model.",
+        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
+        en: "Formulas extracted from the model, with definitions and analytical uses.",
       },
       definitions: [
         {
@@ -421,8 +421,8 @@ export const projects: Project[] = [
     learnings: {
       status: "complete",
       content: {
-        pt: "Apliquei Power Query, medidas DAX e parâmetros de campos. Organizei a navegação para passar da visão geral ao detalhe sem perder a pergunta da análise.",
-        en: "I used Power Query, DAX measures and field parameters. I organized navigation to move from overview to detail while keeping the analytical question in view.",
+        pt: "O case demonstra uso de Power Query, medidas DAX e parâmetros de campos, com navegação entre visão geral, artistas e músicas.",
+        en: "The case demonstrates Power Query, DAX measures and field parameters, with navigation between overview, artist and song pages.",
       },
       items: [],
     },
@@ -492,8 +492,8 @@ export const projects: Project[] = [
       en: "Revenue, cost, profit and margin measures, a related calendar, and commercial breakdowns on desktop and portrait pages.",
     },
     shortDescription: {
-      pt: "Uma leitura das vendas por país, produto e tipo de cliente, com faturamento, descontos, custo, lucro e margem. O relatório tem uma página desktop e uma composição em formato retrato.",
-      en: "A view of sales by country, product and customer type, covering revenue, discounts, costs, profit and margin. The report includes a desktop page and a portrait composition.",
+      pt: "Faturamento, descontos, custo, lucro e margem por mês, país, produto e tipo de cliente. Duas páginas, desktop e retrato, permitem comparar receita e rentabilidade.",
+      en: "Revenue, discounts, cost, profit and margin by month, country, product and customer type. Desktop and portrait pages support comparisons of revenue and profitability.",
     },
     categoryKey: "sales",
     category: {
@@ -599,8 +599,8 @@ export const projects: Project[] = [
         "FatMM",
       ],
       note: {
-        pt: "Veja o que cada medida calcula e como pode ser usada na análise. As fórmulas DAX abaixo foram extraídas do modelo.",
-        en: "See what each measure calculates and how it can be used in analysis. The DAX formulas below were extracted from the model.",
+        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
+        en: "Formulas extracted from the model, with definitions and analytical uses.",
       },
       definitions: [
         {
@@ -696,8 +696,8 @@ export const projects: Project[] = [
     insights: {
       status: "complete",
       content: {
-        pt: "Faturamento e lucro contam partes diferentes da história. O relatório permite comparar receita, custo e margem no mesmo recorte e investigar segmentos que vendem mais, mas apresentam menor rentabilidade.",
-        en: "Revenue and profit tell different parts of the story. The report lets you compare revenue, cost and margin within the same selection and investigate segments with higher sales but lower profitability.",
+        pt: "O relatório permite comparar receita, custo, lucro e margem nos mesmos filtros. Essa comparação ajuda a investigar se os segmentos com maior faturamento também apresentam maior margem.",
+        en: "The report compares revenue, cost, profit and margin under the same filters. This helps investigate whether higher-revenue segments also have higher margins.",
       },
       items: [
         {
@@ -709,8 +709,8 @@ export const projects: Project[] = [
     results: {
       status: "complete",
       content: {
-        pt: "Construí um relatório com indicadores financeiros, filtros por país, produto e cliente e duas composições de página. A comparação entre receita e margem orienta a leitura.",
-        en: "I built a report with financial indicators, country, product and customer filters, and two page compositions. Comparing revenue with margin guides the analysis.",
+        pt: "O relatório reúne indicadores financeiros, filtro de ano e comparações por país, produto e tipo de cliente em páginas desktop e retrato.",
+        en: "The report combines financial indicators, a year filter and comparisons by country, product and customer type on desktop and portrait pages.",
       },
       items: [],
     },
@@ -780,8 +780,8 @@ export const projects: Project[] = [
       en: "Three-store consolidation, a model with commercial dimensions, and navigation from a sales overview to detailed analysis.",
     },
     shortDescription: {
-      pt: "Como as vendas se distribuem entre lojas, produtos e vendedores? Duas páginas permitem comparar faturamento e registros de venda e aprofundar a análise de cada loja.",
-      en: "How are sales distributed across stores, products and sellers? Two pages compare revenue and sales records and provide a closer look at each store.",
+      pt: "Vendas de três lojas consolidadas em uma visão geral e uma página de detalhamento. Compara faturamento, quantidade e valor médio dos registros por loja, produto, vendedor e período.",
+      en: "Sales from three stores combined in an overview and a detail page. Compares revenue, record counts and average record value by store, product, salesperson and period.",
     },
     categoryKey: "sales",
     category: {
@@ -926,8 +926,8 @@ export const projects: Project[] = [
       status: "complete",
       items: ["Faturamento", "TicketMedio", "Qntde_Pedidos", "Produtos_distintos", "FatX"],
       note: {
-        pt: "Veja o que cada medida calcula e como pode ser usada na análise. As fórmulas DAX abaixo foram extraídas do modelo.",
-        en: "See what each measure calculates and how it can be used in analysis. The DAX formulas below were extracted from the model.",
+        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
+        en: "Formulas extracted from the model, with definitions and analytical uses.",
       },
       definitions: [
         {
@@ -952,8 +952,8 @@ export const projects: Project[] = [
           name: "Qntde_Pedidos",
           formula: "COUNT(fVendas[TotalVendas])",
           interpretation: {
-            pt: "Conta valores numéricos preenchidos em TotalVendas; compara frequência de registros.",
-            en: "Counts populated numeric TotalVendas values; compares record frequency.",
+            pt: "Conta valores numéricos preenchidos em TotalVendas. Permite comparar a quantidade de registros nos filtros selecionados.",
+            en: "Counts nonblank numeric values in TotalVendas. Compares the number of records under the selected filters.",
           },
           evidence: "A · PBIX / DAX",
         },
@@ -1041,8 +1041,8 @@ export const projects: Project[] = [
     },
     limitations: [
       {
-        pt: "Qntde_Pedidos usa COUNT(TotalVendas): conta registros numéricos não vazios, não pedidos distintos. TicketMedio usa AVERAGE(TotalVendas): é média por registro, sem comprovação de ticket por pedido. Os nomes originais foram preservados e sua semântica explicitada.",
-        en: "Qntde_Pedidos uses COUNT(TotalVendas): it counts nonblank numeric records, not distinct orders. TicketMedio uses AVERAGE(TotalVendas): it is an average per record, not a verified order-level average. Original names are preserved and their semantics clarified.",
+        pt: "Qntde_Pedidos usa COUNT(TotalVendas): conta registros numéricos não vazios, não pedidos distintos. TicketMedio usa AVERAGE(TotalVendas): é média por registro, sem comprovação de ticket por pedido. Os nomes originais foram mantidos; as explicações descrevem o que as fórmulas calculam.",
+        en: "Qntde_Pedidos uses COUNT(TotalVendas): it counts nonblank numeric records, not distinct orders. TicketMedio uses AVERAGE(TotalVendas): it is an average per record, not a verified order-level average. Original names are retained; the explanations describe what the formulas calculate.",
       },
       {
         pt: "Não foi identificada página mobile dedicada. A natureza real ou sintética da base não foi confirmada.",
@@ -1090,8 +1090,8 @@ export const projects: Project[] = [
       en: "Spending by location and vehicle in a public version with fictional data. Monthly comparison requires the validation described in the case study.",
     },
     shortDescription: {
-      pt: "Um dashboard para acompanhar gastos e registros de abastecimento por veículo e localização, criado a partir de uma necessidade real. A versão pública usa dados e placas fictícios.",
-      en: "A dashboard for tracking fuel spending and records by vehicle and location, built for a real need. The public version uses fictional data and license plates.",
+      pt: "Gastos e registros de abastecimento por estado, cidade e veículo. Criado para uma necessidade real de trabalho; a versão pública usa dados e placas fictícios para preservar a confidencialidade.",
+      en: "Fuel spending and records by state, city and vehicle. Built for a real workplace need; the public version uses fictional data and license plates to protect confidentiality.",
     },
     categoryKey: "fleet",
     category: {
@@ -1205,8 +1205,8 @@ export const projects: Project[] = [
       status: "complete",
       items: ["TotalAbastecimento", "ContAbastecimentos"],
       note: {
-        pt: "Veja o que cada medida calcula e como pode ser usada na análise. As fórmulas DAX abaixo foram extraídas do modelo.",
-        en: "See what each measure calculates and how it can be used in analysis. The DAX formulas below were extracted from the model.",
+        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
+        en: "Formulas extracted from the model, with definitions and analytical uses.",
       },
       definitions: [
         {
@@ -1252,8 +1252,8 @@ export const projects: Project[] = [
     insights: {
       status: "complete",
       content: {
-        pt: "O relatório permite comparar a concentração de gastos por estado, cidade e veículo. Para analisar a evolução mensal, é necessário corrigir e validar o relacionamento temporal identificado na versão publicada.",
-        en: "The report supports comparisons of spending by state, city and vehicle. Monthly analysis requires correcting and validating the time relationship identified in the published version.",
+        pt: "O relatório permite comparar a concentração de gastos por estado, cidade e veículo. A comparação mensal depende da revisão do relacionamento entre o calendário e a tabela usada pelas medidas no arquivo analisado.",
+        en: "The report supports comparisons of spending by state, city and vehicle. Monthly comparisons depend on reviewing the relationship between the calendar and the table used by the measures in the analyzed file.",
       },
       items: [],
     },
@@ -1307,8 +1307,8 @@ export const projects: Project[] = [
           en: "Present a real-origin project without exposing the operation.",
         },
         solution: {
-          pt: "Versão pública com dados e identificadores fictícios, conforme declaração do autor.",
-          en: "A public version with fictional data and identifiers, according to the author.",
+          pt: "Substituição dos dados e identificadores por informações fictícias na versão pública.",
+          en: "Replacement of data and identifiers with fictional information in the public version.",
         },
       },
     ],

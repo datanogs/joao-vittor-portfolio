@@ -23,8 +23,8 @@ export type ProjectProcess = {
 export const projectProcesses: Record<string, ProjectProcess> = {
   "spotify-top-50": {
     excel: copy(
-      "O arquivo Excel é a fonte tabular do histórico do Top 50: reúne datas, posições e atributos de músicas e artistas. A preparação confirmada acontece na consulta que importa essa planilha para o Power BI.",
-      "The Excel workbook is the tabular source for the Top 50 history: dates, positions, and song and artist attributes. The documented preparation takes place in the query that imports this sheet into Power BI.",
+      "O Excel contém o histórico do Top 50, com datas, posições e atributos de músicas e artistas. As etapas de preparação documentadas estão na consulta do Power Query.",
+      "The Excel workbook contains Top 50 history: dates, positions, and song and artist attributes. The documented preparation steps are in the Power Query query.",
     ),
     extraction: copy(
       "O Power Query lê um arquivo Excel local com Excel.Workbook e seleciona a planilha Base de dados - Spotify - TOP50. A origem anterior a esse arquivo não está identificada nos materiais disponíveis.",
@@ -210,8 +210,8 @@ export const projectProcesses: Record<string, ProjectProcess> = {
           "Compare profit relative to revenue, alongside the absolute sales value.",
         ),
         logic: copy(
-          "DIVIDE divide a soma de Lucro pelo Faturamento_liquido. O total é uma razão entre somas, não uma média simples das margens por produto. Sem denominador válido, retorna BLANK.",
-          "DIVIDE divides the sum of Lucro by Faturamento_liquido. The total is a ratio of sums, not a simple average of product margins. Without a valid denominator, it returns BLANK.",
+          "DIVIDE divide a soma de Lucro pelo Faturamento_liquido. O total é uma razão entre somas, não uma média simples das margens por produto. Quando o denominador é zero ou vazio, retorna BLANK.",
+          "DIVIDE divides the sum of Lucro by Faturamento_liquido. The total is a ratio of sums, not a simple average of product margins. When the denominator is zero or blank, it returns BLANK.",
         ),
         usage: copy(
           "Coluna Margem da tabela de produtos e gráficos de margem por país e tipo de cliente.",
@@ -348,8 +348,8 @@ export const projectProcesses: Record<string, ProjectProcess> = {
   },
   "gestao-abastecimentos-frota-leve": {
     excel: copy(
-      "Uma planilha Excel de movimentos de abastecimento fornece a estrutura operacional: data, localização, veículo, produto, quantidade e valores. O portfólio apresenta a versão ilustrativa com valores e placas fictícios, conforme informado pelo autor.",
-      "An Excel sheet of refueling records supplies the operational structure: date, location, vehicle, product, quantity and values. The portfolio presents the illustrative version with fictional values and plates, as declared by the author.",
+      "Uma planilha Excel de movimentos de abastecimento fornece a estrutura operacional: data, localização, veículo, produto, quantidade e valores. A versão do portfólio usa valores e placas fictícios.",
+      "An Excel sheet of refueling records supplies the operational structure: date, location, vehicle, product, quantity and values. The portfolio version uses fictional values and license plates.",
     ),
     extraction: copy(
       "O Power Query lê a planilha movimentos_detalhados (4) de um arquivo Excel. As consultas movimentos_detalhados (4) e (5) partem dessa mesma planilha; as medidas usam a tabela (4).",
