@@ -7,7 +7,7 @@ export type SkillGroup = {
 export const heroStack = ["Power BI", "Power Query", "DAX", "Excel"];
 export const skillGroups: SkillGroup[] = [
   {
-    category: { pt: "Organização e preparação", en: "Organization and preparation" },
+    category: { pt: "Organização, preparação e consulta", en: "Organization, preparation and querying" },
     status: "inUse",
     tools: [
       {
@@ -22,6 +22,13 @@ export const skillGroups: SkillGroup[] = [
         context: {
           pt: "Importo e combino fontes, corrijo inconsistências e padronizo valores, tipos e colunas. Preparo as bases para que filtros, agrupamentos e cálculos partam de uma estrutura consistente.",
           en: "I import and combine sources, correct inconsistencies and standardize values, data types and columns. I prepare datasets so filtering, grouping and calculations use a consistent structure.",
+        },
+      },
+      {
+        name: "SQL",
+        context: {
+          pt: "Utilizo SQL para consultar e explorar dados relacionais, selecionando, filtrando, agrupando e relacionando informações necessárias à análise.",
+          en: "I use SQL to query and explore relational data, selecting, filtering, grouping and joining the information needed for analysis.",
         },
       },
     ],
@@ -47,16 +54,9 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    category: { pt: "Dados e programação", en: "Data and programming" },
+    category: { pt: "Programação e integração", en: "Programming and integration" },
     status: "developing",
     tools: [
-      {
-        name: "SQL",
-        context: {
-          pt: "Estou desenvolvendo SQL para consultar e explorar dados relacionais, com foco na organização de consultas e na seleção das informações necessárias à análise.",
-          en: "I am developing my SQL skills to query and explore relational data, focusing on structuring queries and selecting the information needed for analysis.",
-        },
-      },
       {
         name: "Python",
         context: {
@@ -75,20 +75,20 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: { pt: "Versionamento e desenvolvimento", en: "Version control and development" },
-    status: "inUse",
+    status: "developing",
     tools: [
       {
         name: "Git",
         context: {
-          pt: "Utilizo Git para registrar alterações e manter o histórico do desenvolvimento deste portfólio.",
-          en: "I use Git to track changes and maintain this portfolio’s development history.",
+          pt: "Estou desenvolvendo conhecimentos em Git para registrar alterações e acompanhar o histórico de desenvolvimento dos projetos.",
+          en: "I am learning to use Git to track changes and maintain project development history.",
         },
       },
       {
         name: "GitHub",
         context: {
-          pt: "Utilizo GitHub para hospedar e organizar o repositório do portfólio, manter sua documentação e acompanhar as versões publicadas.",
-          en: "I use GitHub to host and organize the portfolio repository, maintain its documentation and track published versions.",
+          pt: "Estou desenvolvendo conhecimentos em GitHub para organizar repositórios, documentar projetos e acompanhar suas versões.",
+          en: "I am learning to use GitHub to organize repositories, document projects and track their versions.",
         },
       },
     ],
