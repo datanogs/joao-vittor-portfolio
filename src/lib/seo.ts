@@ -162,5 +162,5 @@ export function personJsonLd(lang: Lang) {
     name: profile.fullName,
     description: profile.metaDescription[lang],
     sameAs: ["https://www.linkedin.com/in/joaovittornogueira"],
-  });
+  }).replace(/</g, "\\u003c");
 }

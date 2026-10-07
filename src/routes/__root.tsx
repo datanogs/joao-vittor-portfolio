@@ -7,10 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { ThemeProvider, themeInitScript } from "../lib/theme";
 import { I18nProvider, langFromPath, languageInitScript, localizePath } from "../lib/i18n";
 import { ui } from "@/content/ui";
@@ -43,10 +42,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const lang = langFromPath(pathname);
   const copy = ui[lang].error;
-
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-5 py-16">

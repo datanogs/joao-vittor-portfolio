@@ -52,3 +52,11 @@ Não versionar credenciais, `.env` com valores, `.vercel`, dependências, builds
 
 Os relatórios em `docs/` registram revisões anteriores; instruções Cloudflare e resultados antigos são históricos e não comprovam o estado do deploy atual. Este README descreve a configuração Vercel vigente.
 
+
+## Segurança e manutenção
+
+A revisão está em [docs/SECURITY_REVIEW.md](docs/SECURITY_REVIEW.md). Execute `npm ci`, `npm run audit:security`, `npm run check` e `VITE_SITE_URL=https://joao-vittor-portfolio.vercel.app npm run build:release` antes de publicar alterações de dependências. Não utilize `npm audit fix --force` sem avaliar compatibilidade.
+
+Os metadados de origem do template estão em `docs/tooling/project-origin.json`, apenas como documentação. A pasta `.lovable` foi retirada; isso não revoga conexões entre serviços. O wrapper `@lovable.dev/vite-tanstack-config` ainda participa do build e não deve ser renomeado como se fosse código próprio. O destino de publicação continua sendo Vercel.
+
+Nunca publique credenciais em variáveis `VITE_*`: elas podem integrar o bundle público. Dados originais de trabalho, PBIX e planilhas privadas não devem entrar em `public/` nem no histórico Git.

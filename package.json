@@ -17,7 +17,8 @@
     "check": "npm run validate && npm run typecheck && npm run lint",
     "prebuild": "npm run validate && node scripts/generate-seo.mjs",
     "validate": "node scripts/validate-content.mjs",
-    "build:release": "node scripts/generate-seo.mjs --require-origin && npm run build"
+    "build:release": "node scripts/generate-seo.mjs --require-origin && npm run build",
+    "audit:security": "npm audit --audit-level=high"
   },
   "overrides": {
     "rolldown": "1.2.1"
@@ -49,7 +50,6 @@
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "8.1.5",
-    "wrangler": "4.147.0"
+    "vite": "8.1.5"
   }
 }
