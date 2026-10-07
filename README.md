@@ -6,7 +6,6 @@ Repositório: https://github.com/datanogs/joao-vittor-portfolio
 Branch de produção: `main`.
 
 Site: https://joao-vittor-portfolio.vercel.app
-Projeto Vercel: `joao-vittor-portfolio`, conta `eujoaovittornogueira-9878` (Hobby).
 
 ## Desenvolvimento e validação
 
