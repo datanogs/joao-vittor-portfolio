@@ -33,8 +33,8 @@ function absoluteUrl(path: string) {
 export const seoPages = {
   home: {
     title: {
-      pt: `${profile.fullName} — Analista de Dados | Business Intelligence`,
-      en: `${profile.fullName} — Data Analyst | Business Intelligence`,
+      pt: `${profile.fullName} — Análise de Dados | Business Intelligence`,
+      en: `${profile.fullName} — Data Analytics | Business Intelligence`,
     },
     description: profile.metaDescription,
     ptPath: "/",
@@ -42,8 +42,8 @@ export const seoPages = {
   about: {
     title: { pt: `Sobre — ${profile.name}`, en: `About — ${profile.name}` },
     description: {
-      pt: `Trajetória profissional, formação e objetivos de ${profile.fullName}, Analista de Dados e BI.`,
-      en: `Professional background, education and goals of ${profile.fullName}, Data Analyst and BI professional.`,
+      pt: `Trajetória profissional de ${profile.fullName}: Logística, rotina administrativa e desenvolvimento em Análise de Dados e Business Intelligence.`,
+      en: `The professional background of ${profile.fullName}: Logistics, administrative work and development in Data Analytics and Business Intelligence.`,
     },
     ptPath: "/sobre",
     type: "profile" as const,
@@ -80,8 +80,8 @@ export const seoPages = {
   },
   contact: {
     title: {
-      pt: `Contato — ${profile.name} | Analista de Dados`,
-      en: `Contact — ${profile.name} | Data Analyst`,
+      pt: `Contato — ${profile.name} | Análise de Dados`,
+      en: `Contact — ${profile.name} | Data Analytics`,
     },
     description: {
       pt: `Canais profissionais para falar com ${profile.fullName}: LinkedIn, GitHub e e-mail.`,

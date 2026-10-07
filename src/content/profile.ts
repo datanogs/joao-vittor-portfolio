@@ -4,20 +4,20 @@ export const profile = {
   fullName: "João Vittor Nogueira",
   brand: "João Vittor Nogueira",
   role: {
-    pt: "Analista de Dados | Business Intelligence",
-    en: "Data Analyst | Business Intelligence",
+    pt: "Análise de Dados | Business Intelligence",
+    en: "Data Analytics | Business Intelligence",
   },
   heroStatement: {
     pt: "Estrutura, análise e contexto para entender melhor o negócio.",
     en: "Data structure, analysis and context to understand the business.",
   },
   heroDescription: {
-    pt: "Preparo bases no Power Query, organizo modelos e escrevo medidas DAX. Meus dashboards em Power BI analisam músicas, vendas e abastecimentos.",
-    en: "I prepare datasets in Power Query, structure models and write DAX measures. My Power BI dashboards cover music rankings, sales and fuel records.",
+    pt: "Organizo e confiro bases no Excel e preparo os dados no Power Query, combinando fontes e padronizando informações. No Power BI, estruturo o modelo e os relacionamentos, crio medidas DAX e organizo indicadores, visualizações, filtros e navegação para permitir comparações e passar da visão geral ao detalhe.",
+    en: "I organize and check datasets in Excel, then use Power Query to combine sources and standardize the data. In Power BI, I structure models and relationships, write DAX measures, and organize indicators, visuals, filters and navigation so users can compare results and move from an overview to detailed analysis.",
   },
   metaDescription: {
-    pt: "João Vittor Nogueira — Analista de Dados | Business Intelligence. Projetos em Power BI, preparação de dados, modelagem e DAX, com explicações sobre cada análise.",
-    en: "João Vittor Nogueira — Data Analyst | Business Intelligence. Power BI projects, data preparation, modeling and DAX, with the reasoning behind each analysis.",
+    pt: "João Vittor Nogueira — Análise de Dados | Business Intelligence. Projetos em Power BI, preparação de dados, modelagem e DAX, com explicações sobre cada análise.",
+    en: "João Vittor Nogueira — Data Analytics | Business Intelligence. Power BI projects, data preparation, modeling and DAX, with the reasoning behind each analysis.",
   },
   images: {
     portrait: "/images/profile/portrait.webp",
