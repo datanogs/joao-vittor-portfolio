@@ -119,6 +119,9 @@ export function HomePage() {
         <div className="grid gap-8 md:grid-cols-2">
           {skillGroups.map((group) => (
             <article key={group.category.pt} className="border-t border-border pt-5">
+              <p className="text-meta text-muted-foreground mb-2">
+                {group.status === "inUse" ? h.stackInUse : h.stackDeveloping}
+              </p>
               <h3 className="text-card-title">{l(group.category)}</h3>
               <dl className="mt-6 space-y-6">
                 {group.tools.map((tool) => (
