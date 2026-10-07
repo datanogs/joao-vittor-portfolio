@@ -12,8 +12,8 @@ export const visualLanguage = {
   ] satisfies L[],
   projectLabel: { pt: "Percurso de leitura", en: "Reading path" },
   projectNote: {
-    pt: "Conexões conceituais entre os temas do relatório; não representam valores ou relações causais.",
-    en: "Conceptual connections between report topics; these do not represent values or causal relationships.",
+    pt: "Temas que orientam a exploração do relatório.",
+    en: "Topics that guide exploration of the report.",
   },
   projects: {
     "spotify-top-50": [

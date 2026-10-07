@@ -22,7 +22,6 @@ export type ProjectImage = {
 };
 
 export type Project = {
-  evidence: { confirmed: string[]; inference: string };
   limitations: L[];
   observations: L[];
   challenges: { challenge: L; solution: L }[];
@@ -43,8 +42,6 @@ export type Project = {
   data: {
     status: CompletionStatus;
     source: L;
-    entities: string[];
-    fields: string[];
     note: L;
   };
   treatment: CaseBlock;
@@ -52,7 +49,6 @@ export type Project = {
   modeling: {
     status: CompletionStatus;
     content: L;
-    entities: string[];
   };
   metrics: {
     status: CompletionStatus;
@@ -167,77 +163,36 @@ export const projects: Project[] = [
     data: {
       status: "complete",
       source: {
-        pt: "Arquivo Excel identificado no Power Query; a origem externa anterior ao arquivo não foi confirmada. O snapshot contém 27.800 registros em 556 datas, de 18/05/2023 a 27/11/2024.",
-        en: "An Excel file identified in Power Query; its upstream external source was not confirmed. The snapshot contains 27,800 records across 556 dates, from 18 May 2023 to 27 November 2024.",
+        pt: "O histórico em Excel cobre o Top 50 diário entre maio de 2023 e novembro de 2024. Cada linha registra uma aparição por data e posição.",
+        en: "The Excel dataset covers the daily Top 50 from May 2023 to November 2024. Each row records one appearance at a specific date and position.",
       },
-      entities: ["Base de dados - Spotify - TOP50", "Medidas", "Filtro_Tri_Mes"],
-      fields: [
-        "song",
-        "artist",
-        "position",
-        "date",
-        "release_date",
-        "popularity",
-        "duration_ms",
-        "album_type",
-        "is_explicit",
-        "total_tracks",
-        "album_cover_url",
-      ],
       note: {
-        pt: "A granularidade observada é uma entrada por data e posição: 50 posições por data, sem duplicatas dessa chave no snapshot. São 789 títulos distintos, 342 rótulos de artista e 825 combinações música–artista. Um rótulo pode representar uma colaboração; não equivale necessariamente a uma pessoa.",
-        en: "The observed grain is one entry per date and position: 50 positions per date, with no duplicate keys in this snapshot. There are 789 distinct titles, 342 artist labels and 825 song–artist combinations. A label can represent a collaboration rather than one person.",
+        pt: "Preservei as aparições ao longo dos dias para comparar recorrência sem confundi-la com variedade de músicas.",
+        en: "I kept repeated appearances across dates so that recurrence could be compared separately from the number of distinct songs.",
       },
     },
     treatment: {
       status: "complete",
       content: {
-        pt: "No Power Query, promovi cabeçalhos, defini os tipos e selecionei 11 campos. Também padronizei categorias de álbum e corrigi a codificação de um nome de artista.",
-        en: "In Power Query, I promoted headers, set data types and selected 11 fields. I also standardized album categories and corrected the encoding of an artist name.",
+        pt: "Tratei a base no Power Query, padronizando categorias de álbum, datas, tipos de dados e textos dos artistas. Isso organiza os atributos usados nos filtros e evita que variações de escrita se tornem grupos diferentes nas comparações.",
+        en: "I prepared the data in Power Query, standardizing album categories, dates, data types and artist text. This makes filtering consistent and prevents spelling variations from splitting equivalent categories.",
       },
-      items: [
-        {
-          pt: "Datas convertidas para date; popularidade, posição e duração para inteiros; conteúdo explícito para lógico.",
-          en: "Dates converted to date; popularity, position and duration to integers; explicit content to logical.",
-        },
-        {
-          pt: "Text.Proper em album_type; Single → Solo e Compilation → Compilado; correção de codificação de Beyoncé.",
-          en: "Text.Proper on album_type; Single → Solo and Compilation → Compilado; Beyoncé encoding correction.",
-        },
-        {
-          pt: "A etapa final Table.SelectRows(each true) não remove registros. Não foi detectada remoção de duplicatas.",
-          en: "The final Table.SelectRows(each true) step does not remove records. No deduplication step was detected.",
-        },
-      ],
+      items: [],
     },
     transformation: {
       status: "complete",
       content: {
-        pt: "O modelo contém 70 medidas com expressão e dois objetos de medida vazios. Os cálculos cobrem contagens, médias, duração, posição, Top 10, primeiro lugar, conteúdo explícito e índices próprios de desempenho. Nem todas as medidas são utilizadas nos visuais.",
-        en: "The model contains 70 measures with expressions and two empty measure objects. Calculations cover counts, averages, duration, position, Top 10, number-one entries, explicit content and custom performance indices. Not every measure is used in visuals.",
+        pt: "As medidas combinam presença no ranking, variedade de repertório, posição, popularidade e duração. Cada uma responde a uma pergunta diferente sobre o mesmo histórico.",
+        en: "The measures cover ranking presence, repertoire variety, position, popularity and duration. Each answers a different question about the same history.",
       },
-      items: [
-        {
-          pt: "Colunas calculadas Mes, num_mes, trimestre e Ano organizam recortes temporais; Filtro_Tri_Mes alterna campos de mês e trimestre.",
-          en: "Calculated Mes, num_mes, trimestre and Ano columns organize time slices; Filtro_Tri_Mes switches month and quarter fields.",
-        },
-        {
-          pt: "As medidas de popularidade por artista ou música usam AVERAGEX sobre valores distintos; sua ponderação difere da média de todas as entradas.",
-          en: "Artist- and song-level popularity measures use AVERAGEX over distinct values; their weighting differs from the average across all entries.",
-        },
-        {
-          pt: "O índice próprio combina popularidade e posição média: popularidade × (51 − posição média) / 50. Não é um indicador oficial do Spotify.",
-          en: "The custom index combines popularity and average position: popularity × (51 − average position) / 50. It is not an official Spotify metric.",
-        },
-      ],
+      items: [],
     },
     modeling: {
       status: "complete",
       content: {
-        pt: "Tabela analítica principal com atributos de música e artista na própria base, tabela de medidas e parâmetro de campos. Calendários automáticos atendem date e release_date. Não há dimensões separadas de músicas e artistas que sustentem descrever o modelo como estrela.",
-        en: "A main analytical table holds song and artist attributes, alongside a measure table and field parameter. Automatic calendars support date and release_date. There are no separate song and artist dimensions to support describing this as a star schema.",
+        pt: "Mantive datas, posições e atributos das faixas em uma base analítica. Nas medidas DAX, separei a contagem de aparições das contagens distintas de títulos e artistas: uma faixa que aparece em vários dias contribui várias vezes para a recorrência, mas uma vez para a contagem de títulos no recorte.",
+        en: "I kept dates, positions and track attributes in one analytical table. In DAX, I separated appearance counts from distinct song-title and artist counts: a track appearing on several days contributes repeatedly to recurrence, but once to the distinct-title count within the selection.",
       },
-      entities: ["Base de dados - Spotify - TOP50", "Medidas", "Filtro_Tri_Mes"],
     },
     metrics: {
       status: "complete",
@@ -245,17 +200,13 @@ export const projects: Project[] = [
         "Total Registros",
         "Total Songs Distintas",
         "Total Artistas Distintos",
-        "Total Combinações Song-Artista",
+        "Entradas em #1",
         "Popularidade Média",
         "Duração Média (min)",
-        "Posição Média",
-        "Entradas em #1",
-        "Aparições por Song",
-        "Índice de Performance Song",
       ],
       note: {
-        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
-        en: "Formulas extracted from the model, with definitions and analytical uses.",
+        pt: "As contagens distinguem aparições de itens únicos; popularidade e duração acrescentam contexto às comparações.",
+        en: "Counts distinguish repeated appearances from unique items; popularity and duration add context to those comparisons.",
       },
       definitions: [
         {
@@ -286,21 +237,11 @@ export const projects: Project[] = [
           evidence: "A · PBIX / DAX",
         },
         {
-          name: "Total Combinações Song-Artista",
-          formula:
-            "\n        COUNTROWS(\n            SUMMARIZE(\n                'Base de dados - Spotify - TOP50',\n                'Base de dados - Spotify - TOP50'[song],\n                'Base de dados - Spotify - TOP50'[artist]\n            )\n        )",
-          interpretation: {
-            pt: "Conta pares título–artista; distingue títulos associados a artistas diferentes.",
-            en: "Counts title–artist pairs; distinguishes titles associated with different artists.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
-        {
           name: "Popularidade Média",
           formula: "\n        AVERAGE('Base de dados - Spotify - TOP50'[popularity])",
           interpretation: {
             pt: "Média da pontuação nas entradas filtradas; compara popularidade do recorte, não streams.",
-            en: "Average score across filtered entries; compares snapshot popularity, not streams.",
+            en: "Average score across filtered entries; compares popularity scores, not stream counts.",
           },
           evidence: "A · PBIX / DAX",
         },
@@ -308,17 +249,8 @@ export const projects: Project[] = [
           name: "Duração Média (min)",
           formula: "\n        DIVIDE([Duração Média (ms)], 60000)",
           interpretation: {
-            pt: "Converte duração média para minutos; compara extensão das músicas representadas.",
-            en: "Converts average duration to minutes; compares the length of represented songs.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
-        {
-          name: "Posição Média",
-          formula: "\n        AVERAGE('Base de dados - Spotify - TOP50'[position])",
-          interpretation: {
-            pt: "Resume posição nas entradas; valores menores representam posições mais altas.",
-            en: "Summarizes position across entries; lower values represent higher ranks.",
+            pt: "Duração média das faixas nas aparições selecionadas, em minutos.",
+            en: "Average track duration across the selected appearances, in minutes.",
           },
           evidence: "A · PBIX / DAX",
         },
@@ -332,44 +264,26 @@ export const projects: Project[] = [
           },
           evidence: "A · PBIX / DAX",
         },
-        {
-          name: "Aparições por Song",
-          formula: "\n        DIVIDE([Total Registros], [Total Songs Distintas])",
-          interpretation: {
-            pt: "Divide entradas por títulos distintos; em uma música indica aparições, no total indica média por título.",
-            en: "Divides entries by distinct titles; for one song it indicates appearances, overall an average per title.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
-        {
-          name: "Índice de Performance Song",
-          formula: "\n        [Popularidade Média] * DIVIDE(51 - [Posição Média], 50)",
-          interpretation: {
-            pt: "Combina popularidade média com posição média em uma fórmula própria; permite comparação relativa no modelo.",
-            en: "Combines average popularity and position in a custom formula; supports relative comparison within the model.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
       ],
     },
     dashboard: {
       status: "complete",
       content: {
-        pt: "Home funciona como ponto de entrada. Overview reúne volume, popularidade, duração e distribuições; Artists focaliza presença e repertório por artista; Songs compara faixas e posições. Botões com destinos de página explícitos conectam as quatro telas, todas em 1280 × 720.",
-        en: "Home is the entry point. Overview brings together volume, popularity, duration and distributions; Artists focuses on artist presence and repertoire; Songs compares tracks and positions. Buttons with explicit page destinations connect all four 1280 × 720 pages.",
+        pt: "Organizei a navegação em quatro páginas. Home apresenta o relatório; Overview resume o ranking; Artists permite investigar o repertório e a presença de cada artista; Songs chega ao comportamento de uma faixa. Os botões mantêm esses níveis de leitura conectados.",
+        en: "I organized navigation into four pages. Home introduces the report; Overview summarizes the ranking; Artists explores each artist’s repertoire and presence; Songs focuses on individual tracks. Page buttons connect these levels of analysis.",
       },
       items: [
         {
-          pt: "Overview: cartões, distribuições por tipo de álbum, conteúdo explícito e ano; séries mensais e comparação entre artistas.",
-          en: "Overview: cards, album-type, explicit-content and year distributions; monthly series and artist comparisons.",
+          pt: "Overview: comparar quantidade de músicas, popularidade e duração, além da distribuição por tipo de álbum, conteúdo explícito e período.",
+          en: "Overview: compare song counts, popularity and duration, alongside album type, explicit content and time distributions.",
         },
         {
-          pt: "Artists: entradas em primeiro lugar, títulos distintos e aparições por artista, com tabela de músicas, lançamento, tipo, duração e popularidade.",
-          en: "Artists: number-one entries, distinct titles and appearances by artist, with a table of songs, release dates, types, duration and popularity.",
+          pt: "Artists: distinguir quem aparece com frequência de quem reúne mais títulos, usando aparições, músicas distintas e entradas em primeiro lugar.",
+          en: "Artists: distinguish frequent appearances from a broader repertoire using appearance counts, distinct titles and first-place entries.",
         },
         {
-          pt: "Songs: entradas em primeiro lugar, popularidade média e aparições por música. Segmentadores de música e capa aparecem nas páginas analíticas.",
-          en: "Songs: number-one entries, average popularity and appearances by song. Song and cover slicers appear on analytical pages.",
+          pt: "Songs: comparar faixas por aparições, popularidade e liderança, com filtros para concentrar a leitura na música escolhida.",
+          en: "Songs: compare tracks by appearances, popularity and first-place entries, using filters to focus on a selected song.",
         },
       ],
     },
@@ -406,7 +320,7 @@ export const projects: Project[] = [
         },
         {
           pt: "As distribuições permitem investigar a composição do recorte monitorado; não representam todo o catálogo do Spotify.",
-          en: "Distributions support investigation of the monitored snapshot; they do not represent the entire Spotify catalogue.",
+          en: "Distributions describe the monitored ranking rather than the entire Spotify catalogue.",
         },
       ],
     },
@@ -428,27 +342,14 @@ export const projects: Project[] = [
     },
     githubUrl: "",
     youtubeUrl: "",
-    evidence: {
-      confirmed: ["PBIX: modelo, fórmulas e definição do relatório", "Screenshots fornecidas"],
-      inference:
-        "Capacidades analíticas derivadas da estrutura observada; não representam impacto empresarial medido.",
-    },
     limitations: [
       {
-        pt: "Seis medidas dependem de single/compilation, mas o Power Query converte essas categorias para Solo/Compilado. Essas fórmulas precisam de revisão antes de serem apresentadas como indicadores validados.",
-        en: "Six measures depend on single/compilation, but Power Query converts these categories to Solo/Compilado. These formulas require review before being presented as validated indicators.",
+        pt: "As contagens distintas usam títulos e créditos de artista: faixas com o mesmo nome podem ser agrupadas, e uma colaboração pode formar um único crédito.",
+        en: "Distinct counts use song titles and artist credits: tracks sharing a title can be grouped together, and a collaboration can form one credit.",
       },
       {
-        pt: "O visual “Popularidade por Música” soma popularity; esse valor acumula pontuações nas aparições e não mede streams. Duração total soma durações dos registros, não horas ouvidas.",
-        en: "The “Popularidade por Música” visual sums popularity; it accumulates scores across appearances and does not measure streams. Total duration sums record durations, not listening hours.",
-      },
-      {
-        pt: "DISTINCTCOUNT(song) distingue títulos, não IDs de faixas. Contagens de conteúdo explícito e Top 10 contam entradas. “Artistas/Songs Distintos por Dia” divide o total distinto pelo número de datas, sem calcular a média das contagens diárias.",
-        en: "DISTINCTCOUNT(song) distinguishes titles, not track IDs. Explicit-content and Top 10 counts count entries. “Artistas/Songs Distintos por Dia” divides the overall distinct count by the number of dates instead of averaging daily counts.",
-      },
-      {
-        pt: "Eixos com apenas o nome do mês podem reunir anos diferentes. Não foi identificada uma página mobile dedicada neste arquivo.",
-        en: "Axes containing only month names can combine different years. No dedicated mobile page was identified in this file.",
+        pt: "Popularidade é uma pontuação, não uma contagem de streams. No gráfico que soma essa pontuação, músicas com mais aparições podem acumular valores maiores. Ao comparar meses, selecione também o ano para separar períodos de anos diferentes.",
+        en: "Popularity is a score, not a stream count. In the chart that sums this score, more frequent appearances can produce larger totals. Select the year when comparing months to keep different years separate.",
       },
     ],
     challenges: [
@@ -475,8 +376,8 @@ export const projects: Project[] = [
     ],
     observations: [
       {
-        pt: "Na screenshot Overview, Taylor Swift apresenta 85 títulos distintos, contra 30 de Travis Scott. Na página Artists, são exibidas 1.871 aparições para Taylor Swift e 860 para Billie Eilish. Comparações restritas aos filtros e dados exibidos.",
-        en: "In the Overview screenshot, Taylor Swift has 85 distinct titles versus 30 for Travis Scott. Artists displays 1,871 appearances for Taylor Swift and 860 for Billie Eilish. These comparisons apply only to the displayed data and filters.",
+        pt: "Na visão geral exibida, Taylor Swift reúne 85 títulos, contra 30 de Travis Scott. Essa leitura compara variedade no recorte; a página Artists complementa a comparação com a frequência de aparições.",
+        en: "In the displayed overview, Taylor Swift has 85 titles compared with Travis Scott’s 30. This compares repertoire variety within that selection; Artists adds the frequency of ranking appearances.",
       },
     ],
   },
@@ -543,75 +444,45 @@ export const projects: Project[] = [
     data: {
       status: "complete",
       source: {
-        pt: "Planilha BD de um arquivo Excel local, identificada no Power Query. A base importada contém 700 registros, cinco países, cinco tipos de cliente e seis produtos.",
-        en: "The BD sheet of a local Excel file, identified in Power Query. The imported dataset contains 700 records, five countries, five customer types and six products.",
+        pt: "Usei uma base em Excel com valores de vendas, descontos, custos e lucro, associados a período, país, produto e tipo de cliente. O histórico abrange setembro de 2018 a dezembro de 2019.",
+        en: "I used an Excel dataset with sales, discounts, costs and profit, linked to period, country, product and customer type. The history runs from September 2018 to December 2019.",
       },
-      entities: ["fVendas", "dCalendario", "Medidas"],
-      fields: [
-        "Data",
-        "País",
-        "Tipos de Clientes",
-        "Produto",
-        "Valor Total",
-        "Valor Total c/ Desconto",
-        "Custo Total",
-        "Lucro",
-        "Desconto",
-      ],
       note: {
-        pt: "Existem 16 datas distintas, todas no primeiro dia do mês, entre setembro de 2018 e dezembro de 2019. Não há identificador de venda que comprove uma transação única por linha.",
-        en: "There are 16 distinct dates, all on the first day of the month, between September 2018 and December 2019. No sale identifier establishes a unique transaction per row.",
+        pt: "Essa combinação permite ler o desempenho financeiro junto aos segmentos comerciais que compõem cada total.",
+        en: "This combines financial performance with the commercial segments contributing to each total.",
       },
     },
     treatment: {
       status: "complete",
       content: {
-        pt: "O Power Query promove cabeçalhos, tipa valores financeiros como moeda e Data como data, remove as colunas Mês e Ano e remove a última linha com Table.RemoveLastN(..., 1). O motivo dessa remoção não é demonstrado pelo arquivo.",
-        en: "Power Query promotes headers, types financial values as currency and Data as date, removes Mês and Ano, and removes the final row with Table.RemoveLastN(..., 1). The file does not establish the reason for that removal.",
+        pt: "No Power Query, organizei os campos comerciais e os tipos de datas e valores financeiros. Centralizei mês e ano no calendário do modelo para usar o mesmo recorte temporal nas comparações.",
+        en: "In Power Query, I organized commercial fields and assigned date and financial data types. I centralized month and year in the model’s calendar so comparisons use the same time selection.",
       },
       items: [],
     },
     transformation: {
       status: "complete",
       content: {
-        pt: "Sete medidas consolidam valores brutos, líquidos, descontos, custos, lucro, margem e faturamento médio. O calendário usa CALENDARAUTO(), com mês, ano e mês–ano derivados.",
-        en: "Seven measures consolidate gross and net values, discounts, costs, profit, margin and average revenue. The calendar uses CALENDARAUTO(), with derived month, year and month–year fields.",
+        pt: "Estruturei a leitura em receita, custo, lucro e margem. O faturamento mostra o valor vendido; custo e lucro acrescentam a dimensão financeira; a margem permite comparar rentabilidade relativa entre segmentos de tamanhos diferentes.",
+        en: "I structured the analysis around revenue, cost, profit and margin. Revenue shows sales value; cost and profit add financial context; margin compares relative profitability across segments of different sizes.",
       },
       items: [],
     },
     modeling: {
       status: "complete",
       content: {
-        pt: "fVendas relaciona Data a dCalendario[Date], em muitos-para-um, ativo e com filtro unidirecional do calendário para a base. País, produto e tipo de cliente permanecem como atributos da fato. Há uma tabela de medidas; não há dimensões comerciais separadas.",
-        en: "fVendas relates Data to dCalendario[Date] through an active many-to-one relationship, with one-way filtering from calendar to fact. Country, product and customer type remain fact attributes. A measure table is present; separate commercial dimensions are not.",
+        pt: "Relacionei a base de vendas a uma tabela calendário. País, produto e tipo de cliente permanecem na base e permitem comparar os indicadores sob os mesmos filtros. As medidas somam os valores financeiros da fonte e calculam a margem como lucro dividido pelo faturamento líquido.",
+        en: "I linked the sales table to a calendar. Country, product and customer type remain in the sales table, allowing indicators to be compared under the same filters. Measures aggregate the source’s financial values and calculate margin as profit divided by net revenue.",
       },
-      entities: ["fVendas", "dCalendario", "Medidas"],
     },
     metrics: {
       status: "complete",
-      items: [
-        "Faturamento_Bruto",
-        "Faturamento_liquido",
-        "Descontos",
-        "Custo",
-        "Lucro",
-        "margem",
-        "FatMM",
-      ],
+      items: ["Faturamento_liquido", "Descontos", "Custo", "Lucro", "margem"],
       note: {
-        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
-        en: "Formulas extracted from the model, with definitions and analytical uses.",
+        pt: "Os valores absolutos e a margem devem ser lidos em conjunto: maior receita não implica maior rentabilidade.",
+        en: "Absolute amounts and margin need to be read together: higher revenue does not imply higher profitability.",
       },
       definitions: [
-        {
-          name: "Faturamento_Bruto",
-          formula: "SUM(fVendas[Valor Total])",
-          interpretation: {
-            pt: "Soma Valor Total; referência bruta para comparação com o valor líquido.",
-            en: "Sums Valor Total; a gross reference for comparison with the net value.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
         {
           name: "Faturamento_liquido",
           formula: "SUM(fVendas[Valor Total c/ Desconto])",
@@ -643,8 +514,8 @@ export const projects: Project[] = [
           name: "Lucro",
           formula: "SUM(fVendas[Lucro])",
           interpretation: {
-            pt: "Soma a coluna Lucro; compara resultado absoluto dos segmentos, sem recalcular a regra da fonte.",
-            en: "Sums the Lucro column; compares absolute segment results without recalculating the source rule.",
+            pt: "Soma o lucro registrado na base para cada recorte.",
+            en: "Sums profit recorded in the dataset for each selection.",
           },
           evidence: "A · PBIX / DAX",
         },
@@ -657,27 +528,18 @@ export const projects: Project[] = [
           },
           evidence: "A · PBIX / DAX",
         },
-        {
-          name: "FatMM",
-          formula: "DIVIDE([Faturamento_liquido], DISTINCTCOUNT(fVendas[Data]))",
-          interpretation: {
-            pt: "Divide receita por datas distintas; corresponde a média por mês apenas na granularidade observada.",
-            en: "Divides revenue by distinct dates; corresponds to a monthly average only at the observed grain.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
       ],
     },
     dashboard: {
       status: "complete",
       content: {
-        pt: "Dashboard (1280 × 720) reúne cartões financeiros, evolução mensal, receita e margem por país e tipo de cliente, tabela por produto e filtro de ano. Mobile (720 × 1280) é uma página retrato separada, oculta na navegação padrão e acessível por botão.",
-        en: "Dashboard (1280 × 720) combines financial cards, monthly trends, revenue and margin by country and customer type, a product table and a year filter. Mobile (720 × 1280) is a separate portrait page, hidden from standard navigation and reachable by button.",
+        pt: "Na página desktop, reuni indicadores financeiros, evolução mensal e comparações por país, produto e tipo de cliente. O filtro de ano delimita o período; a tabela de produtos aproxima receita, custo, lucro e margem para facilitar a comparação.",
+        en: "On the desktop page, I brought together financial indicators, monthly trends and comparisons by country, product and customer type. The year filter sets the period, while the product table places revenue, cost, profit and margin side by side.",
       },
       items: [
         {
-          pt: "A página retrato preserva evolução, comparações comerciais, tabela e filtro. Sua estrutura não contém os mesmos cartões de KPI da página desktop.",
-          en: "The portrait page preserves trends, commercial comparisons, the table and filter. Its structure does not contain the same KPI cards as the desktop page.",
+          pt: "Criei também uma página em formato retrato, acessível por botão, reorganizando gráficos, tabela e filtros para uma leitura mais estreita.",
+          en: "I also created a portrait page, accessible through a button, rearranging charts, the table and filters for a narrower format.",
         },
       ],
     },
@@ -724,21 +586,7 @@ export const projects: Project[] = [
     },
     githubUrl: "",
     youtubeUrl: "",
-    evidence: {
-      confirmed: ["PBIX: modelo, fórmulas e definição do relatório", "Screenshots fornecidas"],
-      inference:
-        "Capacidades analíticas derivadas da estrutura observada; não representam impacto empresarial medido.",
-    },
-    limitations: [
-      {
-        pt: "FatMM divide receita pelo número de datas distintas. No snapshot, cada data corresponde a um mês; a fórmula não garante média mensal se a granularidade da fonte mudar.",
-        en: "FatMM divides revenue by the number of distinct dates. Each date corresponds to a month in this snapshot; the formula does not guarantee a monthly average if source granularity changes.",
-      },
-      {
-        pt: "A página retrato comprova uma composição mobile dedicada, mas não comprova ativação automática do layout nativo de telefone do Power BI. A natureza real ou sintética dos dados não foi confirmada.",
-        en: "The portrait page establishes a dedicated mobile composition, but not automatic activation of Power BI’s native phone layout. Whether the data is real or synthetic was not confirmed.",
-      },
-    ],
+    limitations: [],
     challenges: [
       {
         challenge: {
@@ -763,8 +611,8 @@ export const projects: Project[] = [
     ],
     observations: [
       {
-        pt: "Na imagem desktop, Grandes Empresas exibe faturamento de 19,6 milhões e margem de −4,9%; Online exibe 1,8 milhão e 72,7%. O contraste ilustra por que receita e margem devem ser analisadas juntas, no recorte exibido.",
-        en: "In the desktop image, Grandes Empresas shows revenue of 19.6 million and a −4.9% margin; Online shows 1.8 million and 72.7%. This contrast illustrates why revenue and margin should be examined together within the displayed slice.",
+        pt: "No recorte exibido, Grandes Empresas combina faturamento de 19,6 milhões com margem de −4,9%, enquanto Online apresenta 1,8 milhão e 72,7%. A comparação mostra por que volume de receita e rentabilidade precisam ser avaliados separadamente.",
+        en: "In the displayed selection, Large Enterprises combines revenue of 19.6 million with a −4.9% margin, while Online shows 1.8 million and 72.7%. This illustrates why revenue volume and profitability need separate assessment.",
       },
     ],
   },
@@ -842,92 +690,43 @@ export const projects: Project[] = [
     data: {
       status: "complete",
       source: {
-        pt: "Consultas Loja1, Loja2 e Loja3 carregam planilhas Excel e são combinadas em fVendas. O modelo contém 1.000 registros, 20 produtos, nove vendedores e três lojas.",
-        en: "Loja1, Loja2 and Loja3 queries load Excel worksheets and are combined into fVendas. The model contains 1,000 records, 20 products, nine salespeople and three stores.",
+        pt: "Consolidei planilhas de três lojas e um cadastro de produtos em uma base de vendas. Os registros relacionam loja, vendedor, produto, preço, quantidade e data, cobrindo 2022 e 2023.",
+        en: "I consolidated spreadsheets from three stores and a product register into a sales dataset. Records link store, salesperson, product, price, quantity and date, covering 2022 and 2023.",
       },
-      entities: [
-        "fVendas",
-        "dProdutos",
-        "dVendedores",
-        "dLojas",
-        "dCalendario",
-        "Medidas",
-        "ProdutoEVendedores",
-      ],
-      fields: [
-        "Cloja",
-        "Matricula",
-        "Código Produto",
-        "PrecoU",
-        "Qtde",
-        "Data Venda",
-        "TotalVendas",
-      ],
       note: {
-        pt: "A linha representa um registro de venda com produto, quantidade, preço, vendedor, loja e data. Não há identificador único de pedido na estrutura analisada. O período exibido é 2022–2023.",
-        en: "Each row is a sales record with product, quantity, price, salesperson, store and date. The inspected structure has no unique order identifier. The displayed period is 2022–2023.",
+        pt: "A consolidação permite comparar as lojas a partir da mesma estrutura, sem consultar cada planilha separadamente.",
+        en: "Consolidation allows stores to be compared through one structure instead of separate spreadsheets.",
       },
     },
     treatment: {
       status: "complete",
       content: {
-        pt: "A sequência M recuperada comprova consolidação, tratamento textual, tipagem e filtragem de vendas finalizadas.",
-        en: "The recovered M sequence confirms consolidation, text processing, type conversion and filtering to finalized sales.",
+        pt: "No Power Query, combinei os dados das lojas, separei campos que reuniam preço e quantidade e padronizei identificadores e descrições. Mantive as vendas finalizadas e organizei cadastros sem duplicidade de lojas e vendedores, criando uma base comum para as comparações.",
+        en: "In Power Query, I combined store data, separated fields containing both price and quantity, and standardized identifiers and descriptions. I kept completed sales and removed duplicate entries from the store and salesperson registers to create a consistent basis for comparison.",
       },
-      items: [
-        {
-          pt: "Combinação das três consultas; promoção de cabeçalhos; remoção da primeira linha após essa etapa; preenchimento para baixo do identificador de loja.",
-          en: "Combination of three queries; header promotion; first-row removal after that step; fill-down of the store identifier.",
-        },
-        {
-          pt: "Separação do texto de loja por “ -> ” e de preço/quantidade por “-”; conversão de chaves para texto, preço para moeda e quantidade para inteiro; filtro Status Venda = Finalizada.",
-          en: "Store text split on “ -> ” and price/quantity on “-”; keys converted to text, price to currency and quantity to integer; filter Status Venda = Finalizada.",
-        },
-        {
-          pt: "Remoção de duplicatas na dimensão de lojas e por matrícula em vendedores. Em produtos, correções Tevelisão → Televisão e Liqidificado → Liquidificador.",
-          en: "Deduplication in the store dimension and by employee identifier in salespeople. Product corrections include Tevelisão → Televisão and Liqidificado → Liquidificador.",
-        },
-      ],
+      items: [],
     },
     transformation: {
       status: "complete",
       content: {
-        pt: "TotalVendas é uma coluna calculada como PrecoU × Qtde. Dez medidas incluem faturamento, média por registro, contagem de registros, produtos distintos, extremos de venda e totais por loja.",
-        en: "TotalVendas is a calculated column equal to PrecoU × Qtde. Ten measures include revenue, average record value, record counts, distinct products, sales extrema and store totals.",
+        pt: "Combinei faturamento, quantidade de registros e valor médio por registro. Lidos juntos, esses indicadores ajudam a distinguir maior volume de registros de maior valor médio nas vendas.",
+        en: "I combined revenue, record count and average value per record. Together, these indicators distinguish more sales records from a higher average record value.",
       },
-      items: [
-        {
-          pt: "CALENDAR(MIN(Data Venda), MAX(Data Venda)) cria o calendário; colunas derivam mês, ano, dia da semana e fim do mês.",
-          en: "CALENDAR(MIN(Data Venda), MAX(Data Venda)) creates the calendar; columns derive month, year, weekday and month-end.",
-        },
-        {
-          pt: "ProdutoEVendedores usa NAMEOF para alternar o campo de análise entre produto e vendedor.",
-          en: "ProdutoEVendedores uses NAMEOF to switch the analytical field between product and salesperson.",
-        },
-      ],
+      items: [],
     },
     modeling: {
       status: "complete",
       content: {
-        pt: "O núcleo de vendas tem estrutura dimensional: fVendas relaciona-se a dProdutos por código de produto, dVendedores por matrícula, dLojas por Cloja e dCalendario por data. As quatro relações são ativas, muitos-para-um e unidirecionais das dimensões para a fato.",
-        en: "The sales core is dimensional: fVendas relates to dProdutos by product code, dVendedores by employee identifier, dLojas by Cloja and dCalendario by date. All four relationships are active, many-to-one and one-way from dimensions to fact.",
+        pt: "Organizei as vendas em uma tabela fato relacionada a produtos, vendedores, lojas e calendário. Essa separação permite filtrar o mesmo faturamento por diferentes perspectivas, mantendo o vínculo entre cada registro e seus atributos. Calculei o valor de venda por preço unitário × quantidade.",
+        en: "I organized sales in a fact table linked to products, salespeople, stores and a calendar. This allows the same revenue total to be filtered from different perspectives while preserving each record’s attributes. I calculated sales value as unit price × quantity.",
       },
-      entities: [
-        "fVendas",
-        "dProdutos",
-        "dVendedores",
-        "dLojas",
-        "dCalendario",
-        "Medidas",
-        "ProdutoEVendedores",
-      ],
     },
     metrics: {
       status: "complete",
-      items: ["Faturamento", "TicketMedio", "Qntde_Pedidos", "Produtos_distintos", "FatX"],
+      items: ["Faturamento", "TicketMedio", "Qntde_Pedidos"],
       note: {
-        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
-        en: "Formulas extracted from the model, with definitions and analytical uses.",
+        pt: "O dashboard usa os rótulos Pedidos e TicketMedio, mas as fórmulas calculam quantidade e valor médio de registros. Essa é a unidade de análise usada neste case.",
+        en: "The dashboard labels these measures Pedidos and TicketMedio, but their formulas calculate record count and average record value. Records are the unit of analysis used in this case.",
       },
       definitions: [
         {
@@ -957,37 +756,22 @@ export const projects: Project[] = [
           },
           evidence: "A · PBIX / DAX",
         },
-        {
-          name: "Produtos_distintos",
-          formula: "DISTINCTCOUNT(fVendas[Código Produto])",
-          interpretation: {
-            pt: "Conta códigos de produto distintos na fato filtrada; mede variedade vendida.",
-            en: "Counts distinct product codes in the filtered fact; measures variety sold.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
-        {
-          name: "FatX",
-          formula:
-            "\n        SUMX(fVendas, \n            fVendas[PrecoU]\n                *fVendas[Qtde])",
-          interpretation: {
-            pt: "Recalcula preço × quantidade com SUMX; oferece uma agregação por linha do faturamento.",
-            en: "Recalculates price × quantity using SUMX; provides a row-wise revenue aggregation.",
-          },
-          evidence: "A · PBIX / DAX",
-        },
       ],
     },
     dashboard: {
       status: "complete",
       content: {
-        pt: "Visão Geral apresenta totais por loja, evolução temporal, mapa por cidade, treemap e Top 3 vendedores. Detalhamento Loja concentra indicadores, período e investigação por produto/vendedor. Botões ligam as duas páginas de 1280 × 720.",
-        en: "Visão Geral presents store totals, time trends, a city map, a treemap and Top 3 salespeople. Detalhamento Loja focuses on indicators, period selection and product/salesperson investigation. Buttons connect the two 1280 × 720 pages.",
+        pt: "Separei a visão consolidada da investigação detalhada. Visão Geral compara lojas, evolução temporal, cidades e vendedores. Detalhamento Loja permite escolher o recorte e investigar quais produtos ou vendedores compõem o resultado, sem concentrar todos os gráficos na primeira tela.",
+        en: "I separated the consolidated view from detailed investigation. Visão Geral compares stores, time trends, cities and salespeople. Detalhamento Loja lets users select a segment and explore the products or salespeople behind its results, keeping the first page focused.",
       },
       items: [
         {
-          pt: "Há ainda a página oculta TP_QTDEPEDIDO, de 320 × 240, configurada como tooltip. Ela complementa a leitura sem ser uma terceira página principal.",
-          en: "A hidden 320 × 240 page, TP_QTDEPEDIDO, is configured as a tooltip. It complements reading without serving as a third main page.",
+          pt: "O mapa compara faturamento por cidade; o treemap mostra a distribuição de registros por produto.",
+          en: "The map compares revenue by city; the treemap shows how records are distributed across products.",
+        },
+        {
+          pt: "No detalhamento, um parâmetro alterna a análise entre produto e vendedor. Um tooltip acrescenta informação durante a exploração.",
+          en: "On the detail page, a field parameter switches analysis between product and salesperson. A tooltip provides additional context while exploring.",
         },
       ],
     },
@@ -1034,21 +818,7 @@ export const projects: Project[] = [
     },
     githubUrl: "",
     youtubeUrl: "",
-    evidence: {
-      confirmed: ["PBIX: modelo, fórmulas e definição do relatório", "Screenshots fornecidas"],
-      inference:
-        "Capacidades analíticas derivadas da estrutura observada; não representam impacto empresarial medido.",
-    },
-    limitations: [
-      {
-        pt: "Qntde_Pedidos usa COUNT(TotalVendas): conta registros numéricos não vazios, não pedidos distintos. TicketMedio usa AVERAGE(TotalVendas): é média por registro, sem comprovação de ticket por pedido. Os nomes originais foram mantidos; as explicações descrevem o que as fórmulas calculam.",
-        en: "Qntde_Pedidos uses COUNT(TotalVendas): it counts nonblank numeric records, not distinct orders. TicketMedio uses AVERAGE(TotalVendas): it is an average per record, not a verified order-level average. Original names are retained; the explanations describe what the formulas calculate.",
-      },
-      {
-        pt: "Não foi identificada página mobile dedicada. A natureza real ou sintética da base não foi confirmada.",
-        en: "No dedicated mobile page was identified. Whether the dataset is real or synthetic was not confirmed.",
-      },
-    ],
+    limitations: [],
     challenges: [
       {
         challenge: {
@@ -1056,8 +826,8 @@ export const projects: Project[] = [
           en: "Consolidate three store sources.",
         },
         solution: {
-          pt: "Table.Combine e tratamentos de loja, preço e quantidade antes da modelagem.",
-          en: "Table.Combine and store, price and quantity processing before modeling.",
+          pt: "Combinei as bases e padronizei loja, preço e quantidade antes de relacionar as vendas aos cadastros.",
+          en: "I combined the datasets and standardized store, price and quantity fields before linking sales to the reference tables.",
         },
       },
       {
@@ -1073,8 +843,8 @@ export const projects: Project[] = [
     ],
     observations: [
       {
-        pt: "Na screenshot Visão Geral, Filial 2 apresenta 810.420, acima de Filial 3 (721.000) e Matriz (581.600). No treemap, Colchão apresenta 70 registros e Cama Box, 64; esses valores não devem ser interpretados como unidades vendidas.",
-        en: "In the Visão Geral screenshot, Filial 2 shows 810,420, above Filial 3 (721,000) and Matriz (581,600). The treemap shows 70 records for Colchão and 64 for Cama Box; these values must not be interpreted as units sold.",
+        pt: "Na visão geral exibida, Filial 2 tem faturamento de 810.420, acima de Filial 3, com 721.000, e Matriz, com 581.600. O detalhamento permite investigar a composição dessa diferença por produto, vendedor e período.",
+        en: "In the displayed overview, Branch 2 has revenue of 810,420, ahead of Branch 3 at 721,000 and the main store at 581,600. The detail page supports investigating that difference by product, salesperson and period.",
       },
     ],
   },
@@ -1086,8 +856,8 @@ export const projects: Project[] = [
     slug: "gestao-abastecimentos-frota-leve",
     number: "04",
     approach: {
-      pt: "Gastos por localização e veículo em uma versão pública com dados fictícios. A comparação mensal requer a validação descrita no case.",
-      en: "Spending by location and vehicle in a public version with fictional data. Monthly comparison requires the validation described in the case study.",
+      pt: "Organização de registros operacionais e comparação de gastos por estado, cidade e veículo.",
+      en: "Operational records organized for spending comparisons by state, city and vehicle.",
     },
     shortDescription: {
       pt: "Gastos e registros de abastecimento por estado, cidade e veículo. Criado para uma necessidade real de trabalho; a versão pública usa dados e placas fictícios para preservar a confidencialidade.",
@@ -1128,8 +898,8 @@ export const projects: Project[] = [
     context: {
       status: "complete",
       content: {
-        pt: "Criei este projeto para acompanhar abastecimentos em uma situação real de trabalho. Para apresentá-lo no portfólio, substituí dados, placas e identificadores por informações fictícias. Os valores públicos servem para demonstrar o relatório.",
-        en: "I created this project to track fuel records in a real work situation. For the portfolio, I replaced data, license plates and identifiers with fictional information. The public figures demonstrate how the report works.",
+        pt: "O projeto nasceu de uma necessidade real de acompanhar abastecimentos. Construí uma visão dos gastos por localização e veículo. Para o portfólio, substituí os dados e identificadores por informações fictícias, preservando a proposta analítica sem expor a operação.",
+        en: "The project began with a real need to monitor refueling. I built a view of spending by location and vehicle. For the portfolio, I replaced data and identifiers with fictional information, preserving the analytical purpose without exposing the operation.",
       },
       items: [],
     },
@@ -1144,69 +914,51 @@ export const projects: Project[] = [
     objective: {
       status: "complete",
       content: {
-        pt: "Oferecer uma visão de monitoramento com total de gastos, contagem de registros e recortes geográficos e por veículo, mantendo a apresentação pública desvinculada de identificadores reais.",
-        en: "Provide a monitoring view with total expenditure, record counts, geographic and vehicle slices, while keeping the public presentation separate from real identifiers.",
+        pt: "Reunir gasto total e quantidade de registros em uma visão que permita investigar sua distribuição por estado, cidade e veículo.",
+        en: "Bring total spending and record count into one view for investigating their distribution by state, city and vehicle.",
       },
       items: [],
     },
     data: {
       status: "complete",
       source: {
-        pt: "Planilha Excel de movimentos de abastecimento, carregada pelo Power Query. O portfólio apresenta somente a versão ilustrativa do dashboard.",
-        en: "An Excel spreadsheet of fuel records, loaded through Power Query. The portfolio shows only the illustrative version of the dashboard.",
+        pt: "A base em Excel reúne datas, localização, veículo, produto, quantidade e valores dos registros de abastecimento.",
+        en: "The Excel dataset contains dates, locations, vehicles, products, quantities and values for refueling records.",
       },
-      entities: ["movimentos_detalhados (4)", "dCalendario"],
-      fields: [
-        "Data",
-        "Cidade",
-        "UF",
-        "Tp. Abastecimento",
-        "Produto",
-        "Qtde",
-        "Valor Unitário",
-        "Valor Item",
-        "Placa",
-        "Valor Total da venda",
-      ],
       note: {
-        pt: "As medidas usam registros com valor de venda, sem um identificador único de evento confirmado na estrutura. Valores e placas desta versão são fictícios.",
-        en: "Measures use records containing a sale value, with no confirmed unique event identifier in the structure. Values and license plates in this version are fictional.",
+        pt: "Esses campos permitem reunir o gasto total e depois examinar sua distribuição geográfica e por veículo.",
+        en: "These fields support an overall spending total and breakdowns by geography and vehicle.",
       },
     },
     treatment: {
       status: "complete",
       content: {
-        pt: "O Power Query promove cabeçalhos, define tipos, seleciona campos, converte valores financeiros para moeda e Data de datetime para date; uma coluna de nota fiscal é removida em etapa posterior. A leitura técnica foi restrita a estrutura e fórmulas, sem publicar registros identificadores.",
-        en: "Power Query promotes headers, sets types, selects fields, converts financial values to currency and Data from datetime to date; an invoice column is removed in a later step. Technical inspection was limited to structure and formulas, without publishing identifying records.",
+        pt: "Preparei os registros no Power Query, selecionando os campos da análise e ajustando datas e valores financeiros. A base resultante reúne os atributos necessários para comparar gasto e frequência de registros por localização e veículo.",
+        en: "I prepared the records in Power Query, selecting the analytical fields and assigning date and financial data types. The resulting dataset brings together the attributes needed to compare spending and record frequency by location and vehicle.",
       },
       items: [],
     },
     transformation: {
       status: "complete",
       content: {
-        pt: "Duas medidas consolidam valor total e contagem de registros com valor preenchido. O calendário deriva dos limites de Data da tabela movimentos_detalhados (4).",
-        en: "Two measures consolidate total value and the count of records with a populated value. The calendar derives from the Data boundaries in movimentos_detalhados (4).",
+        pt: "Usei gasto total e quantidade de registros como leituras complementares. Um local pode concentrar maior gasto sem necessariamente concentrar a mesma proporção de registros.",
+        en: "I used total spending and record count as complementary views. A location’s share of spending can differ from its share of records.",
       },
       items: [],
     },
     modeling: {
       status: "partial",
       content: {
-        pt: "No arquivo sem “(1)”, movimentos_detalhados (4)[Data] relaciona-se ativamente ao calendário, em muitos-para-um e filtro unidirecional. Na versão “(1)”, o calendário está ligado a movimentos_detalhados (5), enquanto as medidas continuam na tabela (4). Essa diferença interrompe o caminho esperado de filtro mensal para os indicadores.",
-        en: "In the file without “(1)”, movimentos_detalhados (4)[Data] has an active many-to-one, one-way relationship with the calendar. In version “(1)”, the calendar relates to movimentos_detalhados (5), while measures remain on table (4). This difference breaks the expected monthly filter path to the indicators.",
+        pt: "Concentrei os indicadores na base de movimentos: uma medida soma o valor registrado e outra conta os registros com valor preenchido. Estado, cidade e veículo oferecem recortes do mesmo total, permitindo investigar onde o gasto se concentra.",
+        en: "I based the indicators on the movement records: one measure sums recorded spending and another counts records with a populated value. State, city and vehicle provide breakdowns of the same total, supporting investigation of where spending is concentrated.",
       },
-      entities: [
-        "movimentos_detalhados (4)",
-        "movimentos_detalhados (5) — versão (1)",
-        "dCalendario",
-      ],
     },
     metrics: {
       status: "complete",
       items: ["TotalAbastecimento", "ContAbastecimentos"],
       note: {
-        pt: "Fórmulas extraídas do modelo, com definição e aplicação na análise.",
-        en: "Formulas extracted from the model, with definitions and analytical uses.",
+        pt: "A contagem acompanha registros com valor preenchido; não representa litros nem uma contagem distinta de eventos.",
+        en: "The count tracks records with a populated value; it represents neither liters nor distinct refueling events.",
       },
       definitions: [
         {
@@ -1232,8 +984,8 @@ export const projects: Project[] = [
     dashboard: {
       status: "complete",
       content: {
-        pt: "Apresentação oferece entrada por botões para Dashboard. A página analítica combina total gasto, contagem de registros, comparações por UF, cidade e placa e um segmentador de mês. Ambas as páginas têm 1280 × 720.",
-        en: "Apresentação provides button navigation to Dashboard. The analytical page combines expenditure, record counts, comparisons by state, city and plate, and a month slicer. Both pages are 1280 × 720.",
+        pt: "A página de apresentação leva ao dashboard por botões. Na página analítica, reuni gasto total, quantidade de registros e comparações por estado, cidade e placa, permitindo começar pelo total e escolher um recorte para investigar.",
+        en: "The introduction page links to the dashboard through buttons. On the analytical page, I combined total spending, record count and comparisons by state, city and plate, allowing users to start with the total and choose a breakdown to investigate.",
       },
       items: [],
     },
@@ -1252,42 +1004,33 @@ export const projects: Project[] = [
     insights: {
       status: "complete",
       content: {
-        pt: "O relatório permite comparar a concentração de gastos por estado, cidade e veículo. A comparação mensal depende da revisão do relacionamento entre o calendário e a tabela usada pelas medidas no arquivo analisado.",
-        en: "The report supports comparisons of spending by state, city and vehicle. Monthly comparisons depend on reviewing the relationship between the calendar and the table used by the measures in the analyzed file.",
+        pt: "O relatório permite comparar a concentração de gastos entre estados, cidades e veículos. A leitura conjunta de valor e quantidade de registros ajuda a formular perguntas sobre diferenças entre esses recortes, sem atribuir causas que os dados não demonstram.",
+        en: "The report compares spending concentration across states, cities and vehicles. Reading amounts alongside record counts helps frame questions about differences between these groups without assuming causes that the data does not establish.",
       },
       items: [],
     },
     results: {
       status: "complete",
       content: {
-        pt: "Construí uma visão de gastos e registros de abastecimento por localização e veículo. A versão pública usa dados fictícios. A análise mensal permanece com uma pendência de relacionamento temporal, explicada neste case.",
-        en: "I built a view of fuel spending and records by location and vehicle. The public version uses fictional data. Monthly analysis still has a time-relationship issue, explained in this case study.",
+        pt: "O entregável é um dashboard navegável que consolida gastos e registros de abastecimento e permite compará-los por localização e veículo.",
+        en: "The deliverable is a navigable dashboard that consolidates refueling spending and records for comparison by location and vehicle.",
       },
       items: [],
     },
     learnings: {
       status: "complete",
       content: {
-        pt: "Preparei registros operacionais e construí medidas e filtros para acompanhar os gastos. A revisão do modelo também mostrou onde o caminho entre calendário e medidas precisa ser validado.",
-        en: "I prepared operational records and built measures and filters to track spending. Reviewing the model also showed where the path between the calendar and measures needs validation.",
+        pt: "O case demonstra preparação de registros operacionais, medidas de gasto e contagem, organização de filtros e cuidado com a exposição de informações de trabalho.",
+        en: "The case demonstrates operational data preparation, spending and count measures, filter organization and care in presenting workplace information.",
       },
       items: [],
     },
     githubUrl: "",
     youtubeUrl: "",
-    evidence: {
-      confirmed: ["PBIX: modelo, fórmulas e definição do relatório", "Screenshots fornecidas"],
-      inference:
-        "Capacidades analíticas derivadas da estrutura observada; não representam impacto empresarial medido.",
-    },
     limitations: [
       {
-        pt: "A imagem repete aproximadamente R$ 442 mil em janeiro, fevereiro, março e abril. Em conjunto com o relacionamento encontrado, isso indica necessidade de correção/validação do filtro temporal; não comprova estabilidade mensal do gasto.",
-        en: "The image repeats approximately R$442 thousand in January, February, March and April. Together with the inspected relationship, this indicates a need to correct/validate time filtering; it does not demonstrate stable monthly spending.",
-      },
-      {
-        pt: "A contagem representa linhas com valor numérico, não litros nem eventos distintos comprovados. Não foi identificada uma página mobile dedicada.",
-        en: "The count represents rows with numeric values, not litres or verified distinct events. No dedicated mobile page was identified.",
+        pt: "O recorte mensal ainda exige revisão da ligação entre calendário e medidas. Por isso, não uso a série mensal para tirar conclusões sobre evolução ou estabilidade dos gastos.",
+        en: "Monthly filtering still requires a review of the calendar-to-measure relationship. I therefore do not use the monthly series to draw conclusions about spending trends or stability.",
       },
     ],
     challenges: [
@@ -1312,12 +1055,7 @@ export const projects: Project[] = [
         },
       },
     ],
-    observations: [
-      {
-        pt: "Na screenshot fictícia, MT apresenta 177 mil e GO, 70 mil. Os cartões mostram aproximadamente R$ 442 mil e 2.034 registros. Esses números ilustram a composição do dashboard e não são resultados da empresa real.",
-        en: "In the fictional screenshot, MT shows 177 thousand and GO 70 thousand. Cards display approximately R$442 thousand and 2,034 records. These figures illustrate the dashboard composition and are not results from the real company.",
-      },
-    ],
+    observations: [],
   },
 ];
 export const getProject = (slug: string) => projects.find((project) => project.slug === slug);

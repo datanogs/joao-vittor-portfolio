@@ -40,3 +40,12 @@ Use caminhos iniciados por `/`, por exemplo `/images/projects/meu-projeto/capa.w
 ## Evidências dos projetos
 
 Consulte `docs/PROJECT_INVENTORY.md` antes de completar qualquer case. O documento separa fatos confirmados, informações parciais e campos ausentes.
+
+## Narrativa pública e inventário técnico
+
+- `projects.ts`: contexto, preparação, modelagem, métricas prioritárias, experiência de análise e resultado técnico. Cada parágrafo deve explicar o que foi feito e por que importa na leitura do relatório.
+- `project-process.ts`: etapas de navegação e explicação das métricas selecionadas. `name` corresponde ao identificador da fórmula; `label` é o nome legível PT/EN.
+- `ui.ts`: capítulos “Preparação dos dados” e “Modelagem e métricas”. Fórmulas e explicações de cálculo ficam em disclosures nativos.
+- `docs/CASE_STUDY_REVIEW.md`: evidências e limites técnicos. O inventário anterior completo de conteúdo e fórmulas está preservado no histórico Git, commit `10b662f`. Não importar documentação na aplicação.
+- Não transformar extrações de PBIX em texto público. Manter no case apenas limites que mudam a interpretação dos indicadores.
+- Não remover problemas conhecidos do dashboard para melhorar a narrativa. A limitação temporal de Frota Leve permanece explícita, sem afirmar uma correção que não foi feita.

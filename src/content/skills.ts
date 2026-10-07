@@ -36,8 +36,8 @@ export const skillGroups: SkillGroup[] = [
       {
         name: "Power Query",
         context: {
-          pt: "Importo planilhas, ajusto tipos e categorias e combino bases. No case de vendas, reúno os dados das lojas antes da análise.",
-          en: "I import spreadsheets, adjust types and categories, and combine datasets. In the sales tracking case, I bring store data together before analysis.",
+          pt: "No projeto de vendas, reúno as bases de três lojas; no Spotify, padronizo categorias e atributos para manter consistência nos filtros e agrupamentos.",
+          en: "In the sales project, I combine datasets from three stores; in Spotify, I standardize categories and attributes for consistent filtering and grouping.",
         },
       },
     ],
@@ -51,8 +51,8 @@ export const skillGroups: SkillGroup[] = [
       {
         name: "DAX",
         context: {
-          pt: "Uso somas, contagens, médias e razões para calcular faturamento, margem e indicadores de presença no ranking.",
-          en: "I use sums, counts, averages and ratios to calculate revenue, margin and ranking-presence measures.",
+          pt: "No Spotify, distingo aparições de títulos únicos. No XSales, relaciono lucro e faturamento para comparar a margem entre segmentos.",
+          en: "In Spotify, I distinguish appearances from unique titles. In XSales, I relate profit to revenue to compare margins across segments.",
         },
       },
       {

@@ -148,9 +148,6 @@ export function ProjectCasePage({ project }: { project: Project }) {
                         </span>
                         <strong>{l(stage.title)}</strong>
                         <span>{l(stage.detail)}</span>
-                        {stage.pending && (
-                          <small className="flow-pending">{p.validationPending}</small>
-                        )}
                       </a>
                     </li>
                   ))}
@@ -160,86 +157,16 @@ export function ProjectCasePage({ project }: { project: Project }) {
             <Chapter id="04" title={p.dataModel}>
               <p className="text-body text-muted-foreground">{l(project.data.source)}</p>
               <p className="mt-4 text-body text-muted-foreground">{l(project.data.note)}</p>
-              {process && (
-                <div className="case-prose">
-                  <h3 className="text-card-title">{p.excelRole}</h3>
-                  <p className="text-body">{l(process.excel)}</p>
-                  <p className="text-sm">{p.excelBoundary}</p>
-                  <h3 id="case-etl" className="text-card-title case-anchor">
-                    {p.etl}
-                  </h3>
-                  <dl className="etl-sequence">
-                    <div>
-                      <dt>
-                        <span aria-hidden="true">E</span>
-                        {p.extraction}
-                      </dt>
-                      <dd>{l(process.extraction)}</dd>
-                    </div>
-                    <div>
-                      <dt>
-                        <span aria-hidden="true">T</span>
-                        {p.transformation}
-                      </dt>
-                      <dd>
-                        <ul>
-                          {process.transformation.map((item) => (
-                            <li key={item.pt}>{l(item)}</li>
-                          ))}
-                        </ul>
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>
-                        <span aria-hidden="true">L</span>
-                        {p.load}
-                      </dt>
-                      <dd>{l(process.load)}</dd>
-                    </div>
-                  </dl>
-                </div>
-              )}
-              <dl className="case-technical">
-                <div>
-                  <dt>{p.dataEntities}</dt>
-                  <dd>
-                    <ul className="grid gap-2 sm:grid-cols-2">
-                      {project.data.entities.map((entity) => (
-                        <li key={entity}>
-                          <code className="text-sm">{entity}</code>
-                        </li>
-                      ))}
-                    </ul>
-                  </dd>
-                </div>
-                <div>
-                  <dt>{p.dataFields}</dt>
-                  <dd className="flex flex-wrap gap-x-4 gap-y-2">
-                    {project.data.fields.map((field) => (
-                      <code className="text-sm text-muted-foreground" key={field}>
-                        {field}
-                      </code>
-                    ))}
-                  </dd>
-                </div>
-              </dl>
-              <div className="case-prose">
-                <h3 id="case-model" className="text-card-title case-anchor">
-                  {p.model}
-                </h3>
-                <p className="text-body">{l(project.modeling.content)}</p>
-                {!process && (
-                  <>
-                    <h3 className="text-card-title">{p.treatment}</h3>
-                    <Narrative block={project.treatment} />
-                  </>
-                )}
+              <div id="case-etl" className="case-anchor">
+                <Narrative block={project.treatment} />
               </div>
             </Chapter>
             <Chapter id="08" title={p.metrics}>
+              <div id="case-model" className="case-prose case-anchor">
+                <p className="text-body">{l(project.modeling.content)}</p>
+              </div>
               <Narrative block={project.transformation} />
-              <p className="text-body text-muted-foreground mb-6">{l(project.metrics.note)}</p>
-              {selectedMetrics && <p className="metric-intro text-body">{p.selectedMetrics}</p>}
+              <p className="metric-intro text-body">{l(project.metrics.note)}</p>
               <dl className="metric-list">
                 {(
                   selectedMetrics ??
@@ -249,7 +176,7 @@ export function ProjectCasePage({ project }: { project: Project }) {
                   }))
                 ).map((metric) => (
                   <div key={metric.name}>
-                    <dt>{metric.name}</dt>
+                    <dt>{metric.reading ? l(metric.reading.label) : metric.name}</dt>
                     <dd>
                       <p className="text-body text-muted-foreground">{l(metric.interpretation)}</p>
                       {metric.reading && (
@@ -258,18 +185,15 @@ export function ProjectCasePage({ project }: { project: Project }) {
                             <strong>{p.metricPurpose}</strong>
                             {l(metric.reading.purpose)}
                           </p>
-                          <p>
-                            <strong>{p.metricUsage}</strong>
-                            {l(metric.reading.usage)}
-                          </p>
-                          <p>
-                            <strong>{p.metricLogic}</strong>
-                            {l(metric.reading.logic)}
-                          </p>
                         </div>
                       )}
                       <details>
                         <summary>{p.viewFormula}</summary>
+                        {metric.reading && (
+                          <p className="text-body text-muted-foreground my-4">
+                            {l(metric.reading.logic)}
+                          </p>
+                        )}
                         <pre>
                           <code>{metric.formula}</code>
                         </pre>
@@ -318,22 +242,26 @@ export function ProjectCasePage({ project }: { project: Project }) {
             </Chapter>
             <Chapter id="10" title={p.insights}>
               <Narrative block={project.insights} />
-              <div className="case-prose">
-                <h3 className="text-card-title">{p.observations}</h3>
-                {project.observations.map((item) => (
-                  <p className="text-body" key={item.pt}>
-                    {l(item)}
-                  </p>
-                ))}
-              </div>
-              <details className="case-note" open>
-                <summary>{p.limitations}</summary>
-                <ul className="list-disc pl-5 space-y-3 text-body text-muted-foreground mt-3">
-                  {project.limitations.map((item) => (
-                    <li key={item.pt}>{l(item)}</li>
+              {project.observations.length > 0 && (
+                <div className="case-prose">
+                  <h3 className="text-card-title">{p.observations}</h3>
+                  {project.observations.map((item) => (
+                    <p className="text-body" key={item.pt}>
+                      {l(item)}
+                    </p>
                   ))}
-                </ul>
-              </details>
+                </div>
+              )}
+              {project.limitations.length > 0 && (
+                <details className="case-note" open>
+                  <summary>{p.limitations}</summary>
+                  <ul className="list-disc pl-5 space-y-3 text-body text-muted-foreground mt-3">
+                    {project.limitations.map((item) => (
+                      <li key={item.pt}>{l(item)}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
             </Chapter>
             <Chapter id="11" title={p.challenges}>
               <dl className="space-y-7">

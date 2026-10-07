@@ -14,8 +14,8 @@ export const datanogs = {
     en: "DataNogs is my personal project for documenting and sharing studies, projects and explanations about Data and Technology.",
   },
   relationship: {
-    pt: "O portfólio reúne os cases. No DataNogs, a proposta é detalhar etapas de preparação, cálculos e testes realizados nos estudos.",
-    en: "The portfolio presents the case studies. DataNogs is intended to document data preparation, calculations and tests from my studies.",
+    pt: "O portfólio apresenta os projetos e suas escolhas. O DataNogs é o espaço que estou construindo para explicar testes, cálculos e práticas dos meus estudos.",
+    en: "The portfolio presents projects and the choices behind them. I am building DataNogs as a place to explain tests, calculations and practice from my studies.",
   },
   purposeTitle: {
     pt: "Estudar, testar e explicar.",

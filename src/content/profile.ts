@@ -41,12 +41,12 @@ export const profile = {
       en: "My approach",
     },
     title: {
-      pt: "Conferir a base e os cálculos.",
-      en: "Check the data and calculations.",
+      pt: "Organizo a base antes de comparar.",
+      en: "Prepare the data before comparing results.",
     },
     text: {
-      pt: "Nos cases, explico a origem das bases, as etapas do Power Query e as fórmulas DAX. Distingo o que cada medida conta ou soma e registro os limites de interpretação.",
-      en: "The case studies explain the data sources, Power Query steps and DAX formulas. I describe what each measure counts or sums and document its interpretation limits.",
+      pt: "No Spotify, separo músicas distintas de aparições no ranking. No projeto de vendas, reúno três lojas e relaciono os registros a produtos, vendedores e datas. Os cases explicam essas escolhas e como elas orientam a leitura dos indicadores.",
+      en: "In Spotify, I distinguish unique song titles from ranking appearances. In the sales project, I bring three stores together and link records to products, salespeople and dates. The case studies explain these choices and how they shape the interpretation of each measure.",
     },
   },
   about: {
@@ -61,8 +61,8 @@ export const profile = {
           en: "Data and measures",
         },
         text: {
-          pt: "Documento as fontes, os campos e as fórmulas usados nos dashboards.",
-          en: "I document the sources, fields and formulas used in the dashboards.",
+          pt: "Explico como a organização da base e os cálculos sustentam cada comparação.",
+          en: "I explain how the data structure and calculations support each comparison.",
         },
       },
       {
@@ -114,8 +114,8 @@ export const profile = {
         en: "How I learn and build",
       },
       text: {
-        pt: "Curso Ciência da Computação e estudo SQL e Python. Nos projetos publicados, utilizo Excel como fonte, Power Query para preparar as bases e DAX para calcular indicadores no Power BI. Os cases apresentam as fórmulas, os relacionamentos e as limitações encontradas.",
-        en: "I am studying Computer Science, SQL and Python. My published projects use Excel as a source, Power Query for data preparation and DAX for calculations in Power BI. The case studies include formulas, relationships and identified limitations.",
+        pt: "Curso Ciência da Computação e estudo SQL e Python. Nos projetos publicados, utilizo Excel como fonte, Power Query para preparar as bases e DAX para calcular indicadores no Power BI. Nos cases, explico como organizei a base, escolhi as métricas e separei visão geral de detalhamento.",
+        en: "I am studying Computer Science, SQL and Python. My published projects use Excel as a source, Power Query for data preparation and DAX for calculations in Power BI. In the case studies, I explain how I organized the data, chose measures and separated overview pages from detailed analysis.",
       },
     },
     {

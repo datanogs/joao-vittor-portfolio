@@ -44,7 +44,7 @@ Teste Home PT/EN, Sobre, Projetos e quatro cases, Formação, DataNogs e Contato
 
 ## Conteúdo e privacidade
 
-Conteúdo profissional em `src/content/`; traduções em `src/content/ui.ts`. Não inventar resultados, empregadores, competências ou métricas. SQL/Python são apresentados como estudos. Dados públicos de Frota Leve são fictícios. Os limites técnicos dos PBIX e dashboards externos permanecem descritos nos cases.
+Conteúdo profissional em `src/content/`; traduções em `src/content/ui.ts`. Não inventar resultados, empregadores, competências ou métricas. SQL/Python são apresentados como estudos. Dados públicos de Frota Leve são fictícios. Os cases explicam decisões e uso analítico. Inventários e limitações de inspeção ficam em `docs/CASE_STUDY_REVIEW.md`; a interface mantém apenas ressalvas que alteram a interpretação. Consulte `docs/EDITORIAL_NARRATIVE.md` para editar essas duas camadas.
 
 A fotografia oficial é `public/images/profile/portrait.webp`, referenciada por `profile.images.portrait`. Hero e Sobre compartilham o asset com enquadramento CSS.
 
