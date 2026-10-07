@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { DataFlow, DataSignal } from "@/components/site/DataFlow";
+import { DataFlow } from "@/components/site/DataFlow";
 import { ProfilePhoto } from "@/components/site/ProfilePhoto";
 import { ProjectCard } from "@/components/site/ProjectCard";
 import { CertificationsList } from "@/components/site/CertificationsList";
@@ -70,7 +70,6 @@ export function HomePage() {
             </div>
           </div>
           <div className="hero-photo animate-rise reveal-delay-1">
-            <DataSignal />
             <ProfilePhoto variant="hero" />
           </div>
         </div>

@@ -624,11 +624,12 @@
   max-width: 19rem;
 }
 .home-hero {
-  grid-template-areas: "identity" "copy" "photo";
+  grid-template-areas: "identity" "photo" "copy";
 }
 .hero-photo .profile-portrait {
-  aspect-ratio: 5/4;
-  object-position: 50% 8%;
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
 }
 .hero-actions {
   display: flex;
@@ -1076,32 +1077,21 @@
 .hero-copy > p {
   max-width: 59ch;
 }
+/* The official portrait stands alone, without a decorative frame or plane. */
 .hero-photo {
-  position: relative;
-  isolation: isolate;
-  padding: 0 0 1.5rem 1.5rem;
+  padding: 0;
 }
-.hero-photo::before {
-  content: "";
-  position: absolute;
-  inset: 12% 12% 0 0;
-  background: var(--photo-plane);
-  z-index: -1;
-}
-.hero-photo::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 3rem;
-  height: 2px;
-  background: var(--photo-rule);
-}
-.hero-photo .profile-photo-frame {
-  border-radius: 1px;
-}
-.hero-photo .profile-portrait {
-  border-radius: 1px;
+@media (max-width: 767px) {
+  .home-hero {
+    padding-block: 1.75rem 2.5rem;
+    gap: 1.5rem;
+  }
+  .hero-photo {
+    width: clamp(10rem, 42vw, 14rem);
+    max-width: 100%;
+    justify-self: center;
+    margin: 0;
+  }
 }
 .data-signal {
   color: var(--diagram-line);
@@ -1109,14 +1099,6 @@
   height: auto;
   pointer-events: none;
   overflow: visible;
-}
-.hero-photo .data-signal {
-  position: absolute;
-  right: 66%;
-  bottom: -1.5rem;
-  width: 12rem;
-  z-index: -2;
-  opacity: 0.6;
 }
 .signal-grid {
   stroke: var(--diagram-grid);
@@ -1320,12 +1302,7 @@
 @media (min-width: 768px) {
   .hero-photo {
     max-width: 26rem;
-    padding: 0 0 2rem 2rem;
-  }
-  .hero-photo .data-signal {
-    width: 15rem;
-    right: 65%;
-    bottom: -2rem;
+    padding: 0;
   }
   #posicionamento {
     padding-block: 3rem;
@@ -1360,10 +1337,6 @@
   #stack dl > div {
     grid-template-columns: 1fr;
     gap: 0.25rem;
-  }
-  .hero-photo {
-    margin-left: auto;
-    max-width: 20rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
