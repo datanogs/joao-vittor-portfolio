@@ -18,7 +18,7 @@ const nav: NavItem[] = [
 ];
 
 export function Header() {
-  const { t, path } = useI18n();
+  const { t, path, lang } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -59,6 +59,11 @@ export function Header() {
     desktop.addEventListener("change", closeOnDesktop);
     return () => desktop.removeEventListener("change", closeOnDesktop);
   }, []);
+
+  // Static public files intentionally bypass the application's localized router.
+  const resume = lang === "pt"
+    ? { href: "/documents/joao-vittor-nogueira-curriculo.pdf", filename: "joao-vittor-nogueira-curriculo.pdf" }
+    : { href: "/documents/joao-vittor-nogueira-resume-en.pdf", filename: "joao-vittor-nogueira-resume-en.pdf" };
 
   const isActive = (item: NavItem) => {
     const target = path(item.to);
@@ -102,6 +107,14 @@ export function Header() {
               {t.nav[item.key]}
             </LocalizedLink>
           ))}
+          <a
+            href={resume.href}
+            download={resume.filename}
+            aria-label={t.nav.resumeDownload}
+            className="link-underline inline-flex min-h-11 items-center whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {t.nav.resume}
+          </a>
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
@@ -168,6 +181,21 @@ export function Header() {
                   </LocalizedLink>
                 </li>
               ))}
+              <li>
+                <a
+                  href={resume.href}
+                  download={resume.filename}
+                  aria-label={t.nav.resumeDownload}
+                  onClick={() => setOpen(false)}
+                  className="interactive-row grid grid-cols-[2rem_minmax(0,1fr)_auto] items-center border-b border-border py-4 text-sm text-muted-foreground hover:text-foreground"
+                >
+                  <span className="font-sans text-meta text-muted-foreground/70">
+                    {String(nav.length + 1).padStart(2, "0")}
+                  </span>
+                  <span className="min-w-0 truncate">{t.nav.resume}</span>
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </li>
             </ul>
             <div className="mt-5 flex flex-wrap items-center justify-between gap-3 md:hidden">
               <LanguageSwitch />

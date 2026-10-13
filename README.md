@@ -59,3 +59,13 @@ A revisão está em [docs/SECURITY_REVIEW.md](docs/SECURITY_REVIEW.md). Execute 
 Os metadados de origem do template estão em `docs/tooling/project-origin.json`, apenas como documentação. A pasta `.lovable` foi retirada; isso não revoga conexões entre serviços. O wrapper `@lovable.dev/vite-tanstack-config` ainda participa do build e não deve ser renomeado como se fosse código próprio. O destino de publicação continua sendo Vercel.
 
 Nunca publique credenciais em variáveis `VITE_*`: elas podem integrar o bundle público. Dados originais de trabalho, PBIX e planilhas privadas não devem entrar em `public/` nem no histórico Git.
+
+
+## Currículo bilíngue no menu
+
+O item **Currículo** (PT) / **Resume** (EN) fica junto à navegação do cabeçalho no desktop e no mobile. O idioma da rota determina qual documento é baixado:
+
+- Português: `public/documents/joao-vittor-nogueira-curriculo.pdf`
+- Inglês: `public/documents/joao-vittor-nogueira-resume-en.pdf`
+
+Para atualizar um currículo futuramente, substitua o respectivo PDF no mesmo caminho, faça commit e publique; não é necessário editar os componentes. **O arquivo deve existir antes de disponibilizar o link em produção**. Confira se os PDFs têm duas páginas, links internos/externos funcionando e somente dados pessoais intencionalmente públicos. Os dois documentos incluem telefone e e-mail profissional; os arquivos em `public/` podem ser acessados por qualquer pessoa.
