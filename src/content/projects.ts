@@ -851,7 +851,7 @@ export const projects: Project[] = [
   {
     title: {
       pt: "Gestão de Abastecimentos — Frota Leve",
-      en: "Fuel Management — Light Fleet",
+      en: "Fleet Fueling Management",
     },
     slug: "gestao-abastecimentos-frota-leve",
     number: "04",
